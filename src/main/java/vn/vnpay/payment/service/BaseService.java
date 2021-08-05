@@ -16,6 +16,4 @@ public interface BaseService<E extends BaseEntity, ID extends Serializable> {
 
     public E update(E entity);
 
-    public boolean isUnique(Class<E> entityClass, Long id, String fieldName, String value);
-
 }

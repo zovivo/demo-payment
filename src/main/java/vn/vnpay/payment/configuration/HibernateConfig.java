@@ -1,9 +1,9 @@
 package vn.vnpay.payment.configuration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.cfg.Environment;
 import org.hibernate.jpa.HibernatePersistenceProvider;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -30,7 +30,7 @@ import java.util.Properties;
 })
 public class HibernateConfig {
 
-    private static Logger logger = LoggerFactory.getLogger(HibernateConfig.class);
+    private static Logger logger = LogManager.getLogger(HibernateConfig.class);
     private static final String PACKAGES_TO_SCAN = "vn.vnpay.payment.entity";
 
     @Value("${spring.datasource.url}")

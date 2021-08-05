@@ -20,13 +20,16 @@ Configuration:
           max: 10
 
   Loggers:
-    logger:
+    Logger:
       - name: vn.vnpay
         level: debug
         additivity: false
         AppenderRef:
           - ref: LogToConsole
           - ref: LogToRollingFile
+
+      - name: org.springframework.web.filter.CommonsRequestLoggingFilter
+        level: info
 
     Root:
       level: error

@@ -11,6 +11,9 @@ public enum ErrorCode {
     FAIL("fail"),
     UNKNOWN_ERROR("unknown error"),
     VALIDATION_FAILED("validation failed"),
+    DUPLICATE_TOKEN_KEY("same day token key"),
+    EXCEEDS_DEBIT("amount after promotion exceeds debit"),
+    PROMOTION_CODE_EMPTY("promotion code is null or blank"),
     ;
 
     private final String description;
