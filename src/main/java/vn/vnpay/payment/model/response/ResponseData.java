@@ -16,6 +16,7 @@ public class ResponseData {
     private String message;
     private String responseId;
     private String checkSum;
+    private String data;
     private String addValue;
 
     public ResponseData(String code, String message) {

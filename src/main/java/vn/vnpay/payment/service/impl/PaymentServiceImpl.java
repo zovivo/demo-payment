@@ -11,6 +11,7 @@ import vn.vnpay.payment.entity.Payment;
 import vn.vnpay.payment.exception.CustomException;
 import vn.vnpay.payment.model.PaymentDTO;
 import vn.vnpay.payment.model.enu.ErrorCode;
+import vn.vnpay.payment.model.response.ResponseData;
 import vn.vnpay.payment.repository.PaymentRepository;
 import vn.vnpay.payment.service.PaymentService;
 import vn.vnpay.payment.service.RabbitMQService;
@@ -80,7 +81,7 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
         paymentRepositoryRedis.insert(payment);
     }
 
-    protected void sendToPartner() throws CustomException {
+    protected ResponseData sendToPartner() throws CustomException {
         String inputStr = "{\n" +
                 "\t\"tokenKey\": \"1601353776839FT19310RH6P1\",\n" +
                 "\t\"apiID\": \"restPayment\",\n" +
@@ -107,18 +108,22 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
         logger.info("response: {}", response);
         if (!response.getStatusCode().is2xxSuccessful())
             throw new CustomException(ErrorCode.SEND_PARTNER_FAIL);
+        ResponseData responseData = new ResponseData();
+        responseData.setCode(response.getStatusCode().value() + "");
+        responseData.setMessage("Success");
+        return responseData;
     }
 
     @Override
     @Transactional
-    public void executePayment(PaymentDTO paymentDTO) throws CustomException {
-        checkValidPayment(paymentDTO);
-        sendRabbitMQ(paymentDTO);
-        Payment payment = PaymentDTO.convertToEntity(paymentDTO);
-        payment = create(payment);
-        saveRedis(payment);
-        sendToPartner();
-        return;
+    public ResponseData executePayment(PaymentDTO paymentDTO) throws CustomException {
+//        checkValidPayment(paymentDTO);
+//        sendRabbitMQ(paymentDTO);
+//        Payment payment = PaymentDTO.convertToEntity(paymentDTO);
+//        payment = create(payment);
+//        saveRedis(payment);
+        ResponseData responseData = sendToPartner();
+        return responseData;
     }
 
     @Override

@@ -29,10 +29,7 @@ public class PaymentController {
 
     @PostMapping(value = {""})
     public ResponseEntity<ResponseData> executePayment(@RequestBody @Validated PaymentDTO paymentDTO, HttpServletRequest request) throws CustomException {
-        paymentService.executePayment(paymentDTO);
-        ResponseData responseData = new ResponseData();
-        responseData.setCode("00");
-        responseData.setMessage("Success");
+        ResponseData responseData = paymentService.executePayment(paymentDTO);
         return responsePreProcessor.buildResponseEntity(HttpStatus.OK, responseData, request);
     }
 
