@@ -117,11 +117,11 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     @Override
     @Transactional
     public ResponseData executePayment(PaymentDTO paymentDTO) throws CustomException {
-//        checkValidPayment(paymentDTO);
-//        sendRabbitMQ(paymentDTO);
-//        Payment payment = PaymentDTO.convertToEntity(paymentDTO);
-//        payment = create(payment);
-//        saveRedis(payment);
+        checkValidPayment(paymentDTO);
+        sendRabbitMQ(paymentDTO);
+        Payment payment = PaymentDTO.convertToEntity(paymentDTO);
+        payment = create(payment);
+        saveRedis(payment);
         ResponseData responseData = sendToPartner();
         return responseData;
     }
