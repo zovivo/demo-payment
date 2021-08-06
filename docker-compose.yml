@@ -19,9 +19,11 @@ services:
     restart: always
     hostname: redis
     container_name: redis
+    environment:
+      REDIS_PASSWORD: "admin"
     ports:
       - '6379:6379'
-    command: redis-server --requirepass adminadmin
+  #    command: redis-server --requirepass adminadmin
 
 
   rabbitmq:

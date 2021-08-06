@@ -22,29 +22,32 @@ import java.util.List;
 @RestControllerAdvice
 public class CustomRestExceptionHandler {
 
-    private final Logger logger = LogManager.getLogger(CustomRestExceptionHandler.class);
+    private static final Logger logger = LogManager.getLogger(CustomRestExceptionHandler.class);
 
     @Autowired
     private ResponsePreProcessor responsePreProcessor;
 
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ResponseData> handleAllOtherException(Exception ex, HttpServletRequest request) {
+        ResponseData responseData = new ResponseData(HttpStatus.INTERNAL_SERVER_ERROR.value() + "", ex.getMessage());
+        logger.info("Exception: " + ex.getMessage(), ex);
+        return responsePreProcessor.buildResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR, responseData, request);
+    }
+
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<ResponseData> handleCustomException(CustomException ex, HttpServletRequest request) {
-        ResponseData responseData = new ResponseData();
-        responseData.setCode(HttpStatus.BAD_REQUEST.value() + "");
-        responseData.setMessage(ex.getErrorCode().getDescription());
+        ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", ex.getErrorCode().getDescription());
         logger.info("Handler for CustomException: {}", ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.BAD_REQUEST, responseData, request);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseData> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpServletRequest request) {
-        ResponseData responseData = new ResponseData();
         List<String> validationMessages = new ArrayList<>();
         for (ObjectError error : ex.getBindingResult().getAllErrors()) {
             validationMessages.add(error.getDefaultMessage());
         }
-        responseData.setCode(HttpStatus.BAD_REQUEST.value() + "");
-        responseData.setMessage(String.join(", ", validationMessages));
+        ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", String.join(", ", validationMessages));
         logger.info("Handler for ArgumentNotValidException: {}", ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.BAD_REQUEST, responseData, request);
     }

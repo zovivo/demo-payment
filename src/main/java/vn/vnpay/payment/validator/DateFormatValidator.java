@@ -16,7 +16,6 @@ public class DateFormatValidator implements ConstraintValidator<DateFormat, Stri
 
     @Override
     public boolean isValid(final String value, final ConstraintValidatorContext context) {
-        java.text.DateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss", Locale.getDefault())
                 .withResolverStyle(ResolverStyle.STRICT);
         try {

@@ -1,17 +1,16 @@
-package vn.vnpay.payment.service.impl;
+package vn.vnpay.payment.util;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
-import vn.vnpay.payment.util.GsonParserUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Service
-public class LoggingService {
+public class LoggingComponent {
 
-    private final Logger logger = LogManager.getLogger(LoggingService.class);
+    private static final Logger logger = LogManager.getLogger(LoggingComponent.class);
 
     private static final String REQUEST_ID = "request_id";
 
@@ -24,7 +23,7 @@ public class LoggingService {
         data.append("\nLOGGING REQUEST BODY-----------------------------------\n")
                 .append("[REQUEST-ID]: ").append(requestId).append("\n")
                 .append("[BODY REQUEST]: ").append("\n\n")
-                .append(GsonParserUtils.parseObjectToString(body))
+                .append(CommonUtils.parseObjectToString(body))
                 .append("\n\n")
                 .append("LOGGING REQUEST BODY-----------------------------------\n");
 
@@ -40,7 +39,7 @@ public class LoggingService {
         data.append("\nLOGGING RESPONSE-----------------------------------\n")
                 .append("[REQUEST-ID]: ").append(requestId).append("\n")
                 .append("[BODY RESPONSE]: ").append("\n\n")
-                .append(GsonParserUtils.parseObjectToString(body))
+                .append(CommonUtils.parseObjectToString(body))
                 .append("\n\n")
                 .append("LOGGING RESPONSE-----------------------------------\n");
 

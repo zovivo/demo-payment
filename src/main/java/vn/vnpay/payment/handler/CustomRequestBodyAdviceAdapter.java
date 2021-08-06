@@ -6,7 +6,7 @@ import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
-import vn.vnpay.payment.service.impl.LoggingService;
+import vn.vnpay.payment.util.LoggingComponent;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Type;
@@ -15,7 +15,7 @@ import java.lang.reflect.Type;
 public class CustomRequestBodyAdviceAdapter extends RequestBodyAdviceAdapter {
 
     @Autowired
-    private LoggingService loggingService;
+    private LoggingComponent loggingComponent;
 
     @Autowired
     private HttpServletRequest httpServletRequest;
@@ -30,7 +30,7 @@ public class CustomRequestBodyAdviceAdapter extends RequestBodyAdviceAdapter {
     public Object afterBodyRead(Object body, HttpInputMessage inputMessage,
                                 MethodParameter parameter, Type targetType,
                                 Class<? extends HttpMessageConverter<?>> converterType) {
-        loggingService.logRequest(httpServletRequest, body);
+        loggingComponent.logRequest(httpServletRequest, body);
 
         return super.afterBodyRead(body, inputMessage, parameter, targetType, converterType);
     }

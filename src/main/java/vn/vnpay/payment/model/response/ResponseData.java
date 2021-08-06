@@ -18,4 +18,9 @@ public class ResponseData {
     private String checkSum;
     private String addValue;
 
+    public ResponseData(String code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
 }

@@ -14,6 +14,7 @@ public enum ErrorCode {
     DUPLICATE_TOKEN_KEY("same day token key"),
     EXCEEDS_DEBIT("amount after promotion exceeds debit"),
     PROMOTION_CODE_EMPTY("promotion code is null or blank"),
+    SEND_PARTNER_FAIL("send to partner failed"),
     ;
 
     private final String description;

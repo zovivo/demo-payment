@@ -10,13 +10,13 @@ import org.springframework.http.server.ServletServerHttpRequest;
 import org.springframework.http.server.ServletServerHttpResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
-import vn.vnpay.payment.service.impl.LoggingService;
+import vn.vnpay.payment.util.LoggingComponent;
 
 @ControllerAdvice
 public class CustomResponseBodyAdviceAdapter implements ResponseBodyAdvice<Object> {
 
     @Autowired
-    private LoggingService loggingService;
+    private LoggingComponent loggingComponent;
 
     @Override
     public boolean supports(MethodParameter methodParameter,
@@ -34,7 +34,7 @@ public class CustomResponseBodyAdviceAdapter implements ResponseBodyAdvice<Objec
 
         if (serverHttpRequest instanceof ServletServerHttpRequest &&
                 serverHttpResponse instanceof ServletServerHttpResponse) {
-            loggingService.logResponse(
+            loggingComponent.logResponse(
                     ((ServletServerHttpRequest) serverHttpRequest).getServletRequest(),
                     ((ServletServerHttpResponse) serverHttpResponse).getServletResponse(), o);
         }
