@@ -30,12 +30,15 @@ out/
 *.ipr
 *.iws
 
+## Test
+**/src/test/**
+
 ## Maven
-target/
-.mvn/
-mvnw
-mvnw.cmd
+*/target/
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
 
 ## Other
-
-HELP.md
+*/.gitignore
+**/HELP.md

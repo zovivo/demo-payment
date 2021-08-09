@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>vn.vnpay</groupId>
+        <artifactId>demo-payment</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>vn.vnpay.preprocess</groupId>
+    <artifactId>preprocess</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>preprocess-transaction</name>
+    <description>preprocess-transaction</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.10.Final</version>
+        </dependency>
+    </dependencies>
+
+</project>
