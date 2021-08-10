@@ -5,18 +5,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResponseData {
+public class ResponseData implements Serializable {
 
     private String code;
     private String message;
     private String responseId;
     private String checkSum;
-    private String data;
+    private Object data;
     private String addValue;
 
     public ResponseData(String code, String message) {

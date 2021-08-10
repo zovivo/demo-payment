@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.PropertyMap;
 import org.springframework.format.annotation.DateTimeFormat;
 import vn.vnpay.preprocess.model.Payment;
 import vn.vnpay.preprocess.validator.DateFormat;
@@ -43,6 +44,12 @@ public class PaymentDTO {
 
     public static Payment convertToEntity(PaymentDTO paymentDTO) {
         ModelMapper modelMapper = new ModelMapper();
+        modelMapper.addMappings(new PropertyMap<PaymentDTO, Payment>() {
+            @Override
+            protected void configure() {
+                skip(destination.getId());
+            }
+        });
         Payment payment = modelMapper.map(paymentDTO, Payment.class);
         return payment;
     }

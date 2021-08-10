@@ -1,5 +1,6 @@
 package vn.vnpay.process.configuration;
 
+import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,11 +9,13 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
+import org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import java.time.Duration;
+
 @Configuration
-//@EnableRedisRepositories
-@PropertySource("classpath:application.properties")
+@PropertySource(value = "classpath:application.properties")
 public class RedisConfig {
 
     @Value("${spring.redis.host}")
@@ -27,11 +30,35 @@ public class RedisConfig {
     @Value("${spring.redis.password}")
     private String redisPassword;
 
+    @Value("${spring.redis.max-idle}")
+    private int maxIdle;
+    @Value("${spring.redis.min-idle}")
+    private int minIdle;
+    @Value("${spring.redis.max-wait}")
+    private int maxWaitMillis;
+    @Value("${spring.redis.max-active}")
+    private int maxTotal;
+
     @Bean
     public LettuceConnectionFactory redisConnectionFactory() {
-        RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration(redisHost, redisPort);
+
+        RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration();
+        redisConfig.setHostName(redisHost);
+        redisConfig.setPort(redisPort);
         redisConfig.setPassword(redisPassword);
-        return new LettuceConnectionFactory(redisConfig);
+        GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
+        poolConfig.setMaxIdle(maxIdle);
+        poolConfig.setMinIdle(minIdle);
+        poolConfig.setMaxWaitMillis(maxWaitMillis);
+        poolConfig.setMaxTotal(maxTotal);
+        LettucePoolingClientConfiguration lettucePoolingClientConfiguration = LettucePoolingClientConfiguration.builder()
+                .commandTimeout(Duration.ofSeconds(10))
+                .shutdownTimeout(Duration.ZERO)
+                .poolConfig(poolConfig)
+                .build();
+        LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory(redisConfig, lettucePoolingClientConfiguration);
+        lettuceConnectionFactory.setShareNativeConnection(false);
+        return lettuceConnectionFactory;
     }
 
     @Bean

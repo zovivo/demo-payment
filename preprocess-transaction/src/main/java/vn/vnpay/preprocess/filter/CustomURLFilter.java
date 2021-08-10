@@ -2,6 +2,7 @@ package vn.vnpay.preprocess.filter;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -25,6 +26,7 @@ public class CustomURLFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         String requestId = UUID.randomUUID().toString();
         servletRequest.setAttribute(REQUEST_ID, requestId);
+        ThreadContext.put("requestId",requestId);
         logRequest((HttpServletRequest) servletRequest, requestId);
         filterChain.doFilter(servletRequest, servletResponse);
     }

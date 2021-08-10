@@ -25,9 +25,6 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     private static final Logger logger = LogManager.getLogger(PaymentServiceImpl.class);
 
     @Autowired
-    private RabbitMQService rabbitMQService;
-
-    @Autowired
     private CustomRestTemplate customRestTemplate;
 
     @Autowired
@@ -41,6 +38,11 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
 
     protected void saveRedis(Payment payment) {
         paymentRepositoryRedis.insert(payment);
+    }
+
+    @Transactional
+    protected void saveDB(Payment payment) {
+        paymentRepository.insert(payment);
     }
 
     protected ResponseData sendToPartner() throws CustomException {
@@ -77,11 +79,12 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     }
 
     @Override
-    @Transactional
     public ResponseData executePayment(PaymentModel paymentModel) throws CustomException {
         Payment payment = PaymentModel.convertToEntity(paymentModel);
+        saveDB(payment);
         saveRedis(payment);
         ResponseData responseData = sendToPartner();
+        responseData.setData(payment);
         return responseData;
     }
 

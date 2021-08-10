@@ -94,7 +94,9 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     protected void sendRabbitMQ(Payment payment) {
+        logger.info("===== begin sendRabbitMQ =====");
         rabbitMQService.send(payment);
+        logger.info("===== end sendRabbitMQ =====");
     }
 
     @Override
