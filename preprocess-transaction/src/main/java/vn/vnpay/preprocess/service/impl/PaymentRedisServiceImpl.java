@@ -31,13 +31,8 @@ public class PaymentRedisServiceImpl implements PaymentRedisService {
     @Override
     public Payment getByTokenKey(String tokenKey) {
         logger.info("get Payment By tokenKey from Redis");
-        List<Payment> payments = hashOperations.values(Payment.class.getSimpleName());
-        if (payments.size() > 0)
-            return payments.stream().filter(payment -> payment.getTokenKey().equals(tokenKey))
-                    .sorted((Comparator.comparingLong(Payment::getId)).reversed())
-                    .collect(Collectors.toList()).get(0);
-        else
-            return null;
+        Payment payment = (Payment) redisTemplate.opsForValue().get(tokenKey);
+        return payment;
     }
 
 

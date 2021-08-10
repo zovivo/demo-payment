@@ -2,15 +2,15 @@ package vn.vnpay.preprocess.service;
 
 
 import vn.vnpay.preprocess.model.Payment;
+import vn.vnpay.preprocess.model.response.ResponseData;
 
 public interface RabbitMQService {
 
     /**
      * hàm gửi dữ liệu thanh toán vào queue
      * @param payment Payment
-     * @return void
-     * @throws
+     * @return ResponseData
      */
-    public void send(Payment payment);
+    public ResponseData send(Payment payment);
 
 }

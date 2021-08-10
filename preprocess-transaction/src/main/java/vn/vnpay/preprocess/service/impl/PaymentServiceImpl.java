@@ -31,6 +31,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     /**
      * hàm thực thi kiểm tra tokenKey trùng sau 0h
+     *
      * @param paymentDTO
      * @return void
      * @throws CustomException
@@ -51,6 +52,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     /**
      * hàm thực thi kiểm tra realAmount và debitAmount
+     *
      * @param paymentDTO
      * @return void
      * @throws CustomException
@@ -65,6 +67,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     /**
      * hàm thực thi kiểm tra promotionCode
+     *
      * @param paymentDTO
      * @return void
      * @throws CustomException
@@ -81,6 +84,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     /**
      * hàm thực thi kiểm tra dữ liệu thanh toán hợp lệ
+     *
      * @param paymentDTO
      * @return void
      * @throws CustomException
@@ -93,10 +97,17 @@ public class PaymentServiceImpl implements PaymentService {
         logger.info("===== end checkValidPayment =====");
     }
 
-    protected void sendRabbitMQ(Payment payment) {
+    /**
+     * hàm thực thi gửi dữ liệu thanh toán lên queue
+     *
+     * @param payment - {@link Payment}
+     * @return responseData - {@link ResponseData}
+     */
+    protected ResponseData sendRabbitMQ(Payment payment) {
         logger.info("===== begin sendRabbitMQ =====");
-        rabbitMQService.send(payment);
+        ResponseData responseData = rabbitMQService.send(payment);
         logger.info("===== end sendRabbitMQ =====");
+        return responseData;
     }
 
     @Override
@@ -104,8 +115,7 @@ public class PaymentServiceImpl implements PaymentService {
         logger.info("===== begin executePayment =====");
         checkValidPayment(paymentDTO);
         Payment payment = PaymentDTO.convertToEntity(paymentDTO);
-        sendRabbitMQ(payment);
-        ResponseData responseData = new ResponseData();
+        ResponseData responseData = sendRabbitMQ(payment);
         logger.info("===== end executePayment =====");
         return responseData;
     }

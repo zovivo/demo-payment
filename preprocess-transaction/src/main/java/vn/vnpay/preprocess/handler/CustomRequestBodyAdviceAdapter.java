@@ -1,11 +1,13 @@
 package vn.vnpay.preprocess.handler;
 
+import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
+import vn.vnpay.preprocess.model.dto.PaymentDTO;
 import vn.vnpay.preprocess.util.LoggingComponent;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +33,8 @@ public class CustomRequestBodyAdviceAdapter extends RequestBodyAdviceAdapter {
                                 MethodParameter parameter, Type targetType,
                                 Class<? extends HttpMessageConverter<?>> converterType) {
         loggingComponent.logRequest(httpServletRequest, body);
-
+        PaymentDTO paymentDTO = (PaymentDTO) body;
+        ThreadContext.put("tokenKey", paymentDTO.getTokenKey());
         return super.afterBodyRead(body, inputMessage, parameter, targetType, converterType);
     }
 }

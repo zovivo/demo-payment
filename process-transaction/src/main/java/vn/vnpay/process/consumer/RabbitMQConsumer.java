@@ -1,5 +1,6 @@
-package vn.vnpay.process.configuration;
+package vn.vnpay.process.consumer;
 
+import org.apache.logging.log4j.ThreadContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
@@ -11,6 +12,7 @@ import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
 import vn.vnpay.process.model.response.ResponseData;
 import vn.vnpay.process.service.PaymentService;
+import vn.vnpay.process.util.CommonUtils;
 
 /**
  * Project: demo-payment
@@ -31,10 +33,10 @@ public class RabbitMQConsumer {
 
     @RabbitListener(queues = "${spring.rabbitmq.queue}")
     public ResponseData receivedMessageAndReply(PaymentModel paymentModel, Message message) throws CustomException {
-        logger.info("Received Message From RabbitMQ: " + paymentModel);
-        paymentService.executePayment(paymentModel);
-        ResponseData responseData = new ResponseData();
-        responseData.setData(paymentModel);
+        logger.info("Received Message From RabbitMQ: " + message);
+        ThreadContext.put("tokenKey", paymentModel.getTokenKey());
+        ResponseData responseData = paymentService.executePayment(paymentModel);
+        logger.info("return response: " + CommonUtils.parseObjectToString(responseData));
         return responseData;
     }
 

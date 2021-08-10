@@ -8,6 +8,12 @@ import vn.vnpay.process.model.response.ResponseData;
 
 public interface PaymentService extends BaseService<Payment, Long> {
 
-    public ResponseData executePayment(PaymentModel paymentModel) throws CustomException;
+    /**
+     * hàm thực thi xử lý dữ liệu thanh toán
+     * @param payment {@link PaymentModel}
+     * @return responseData {@link ResponseData}
+     * @throws CustomException
+     */
+    public ResponseData executePayment(PaymentModel payment) throws CustomException;
 
 }

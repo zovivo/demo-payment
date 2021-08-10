@@ -3,6 +3,7 @@ package vn.vnpay.process.repository.impl;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 import vn.vnpay.process.entity.BaseEntity;
 import vn.vnpay.process.repository.BaseRepository;
 import vn.vnpay.process.util.QueryTemplate;

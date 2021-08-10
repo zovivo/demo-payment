@@ -36,7 +36,7 @@ public class PaymentRepositoryRedisImpl implements PaymentRepository {
 
     @Override
     public Payment insert(Payment payment) {
-        hashOperations.put(getEntityClass().getSimpleName(), payment.getId(), payment);
+        hashOperations.put(getEntityClass().getSimpleName(), payment.getTokenKey(), payment);
         logger.info("save payment to redis: {}", CommonUtils.parseObjectToString(payment));
         return payment;
     }

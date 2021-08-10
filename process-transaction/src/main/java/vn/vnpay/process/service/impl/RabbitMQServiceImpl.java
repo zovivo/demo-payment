@@ -7,11 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import vn.vnpay.process.model.PaymentModel;
-import vn.vnpay.process.service.RabbitMQService;
 import vn.vnpay.process.util.CommonUtils;
 
 @Service(value = "rabbitMQService")
-public class RabbitMQServiceImpl implements RabbitMQService {
+public class RabbitMQServiceImpl {
 
     private static final Logger logger = LogManager.getLogger(RabbitMQServiceImpl.class);
 

@@ -30,9 +30,12 @@ public class RabbitMQServiceImpl implements RabbitMQService {
     private String routingkey;
 
     @Override
-    public void send(Payment payment) {
-        Object response = rabbitTemplate.convertSendAndReceiveAsType(exchange, routingkey, payment, new ParameterizedTypeReference<ResponseData>(){});
+    public ResponseData send(Payment payment) {
         logger.info("send payment: {}", CommonUtils.parseObjectToString(payment));
+        ResponseData response = rabbitTemplate.convertSendAndReceiveAsType(exchange, routingkey, payment, new ParameterizedTypeReference<ResponseData>() {
+        });
+        logger.info("response: {}", CommonUtils.parseObjectToString(response));
+        return response;
     }
 
 }

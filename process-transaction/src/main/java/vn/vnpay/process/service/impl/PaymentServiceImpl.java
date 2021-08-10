@@ -14,7 +14,6 @@ import vn.vnpay.process.model.enu.ErrorCode;
 import vn.vnpay.process.model.response.ResponseData;
 import vn.vnpay.process.repository.PaymentRepository;
 import vn.vnpay.process.service.PaymentService;
-import vn.vnpay.process.service.RabbitMQService;
 import vn.vnpay.process.util.CommonUtils;
 import vn.vnpay.process.util.CustomRestTemplate;
 
@@ -37,15 +36,19 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
 
 
     protected void saveRedis(Payment payment) {
+        logger.info("===== begin saveRedis =====");
         paymentRepositoryRedis.insert(payment);
+        logger.info("===== end saveRedis =====");
     }
 
-    @Transactional
-    protected void saveDB(Payment payment) {
+    public void saveDB(Payment payment) {
+        logger.info("===== begin saveDB =====");
         paymentRepository.insert(payment);
+        logger.info("===== end saveDB =====");
     }
 
     protected ResponseData sendToPartner() throws CustomException {
+        logger.info("===== begin sendToPartner =====");
         String inputStr = "{\n" +
                 "\t\"tokenKey\": \"1601353776839FT19310RH6P1\",\n" +
                 "\t\"apiID\": \"restPayment\",\n" +
@@ -75,16 +78,20 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
         ResponseData responseData = new ResponseData();
         responseData.setCode(response.getStatusCode().value() + "");
         responseData.setMessage("Success");
+        logger.info("===== end sendToPartner =====");
         return responseData;
     }
 
     @Override
+    @Transactional
     public ResponseData executePayment(PaymentModel paymentModel) throws CustomException {
+        logger.info("===== begin executePayment =====");
         Payment payment = PaymentModel.convertToEntity(paymentModel);
         saveDB(payment);
         saveRedis(payment);
         ResponseData responseData = sendToPartner();
         responseData.setData(payment);
+        logger.info("===== end executePayment =====");
         return responseData;
     }
 
