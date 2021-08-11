@@ -33,10 +33,11 @@ public class CustomRestExceptionHandler {
         return responsePreProcessor.buildResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR, responseData, request);
     }
 
+
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<ResponseData> handleCustomException(CustomException ex, HttpServletRequest request) {
         ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", ex.getErrorCode().getDescription());
-        logger.info("Handler for CustomException: {}", ex);
+        logger.info("Handler for CustomException:", ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.BAD_REQUEST, responseData, request);
     }
 

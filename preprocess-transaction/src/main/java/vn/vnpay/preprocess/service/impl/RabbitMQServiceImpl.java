@@ -30,9 +30,6 @@ public class RabbitMQServiceImpl implements RabbitMQService {
     @Value("${spring.rabbitmq.routingkey}")
     private String routingkey;
 
-    @Value("${spring.rabbitmq.reply-queue}")
-    private String replyQueue;
-
     @Override
     public ResponseData send(Payment payment) {
         logger.info("send payment: {}", CommonUtils.parseObjectToString(payment));

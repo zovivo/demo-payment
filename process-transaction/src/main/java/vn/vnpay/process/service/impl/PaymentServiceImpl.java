@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import vn.vnpay.process.entity.Payment;
@@ -33,7 +34,6 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     @Autowired
     @Qualifier(value = "paymentRepositoryRedis")
     private PaymentRepository paymentRepositoryRedis;
-
 
     protected void saveRedis(Payment payment) {
         logger.info("===== begin saveRedis =====");

@@ -37,9 +37,6 @@ public class RabbitMQConfig {
     @Value("${spring.rabbitmq.queue}")
     private String queueName;
 
-    @Value("${spring.rabbitmq.reply-queue}")
-    private String replyQueue;
-
     @Value("${spring.rabbitmq.exchange}")
     private String exchange;
 
@@ -70,19 +67,13 @@ public class RabbitMQConfig {
         template.setExchange(exchange);
         template.setRoutingKey(routingKey);
         template.setMessageConverter(messageConverter);
-//        template.setReplyTimeout(10000);
-        template.setReceiveTimeout(10000);
+        template.setReplyTimeout(10000l);
         return template;
     }
 
     @Bean(name = "rabbitQueue")
     Queue queue() {
         return new Queue(queueName, false);
-    }
-
-    @Bean(name = "replyQueue")
-    Queue replyQueue() {
-        return new Queue(replyQueue, false);
     }
 
     @Bean(name = "rabbitExchange")

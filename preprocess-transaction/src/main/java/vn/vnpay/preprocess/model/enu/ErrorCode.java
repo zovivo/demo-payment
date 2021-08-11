@@ -15,6 +15,7 @@ public enum ErrorCode {
     EXCEEDS_DEBIT("amount after promotion exceeds debit"),
     PROMOTION_CODE_EMPTY("promotion code is null or blank"),
     SEND_PARTNER_FAIL("send to partner failed"),
+    REQUEST_TIME_OUT("request timeout to execute in queue"),
     ;
 
     private final String description;

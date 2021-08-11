@@ -103,9 +103,11 @@ public class PaymentServiceImpl implements PaymentService {
      * @param payment - {@link Payment}
      * @return responseData - {@link ResponseData}
      */
-    protected ResponseData sendRabbitMQ(Payment payment) {
+    protected ResponseData sendRabbitMQ(Payment payment) throws CustomException {
         logger.info("===== begin sendRabbitMQ =====");
         ResponseData responseData = rabbitMQService.send(payment);
+        if (responseData == null)
+            throw new CustomException(ErrorCode.REQUEST_TIME_OUT);
         logger.info("===== end sendRabbitMQ =====");
         return responseData;
     }

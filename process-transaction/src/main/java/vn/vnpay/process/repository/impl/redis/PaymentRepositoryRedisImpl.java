@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
 import vn.vnpay.process.entity.Payment;
 import vn.vnpay.process.repository.PaymentRepository;
@@ -39,6 +40,7 @@ public class PaymentRepositoryRedisImpl implements PaymentRepository {
     }
 
     @Override
+    @Async
     public Payment insert(Payment payment) {
         hashOperations.put(getHashName(), payment.getTokenKey(), CommonUtils.parseObjectToString(payment));
         logger.info("save payment of hash {} to redis : {}", getHashName(), CommonUtils.parseObjectToString(payment));
