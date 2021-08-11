@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import vn.vnpay.preprocess.model.Payment;
 import vn.vnpay.preprocess.service.PaymentRedisService;
+import vn.vnpay.preprocess.util.CommonUtils;
 
 import javax.annotation.PostConstruct;
 import java.util.Comparator;
@@ -28,10 +29,16 @@ public class PaymentRedisServiceImpl implements PaymentRedisService {
         hashOperations = redisTemplate.opsForHash();
     }
 
+    private String getHashName() {
+        return Payment.class.getSimpleName();
+    }
+
     @Override
     public Payment getByTokenKey(String tokenKey) {
         logger.info("get Payment By tokenKey from Redis");
-        Payment payment = (Payment) redisTemplate.opsForValue().get(tokenKey);
+        String paymentData = (String) hashOperations.get(getHashName(),tokenKey);
+        Payment payment = CommonUtils.parseStringToObject(paymentData,Payment.class);
+        logger.info("Payment By tokenKey from Redis: {}", CommonUtils.parseObjectToString(payment));
         return payment;
     }
 

@@ -8,6 +8,8 @@ import org.springframework.amqp.rabbit.connection.PooledChannelConnectionFactory
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,6 +36,9 @@ public class RabbitMQConfig {
 
     @Value("${spring.rabbitmq.queue}")
     private String queueName;
+
+    @Value("${spring.rabbitmq.reply-queue}")
+    private String replyQueue;
 
     @Value("${spring.rabbitmq.exchange}")
     private String exchange;
@@ -65,7 +70,7 @@ public class RabbitMQConfig {
         template.setExchange(exchange);
         template.setRoutingKey(routingKey);
         template.setMessageConverter(messageConverter);
-        template.setReplyTimeout(10000);
+//        template.setReplyTimeout(10000);
         template.setReceiveTimeout(10000);
         return template;
     }
@@ -75,13 +80,19 @@ public class RabbitMQConfig {
         return new Queue(queueName, false);
     }
 
+    @Bean(name = "replyQueue")
+    Queue replyQueue() {
+        return new Queue(replyQueue, false);
+    }
+
     @Bean(name = "rabbitExchange")
     DirectExchange exchange() {
         return new DirectExchange(exchange);
     }
 
     @Bean
-    Binding binding(Queue queue, DirectExchange exchange) {
+    @Autowired
+    Binding binding(@Qualifier(value = "rabbitQueue") Queue queue, DirectExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(routingKey);
     }
 

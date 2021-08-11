@@ -34,43 +34,47 @@ public class PaymentRepositoryRedisImpl implements PaymentRepository {
         return Payment.class;
     }
 
+    private String getHashName() {
+        return getEntityClass().getSimpleName();
+    }
+
     @Override
     public Payment insert(Payment payment) {
-        hashOperations.put(getEntityClass().getSimpleName(), payment.getTokenKey(), payment);
-        logger.info("save payment to redis: {}", CommonUtils.parseObjectToString(payment));
+        hashOperations.put(getHashName(), payment.getTokenKey(), CommonUtils.parseObjectToString(payment));
+        logger.info("save payment of hash {} to redis : {}", getHashName(), CommonUtils.parseObjectToString(payment));
         return payment;
     }
 
     @Override
     public Payment find(Long id) {
-        return (Payment) hashOperations.get(getEntityClass().getSimpleName(), id);
+        return (Payment) hashOperations.get(getHashName(), id);
     }
 
     @Override
     public List<Payment> findAll() {
-        return hashOperations.values(getEntityClass().getSimpleName());
+        return hashOperations.values(getHashName());
     }
 
     @Override
     public long countAll() {
-        return hashOperations.values(getEntityClass().getSimpleName()).size();
+        return hashOperations.values(getHashName()).size();
     }
 
     @Override
     public Payment update(Payment payment) {
-        hashOperations.put(getEntityClass().getSimpleName(), payment.getId(), payment);
+        hashOperations.put(getHashName(), payment.getId(), CommonUtils.parseObjectToString(payment));
         return payment;
     }
 
     @Override
     public int delete(Long id) {
-        hashOperations.delete(getEntityClass().getSimpleName(), id);
+        hashOperations.delete(getHashName(), id);
         return 0;
     }
 
     @Override
     public Payment getByTokenKey(String tokenKey) {
-        List<Payment> payments = hashOperations.values(getEntityClass().getSimpleName());
+        List<Payment> payments = hashOperations.values(getHashName());
         if (payments.size() > 0)
             return payments.stream().filter(payment -> payment.getTokenKey().equals(tokenKey))
                     .sorted((Comparator.comparingLong(Payment::getId)).reversed())

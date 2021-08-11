@@ -2,7 +2,8 @@ package vn.vnpay.preprocess.service.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.core.MessagePostProcessor;
+import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,6 +29,9 @@ public class RabbitMQServiceImpl implements RabbitMQService {
 
     @Value("${spring.rabbitmq.routingkey}")
     private String routingkey;
+
+    @Value("${spring.rabbitmq.reply-queue}")
+    private String replyQueue;
 
     @Override
     public ResponseData send(Payment payment) {

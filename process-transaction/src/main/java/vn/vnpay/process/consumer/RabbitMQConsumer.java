@@ -7,6 +7,7 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
@@ -32,6 +33,7 @@ public class RabbitMQConsumer {
     private PaymentService paymentService;
 
     @RabbitListener(queues = "${spring.rabbitmq.queue}")
+    @SendTo(value = "")
     public ResponseData receivedMessageAndReply(PaymentModel paymentModel, Message message) throws CustomException {
         logger.info("Received Message From RabbitMQ: " + message);
         ThreadContext.put("tokenKey", paymentModel.getTokenKey());
