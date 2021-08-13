@@ -40,7 +40,7 @@ public class PaymentRepositoryRedisImpl implements PaymentRepository {
     }
 
     @Override
-    @Async
+//    @Async
     public Payment insert(Payment payment) {
         hashOperations.put(getHashName(), payment.getTokenKey(), CommonUtils.parseObjectToString(payment));
         logger.info("save payment of hash {} to redis : {}", getHashName(), CommonUtils.parseObjectToString(payment));

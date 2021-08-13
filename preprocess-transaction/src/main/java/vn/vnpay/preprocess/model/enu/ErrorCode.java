@@ -16,6 +16,8 @@ public enum ErrorCode {
     PROMOTION_CODE_EMPTY("promotion code is null or blank"),
     SEND_PARTNER_FAIL("send to partner failed"),
     REQUEST_TIME_OUT("request timeout to execute in queue"),
+    CHECKSUM_NOT_MATCH("checkSum not match"),
+    BANK_CODE_INVALID("bank code not exist"),
     ;
 
     private final String description;

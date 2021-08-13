@@ -36,19 +36,19 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     private PaymentRepository paymentRepositoryRedis;
 
     protected void saveRedis(Payment payment) {
-        logger.info("===== begin saveRedis =====");
+        logger.info("begin saveRedis ");
         paymentRepositoryRedis.insert(payment);
-        logger.info("===== end saveRedis =====");
+        logger.info("end saveRedis ");
     }
 
     public void saveDB(Payment payment) {
-        logger.info("===== begin saveDB =====");
+        logger.info("begin saveDB ");
         paymentRepository.insert(payment);
-        logger.info("===== end saveDB =====");
+        logger.info("end saveDB ");
     }
 
     protected ResponseData sendToPartner() throws CustomException {
-        logger.info("===== begin sendToPartner =====");
+        logger.info("begin sendToPartner ");
         String inputStr = "{\n" +
                 "\t\"tokenKey\": \"1601353776839FT19310RH6P1\",\n" +
                 "\t\"apiID\": \"restPayment\",\n" +
@@ -78,20 +78,20 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
         ResponseData responseData = new ResponseData();
         responseData.setCode(response.getStatusCode().value() + "");
         responseData.setMessage("Success");
-        logger.info("===== end sendToPartner =====");
+        logger.info("end sendToPartner ");
         return responseData;
     }
 
     @Override
     @Transactional
     public ResponseData executePayment(PaymentModel paymentModel) throws CustomException {
-        logger.info("===== begin executePayment =====");
+        logger.info("begin executePayment ");
         Payment payment = PaymentModel.convertToEntity(paymentModel);
         saveDB(payment);
         saveRedis(payment);
         ResponseData responseData = sendToPartner();
         responseData.setData(payment);
-        logger.info("===== end executePayment =====");
+        logger.info("end executePayment ");
         return responseData;
     }
 

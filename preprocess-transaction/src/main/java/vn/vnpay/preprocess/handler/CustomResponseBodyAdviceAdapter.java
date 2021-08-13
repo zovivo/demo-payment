@@ -1,5 +1,6 @@
 package vn.vnpay.preprocess.handler;
 
+import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -37,6 +38,7 @@ public class CustomResponseBodyAdviceAdapter implements ResponseBodyAdvice<Objec
             loggingComponent.logResponse(
                     ((ServletServerHttpRequest) serverHttpRequest).getServletRequest(),
                     ((ServletServerHttpResponse) serverHttpResponse).getServletResponse(), o);
+            ThreadContext.clearMap();
         }
 
         return o;

@@ -7,7 +7,7 @@ Bước 2: Đẩy dữ liệu lên queue
 
 Bước 3: Viết Project consumer data , insert data vào database
 
-Bước 4: Sau khi insert db thành công , đẩy thông tin vào api sau 
+Bước 4: Sau khi insert db thành công , đẩy thông tin vào api sau
 
 https://api.foodbook.vn/ipos/ws/xpartner/callback/vnpay
 

@@ -1,0 +1,478 @@
+2021-08-13 10:53:20.683 logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Starting PreprocessTransactionApplication using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 13924 (C:\Users\dell\my-workspace\demo-payment\preprocess-transaction\target\classes started by dell in C:\Users\dell\my-workspace\demo-payment)
+2021-08-13 10:53:20.699 logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-13 10:53:20.699 logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : No active profile set, falling back to default profiles: default
+2021-08-13 10:53:26.193 logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Started PreprocessTransactionApplication in 6.776 seconds (JVM running for 12.633)
+2021-08-13 10:53:37.168 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 2f6400cd-e0dc-428b-af67-4ca9f6ce4f6c
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.3
+---accept : */*
+---postman-token : 60454c01-ce0f-42ee-92d1-9dfb7329fb28
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-13 10:53:37.592 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 2f6400cd-e0dc-428b-af67-4ca9f6ce4f6c
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-13 10:53:37.807 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-13 10:53:37.808 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-13 10:53:37.809 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-13 10:53:37.812 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-13 10:53:37.813 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-13 10:53:37.815 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-13 10:53:40.415 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: null
+2021-08-13 10:53:40.416 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-13 10:53:40.417 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-13 10:53:40.417 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-13 10:53:40.417 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-13 10:53:40.420 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-13 10:53:40.422 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-13 10:53:40.459 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-13 10:53:40.459 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-13 10:53:41.381 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-13 10:53:41.388 send                           --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-13 10:53:52.512 send                           --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: null
+2021-08-13 10:53:52.873 handleCustomException          --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: request timeout to execute in queue
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.sendRabbitMQ(PaymentServiceImpl.java:117) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:180) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_261]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_261]
+2021-08-13 10:54:10.491 logResponse                    --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 2f6400cd-e0dc-428b-af67-4ca9f6ce4f6c
+[BODY RESPONSE]: 
+
+{"code":"400","message":"request timeout to execute in queue","responseId":"2f6400cd-e0dc-428b-af67-4ca9f6ce4f6c"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-13 10:54:32.300 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: afa19437-fd06-4a42-a85b-5190822c4272
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.3
+---accept : */*
+---postman-token : 118e1cfa-4ac4-4362-9808-6e10c729b467
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-13 10:54:32.306 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: afa19437-fd06-4a42-a85b-5190822c4272
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-13 10:54:32.307 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-13 10:54:32.307 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-13 10:54:32.307 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-13 10:54:32.308 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-13 10:54:32.308 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-13 10:54:32.308 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-13 10:54:32.327 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: {"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","id":1,"createdAt":"Aug 13, 2021 10:53:44 AM"}
+2021-08-13 10:54:32.328 handleCustomException          --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: same day token key
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkDuplicateToken(PaymentServiceImpl.java:52) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkValidPayment(PaymentServiceImpl.java:100) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:178) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_261]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_261]
+2021-08-13 10:54:32.333 logResponse                    --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: afa19437-fd06-4a42-a85b-5190822c4272
+[BODY RESPONSE]: 
+
+{"code":"400","message":"same day token key","responseId":"afa19437-fd06-4a42-a85b-5190822c4272"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-13 11:01:50.842 logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Starting PreprocessTransactionApplication using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 3992 (C:\Users\dell\my-workspace\demo-payment\preprocess-transaction\target\classes started by dell in C:\Users\dell\my-workspace\demo-payment)
+2021-08-13 11:01:50.864 logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-13 11:01:50.867 logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : No active profile set, falling back to default profiles: default
+2021-08-13 11:01:55.833 logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Started PreprocessTransactionApplication in 6.059 seconds (JVM running for 13.249)
+2021-08-13 11:03:46.537 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: f6951449-592f-4dcc-9f38-dd220a1262f9
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.3
+---accept : */*
+---postman-token : c6a31103-aceb-49c1-b301-c55b77f4ef37
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-13 11:03:46.765 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: f6951449-592f-4dcc-9f38-dd220a1262f9
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-13 11:03:47.310 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-13 11:03:47.312 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-13 11:03:47.315 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-13 11:03:47.317 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-13 11:03:47.318 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-13 11:03:47.319 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-13 11:03:49.168 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: null
+2021-08-13 11:03:49.168 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-13 11:03:49.168 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-13 11:03:49.169 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-13 11:03:49.170 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-13 11:03:49.170 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-13 11:03:49.170 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-13 11:03:49.187 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-13 11:03:49.187 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-13 11:03:49.998 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-13 11:03:50.001 send                           --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-13 11:03:54.129 send                           --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"Success","data":{"id":1,"createdAt":1628827431348,"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+2021-08-13 11:03:54.129 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-13 11:03:54.129 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-13 11:03:54.181 logResponse                    --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: f6951449-592f-4dcc-9f38-dd220a1262f9
+[BODY RESPONSE]: 
+
+{"code":"200","message":"Success","responseId":"f6951449-592f-4dcc-9f38-dd220a1262f9","data":{"id":1,"createdAt":1628827431348,"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-13 11:17:25.529 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 47e3ad2f-440c-4323-861c-ce467fcabef0
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.3
+---accept : */*
+---postman-token : e7891801-e515-4a2c-92d3-79574a5af654
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 550
+LOGGING REQUEST-----------------------------------
+
+2021-08-13 11:17:25.708 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 47e3ad2f-440c-4323-861c-ce467fcabef0
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-13 11:17:25.754 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-13 11:17:25.755 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-13 11:17:25.756 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-13 11:17:25.761 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-13 11:17:25.761 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-13 11:17:25.762 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-13 11:17:25.978 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: {"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","id":1,"createdAt":"Aug 13, 2021 11:03:51 AM"}
+2021-08-13 11:17:26.030 handleCustomException          --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: same day token key
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkDuplicateToken(PaymentServiceImpl.java:52) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkValidPayment(PaymentServiceImpl.java:100) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:178) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_261]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_261]
+2021-08-13 11:17:26.104 logResponse                    --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 47e3ad2f-440c-4323-861c-ce467fcabef0
+[BODY RESPONSE]: 
+
+{"code":"400","message":"same day token key","responseId":"47e3ad2f-440c-4323-861c-ce467fcabef0"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-13 11:17:44.111 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 016bf0cb-9625-4924-86f2-6519e3d193d1
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.3
+---accept : */*
+---postman-token : 319d9dea-7592-425e-b4aa-da3a7761d808
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-13 11:17:44.117 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 016bf0cb-9625-4924-86f2-6519e3d193d1
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-13 11:17:44.119 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-13 11:17:44.120 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-13 11:17:44.120 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-13 11:17:44.120 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-13 11:17:44.120 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-13 11:17:44.121 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-13 11:17:44.137 getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: {"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","id":1,"createdAt":"Aug 13, 2021 11:03:51 AM"}
+2021-08-13 11:17:44.137 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-13 11:17:44.138 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-13 11:17:44.138 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-13 11:17:44.138 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-13 11:17:44.138 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-13 11:17:44.139 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-13 11:17:44.142 handleCustomException          --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: checkSum not match
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkMatchCheckSum(PaymentServiceImpl.java:154) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkValidPayment(PaymentServiceImpl.java:103) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:178) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_261]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_261]
+2021-08-13 11:17:44.148 logResponse                    --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 016bf0cb-9625-4924-86f2-6519e3d193d1
+[BODY RESPONSE]: 
+
+{"code":"400","message":"checkSum not match","responseId":"016bf0cb-9625-4924-86f2-6519e3d193d1"}
+
+LOGGING RESPONSE-----------------------------------
+

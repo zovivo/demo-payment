@@ -3,7 +3,9 @@ package vn.vnpay.preprocess.filter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import vn.vnpay.preprocess.configuration.PartnerComponent;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

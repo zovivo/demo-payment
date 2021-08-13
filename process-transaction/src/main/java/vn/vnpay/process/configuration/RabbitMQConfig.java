@@ -83,19 +83,4 @@ public class RabbitMQConfig {
         return new Jackson2JsonMessageConverter();
     }
 
-//    @Bean
-//    public MessageListener messageListener() {
-//
-//        return message -> logger.info("queue received: " + message);
-//    }
-//
-//    @Bean
-//    public SimpleMessageListenerContainer messageListenerContainer() throws Exception {
-//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-//        container.setConnectionFactory(pooledChannelConnectionFactory());
-//        container.setQueueNames(queueName);
-//        container.setMessageListener(messageListener());
-//        return container;
-//    }
-
 }

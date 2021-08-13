@@ -1,10 +1,12 @@
 package vn.vnpay.preprocess.util;
 
+import com.google.common.hash.Hashing;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -59,5 +61,12 @@ public class CommonUtils {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public static String hashData(String dataInput) {
+        String sha256hex = Hashing.sha256()
+                .hashString(dataInput, StandardCharsets.UTF_8)
+                .toString();
+        return sha256hex;
     }
 }
