@@ -13,6 +13,7 @@ import vn.vnpay.preprocess.util.CommonUtils;
 import javax.annotation.PostConstruct;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.stream.Collectors;
 
 @Service(value = "paymentRedisService")
@@ -24,15 +25,6 @@ public class PaymentRedisServiceImpl implements PaymentRedisService {
     private RedisTemplate redisTemplate;
     private HashOperations hashOperations;
 
-    @PostConstruct
-    private void init() {
-        hashOperations = redisTemplate.opsForHash();
-    }
-
-    private String getHashName() {
-        return Payment.class.getSimpleName();
-    }
-
     @Override
     public Payment getByTokenKey(String tokenKey) {
         logger.info("get Payment By tokenKey from Redis");
@@ -40,6 +32,15 @@ public class PaymentRedisServiceImpl implements PaymentRedisService {
         Payment payment = CommonUtils.parseStringToObject(paymentData,Payment.class);
         logger.info("Payment By tokenKey from Redis: {}", CommonUtils.parseObjectToString(payment));
         return payment;
+    }
+
+    @PostConstruct
+    private void init() {
+        hashOperations = redisTemplate.opsForHash();
+    }
+
+    private String getHashName() {
+        return Payment.class.getSimpleName();
     }
 
 

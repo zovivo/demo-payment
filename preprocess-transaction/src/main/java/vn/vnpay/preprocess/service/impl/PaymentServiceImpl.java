@@ -34,6 +34,33 @@ public class PaymentServiceImpl implements PaymentService {
     @Autowired
     private PartnerComponent partnerComponent;
 
+    @Override
+    public ResponseData executePayment(PaymentDTO paymentDTO) throws CustomException {
+        logger.info("begin executePayment");
+        checkValidPayment(paymentDTO);
+        Payment payment = PaymentDTO.convertToEntity(paymentDTO);
+        ResponseData responseData = sendRabbitMQ(payment);
+        logger.info("end executePayment");
+        return responseData;
+    }
+
+    /**
+     * hàm thực thi kiểm tra dữ liệu thanh toán hợp lệ
+     *
+     * @param paymentDTO
+     * @return void
+     * @throws CustomException
+     */
+    protected void checkValidPayment(PaymentDTO paymentDTO) throws CustomException {
+        logger.info("begin checkValidPayment");
+        checkBankCode(paymentDTO);
+        checkDuplicateToken(paymentDTO);
+        checkRealAmount(paymentDTO);
+        checkPromotionCode(paymentDTO);
+        checkMatchCheckSum(paymentDTO);
+        logger.info("end checkValidPayment");
+    }
+
     /**
      * hàm thực thi kiểm tra tokenKey trùng sau 0h
      *
@@ -53,6 +80,21 @@ public class PaymentServiceImpl implements PaymentService {
         }
         logger.info("end checkDuplicateToken");
         return;
+    }
+
+    /**
+     * hàm thực thi gửi dữ liệu thanh toán lên queue
+     *
+     * @param payment - {@link Payment}
+     * @return responseData - {@link ResponseData}
+     */
+    protected ResponseData sendRabbitMQ(Payment payment) throws CustomException {
+        logger.info("begin sendRabbitMQ");
+        ResponseData responseData = rabbitMQService.send(payment);
+        if (responseData == null)
+            throw new CustomException(ErrorCode.REQUEST_TIME_OUT);
+        logger.info("end sendRabbitMQ");
+        return responseData;
     }
 
     /**
@@ -85,38 +127,6 @@ public class PaymentServiceImpl implements PaymentService {
         }
         logger.info("end checkPromotionCode");
         return;
-    }
-
-    /**
-     * hàm thực thi kiểm tra dữ liệu thanh toán hợp lệ
-     *
-     * @param paymentDTO
-     * @return void
-     * @throws CustomException
-     */
-    protected void checkValidPayment(PaymentDTO paymentDTO) throws CustomException {
-        logger.info("begin checkValidPayment");
-        checkBankCode(paymentDTO);
-        checkDuplicateToken(paymentDTO);
-        checkRealAmount(paymentDTO);
-        checkPromotionCode(paymentDTO);
-        checkMatchCheckSum(paymentDTO);
-        logger.info("end checkValidPayment");
-    }
-
-    /**
-     * hàm thực thi gửi dữ liệu thanh toán lên queue
-     *
-     * @param payment - {@link Payment}
-     * @return responseData - {@link ResponseData}
-     */
-    protected ResponseData sendRabbitMQ(Payment payment) throws CustomException {
-        logger.info("begin sendRabbitMQ");
-        ResponseData responseData = rabbitMQService.send(payment);
-        if (responseData == null)
-            throw new CustomException(ErrorCode.REQUEST_TIME_OUT);
-        logger.info("end sendRabbitMQ");
-        return responseData;
     }
 
     /**
@@ -170,16 +180,6 @@ public class PaymentServiceImpl implements PaymentService {
         ThreadContext.put("bankCode", payment.getBankCode());
         logger.info("end checkBankCode");
         return;
-    }
-
-    @Override
-    public ResponseData executePayment(PaymentDTO paymentDTO) throws CustomException {
-        logger.info("begin executePayment");
-        checkValidPayment(paymentDTO);
-        Payment payment = PaymentDTO.convertToEntity(paymentDTO);
-        ResponseData responseData = sendRabbitMQ(payment);
-        logger.info("end executePayment");
-        return responseData;
     }
 
 }

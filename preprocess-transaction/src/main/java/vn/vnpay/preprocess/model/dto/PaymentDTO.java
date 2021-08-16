@@ -38,6 +38,7 @@ public class PaymentDTO {
     @NullOrBlank(message = "orderCode cannot be blank or null")
     private String orderCode;
     private String userName;
+    @NullOrBlank(message = "realAmount cannot be blank or null")
     private String realAmount;
     private String promotionCode;
     private String addValue;

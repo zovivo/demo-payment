@@ -9,6 +9,10 @@ import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -22,6 +26,17 @@ public class CommonUtils {
     public static Timestamp getCurrentTime() {
         Timestamp currentTime = new Timestamp(System.currentTimeMillis());
         return currentTime;
+    }
+
+    public static Date getCurrentDateTime() {
+        Date currentTime = new Date(System.currentTimeMillis());
+        return currentTime;
+    }
+
+    public static Date getEndDateTime() {
+        LocalDateTime localDate = LocalTime.MAX.atDate(LocalDate.now());
+        Date endDayTime = Date.from(localDate.atZone(ZoneId.systemDefault()).toInstant());
+        return endDayTime;
     }
 
     public static String parseObjectToString(Object object) {

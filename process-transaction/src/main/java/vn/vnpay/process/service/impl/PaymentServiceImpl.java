@@ -35,16 +35,29 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     @Qualifier(value = "paymentRepositoryRedis")
     private PaymentRepository paymentRepositoryRedis;
 
-    protected void saveRedis(Payment payment) {
-        logger.info("begin saveRedis ");
-        paymentRepositoryRedis.insert(payment);
-        logger.info("end saveRedis ");
+    @Override
+    @Transactional
+    public ResponseData executePayment(PaymentModel paymentModel) throws CustomException {
+        logger.info("begin executePayment ");
+        Payment payment = PaymentModel.convertToEntity(paymentModel);
+        saveDB(payment);
+        saveRedis(payment);
+        ResponseData responseData = sendToPartner();
+        responseData.setData(payment);
+        logger.info("end executePayment ");
+        return responseData;
     }
 
     public void saveDB(Payment payment) {
         logger.info("begin saveDB ");
         paymentRepository.insert(payment);
         logger.info("end saveDB ");
+    }
+
+    protected void saveRedis(Payment payment) {
+        logger.info("begin saveRedis ");
+        paymentRepositoryRedis.insert(payment);
+        logger.info("end saveRedis ");
     }
 
     protected ResponseData sendToPartner() throws CustomException {
@@ -79,19 +92,6 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
         responseData.setCode(response.getStatusCode().value() + "");
         responseData.setMessage("Success");
         logger.info("end sendToPartner ");
-        return responseData;
-    }
-
-    @Override
-    @Transactional
-    public ResponseData executePayment(PaymentModel paymentModel) throws CustomException {
-        logger.info("begin executePayment ");
-        Payment payment = PaymentModel.convertToEntity(paymentModel);
-        saveDB(payment);
-        saveRedis(payment);
-        ResponseData responseData = sendToPartner();
-        responseData.setData(payment);
-        logger.info("end executePayment ");
         return responseData;
     }
 

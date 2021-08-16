@@ -2,6 +2,9 @@ package vn.vnpay.preprocess.service.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,11 +31,18 @@ public class RabbitMQServiceImpl implements RabbitMQService {
     @Value("${spring.rabbitmq.routingkey}")
     private String routingkey;
 
+    @Value("${spring.rabbitmq.reply-queue}")
+    private String replyQueue;
+
     @Override
     public ResponseData send(Payment payment) {
         logger.info("send to exchange: {} routingKey: {} payment: {}", exchange, routingkey, CommonUtils.parseObjectToString(payment));
-        ResponseData response = rabbitTemplate.convertSendAndReceiveAsType(exchange, routingkey, payment, new ParameterizedTypeReference<ResponseData>() {
-        });
+        ResponseData response = rabbitTemplate.convertSendAndReceiveAsType(exchange, routingkey, payment, message -> {
+                    message.getMessageProperties().setReplyTo(replyQueue);
+                    return message;
+                }, new ParameterizedTypeReference<ResponseData>() {
+                }
+        );
         logger.info("response: {}", CommonUtils.parseObjectToString(response));
         return response;
     }

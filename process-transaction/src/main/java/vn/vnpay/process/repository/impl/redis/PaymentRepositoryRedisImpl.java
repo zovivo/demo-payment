@@ -43,7 +43,8 @@ public class PaymentRepositoryRedisImpl implements PaymentRepository {
 //    @Async
     public Payment insert(Payment payment) {
         hashOperations.put(getHashName(), payment.getTokenKey(), CommonUtils.parseObjectToString(payment));
-        logger.info("save payment of hash {} to redis : {}", getHashName(), CommonUtils.parseObjectToString(payment));
+        redisTemplate.expireAt(getHashName(),CommonUtils.getEndDateTime());
+        logger.info("save payment of hash {} to redis : {} expireTime: {}", getHashName(), CommonUtils.parseObjectToString(payment),CommonUtils.getEndDateTime());
         return payment;
     }
 

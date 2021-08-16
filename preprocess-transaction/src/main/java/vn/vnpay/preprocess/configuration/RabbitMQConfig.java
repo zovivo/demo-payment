@@ -37,6 +37,9 @@ public class RabbitMQConfig {
     @Value("${spring.rabbitmq.queue}")
     private String queueName;
 
+    @Value("${spring.rabbitmq.reply-queue}")
+    private String replyQueueName;
+
     @Value("${spring.rabbitmq.exchange}")
     private String exchange;
 
@@ -74,6 +77,11 @@ public class RabbitMQConfig {
     @Bean(name = "rabbitQueue")
     Queue queue() {
         return new Queue(queueName, false);
+    }
+
+    @Bean(name = "replyQueue")
+    Queue replyQueue() {
+        return new Queue(replyQueueName, true);
     }
 
     @Bean(name = "rabbitExchange")
