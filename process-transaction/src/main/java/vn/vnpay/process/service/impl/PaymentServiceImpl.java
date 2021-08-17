@@ -48,7 +48,7 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
         return responseData;
     }
 
-    public void saveDB(Payment payment) {
+    protected void saveDB(Payment payment) {
         logger.info("begin saveDB ");
         paymentRepository.insert(payment);
         logger.info("end saveDB ");
@@ -62,7 +62,7 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
 
     protected ResponseData sendToPartner() throws CustomException {
         logger.info("begin sendToPartner ");
-        String inputStr = "{\n" +
+        String inputData = "{\n" +
                 "\t\"tokenKey\": \"1601353776839FT19310RH6P1\",\n" +
                 "\t\"apiID\": \"restPayment\",\n" +
                 "\t\"mobile\": \"0145225630\",\n" +
@@ -83,8 +83,8 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
                 "\t\"queueNameResponse\": \"queue.payment.qrcodeV2.restPayment\",\n" +
                 "\t\"addValue\": \"{\\\"payMethod\\\":\\\"01\\\",\\\"payMethodMMS\\\":1}\"\n" +
                 "}\n";
-        Object input = CommonUtils.parseStringToObject(inputStr, Object.class);
-        ResponseEntity<Object> response = customRestTemplate.postForObject(input);
+        Object inputForPartner = CommonUtils.parseStringToObject(inputData, Object.class);
+        ResponseEntity<Object> response = customRestTemplate.postForObject(inputForPartner);
         logger.info("response: {}", response);
         if (!response.getStatusCode().is2xxSuccessful())
             throw new CustomException(ErrorCode.SEND_PARTNER_FAIL);
