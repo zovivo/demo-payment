@@ -9,7 +9,7 @@ import vn.vnpay.preprocess.configuration.PartnerComponent;
 import vn.vnpay.preprocess.exception.CustomException;
 import vn.vnpay.preprocess.model.Payment;
 import vn.vnpay.preprocess.model.dto.PaymentDTO;
-import vn.vnpay.preprocess.model.enu.ErrorCode;
+import vn.vnpay.preprocess.model.enu.CustomCode;
 import vn.vnpay.preprocess.model.response.ResponseData;
 import vn.vnpay.preprocess.service.PaymentRedisService;
 import vn.vnpay.preprocess.service.PaymentService;
@@ -76,7 +76,7 @@ public class PaymentServiceImpl implements PaymentService {
             Date lastPayDate = CommonUtils.parseStringToDate(payment.getPayDate().substring(0, 8), dateFormat);
             Date newPayDate = CommonUtils.parseStringToDate(paymentDTO.getPayDate().substring(0, 8), dateFormat);
             if (lastPayDate.getTime() == newPayDate.getTime())
-                throw new CustomException(ErrorCode.DUPLICATE_TOKEN_KEY);
+                throw new CustomException(CustomCode.DUPLICATE_TOKEN_KEY);
         }
         logger.info("end checkDuplicateToken");
         return;
@@ -92,7 +92,7 @@ public class PaymentServiceImpl implements PaymentService {
         logger.info("begin sendRabbitMQ");
         ResponseData responseData = rabbitMQService.send(payment);
         if (responseData == null)
-            throw new CustomException(ErrorCode.REQUEST_TIME_OUT);
+            throw new CustomException(CustomCode.REQUEST_TIME_OUT);
         logger.info("end sendRabbitMQ");
         return responseData;
     }
@@ -107,7 +107,7 @@ public class PaymentServiceImpl implements PaymentService {
     protected void checkRealAmount(PaymentDTO paymentDTO) throws CustomException {
         logger.info("begin checkRealAmount");
         if (Long.parseLong(paymentDTO.getRealAmount()) > paymentDTO.getDebitAmount())
-            throw new CustomException(ErrorCode.EXCEEDS_DEBIT);
+            throw new CustomException(CustomCode.EXCEEDS_DEBIT);
         logger.info("end checkRealAmount");
         return;
     }
@@ -123,7 +123,7 @@ public class PaymentServiceImpl implements PaymentService {
         logger.info("begin checkPromotionCode");
         if (Long.parseLong(paymentDTO.getRealAmount()) != paymentDTO.getDebitAmount()) {
             if (paymentDTO.getPromotionCode() == null || paymentDTO.getPromotionCode().trim().isEmpty())
-                throw new CustomException(ErrorCode.PROMOTION_CODE_EMPTY);
+                throw new CustomException(CustomCode.PROMOTION_CODE_EMPTY);
         }
         logger.info("end checkPromotionCode");
         return;
@@ -161,7 +161,7 @@ public class PaymentServiceImpl implements PaymentService {
         logger.info("begin checkMatchCheckSum");
         String checkSum = hashPayment(payment);
         if (!checkSum.equals(payment.getCheckSum()))
-            throw new CustomException(ErrorCode.CHECKSUM_NOT_MATCH);
+            throw new CustomException(CustomCode.CHECKSUM_NOT_MATCH);
         logger.info("end checkMatchCheckSum");
         return;
     }
@@ -176,7 +176,7 @@ public class PaymentServiceImpl implements PaymentService {
     protected void checkBankCode(PaymentDTO payment) throws CustomException {
         logger.info("begin checkBankCode");
         if (partnerComponent.getPartnerByCode(payment.getBankCode()) == null)
-            throw new CustomException(ErrorCode.BANK_CODE_INVALID);
+            throw new CustomException(CustomCode.BANK_CODE_INVALID);
         ThreadContext.put("bankCode", payment.getBankCode());
         logger.info("end checkBankCode");
         return;

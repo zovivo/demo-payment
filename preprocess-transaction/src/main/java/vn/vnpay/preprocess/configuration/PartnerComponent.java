@@ -5,7 +5,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import vn.vnpay.preprocess.util.Partner;
 
-import java.nio.file.Path;
 import java.util.List;
 
 

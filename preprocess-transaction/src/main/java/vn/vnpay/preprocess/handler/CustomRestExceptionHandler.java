@@ -2,8 +2,6 @@ package vn.vnpay.preprocess.handler;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.amqp.AmqpRejectAndDontRequeueException;
-import org.springframework.amqp.rabbit.support.ListenerExecutionFailedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +9,6 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.context.request.WebRequest;
 import vn.vnpay.preprocess.exception.CustomException;
 import vn.vnpay.preprocess.model.response.ResponseData;
 import vn.vnpay.preprocess.util.ResponsePreProcessor;
@@ -38,7 +35,7 @@ public class CustomRestExceptionHandler {
 
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<ResponseData> handleCustomException(CustomException ex, HttpServletRequest request) {
-        ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", ex.getErrorCode().getDescription());
+        ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", ex.getCustomCode().getDescription());
         logger.info("Handler for CustomException: ", ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.BAD_REQUEST, responseData, request);
     }
