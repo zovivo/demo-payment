@@ -1,4 +1,4 @@
-package vn.vnpay.process.model.enu;
+package vn.vnpay.process.enu;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

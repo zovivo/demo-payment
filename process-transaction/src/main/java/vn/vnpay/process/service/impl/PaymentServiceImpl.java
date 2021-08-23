@@ -5,19 +5,17 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import vn.vnpay.process.entity.Payment;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
-import vn.vnpay.process.model.enu.ErrorCode;
-import vn.vnpay.process.model.response.ResponseData;
+import vn.vnpay.process.enu.ErrorCode;
+import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.repository.PaymentRepository;
 import vn.vnpay.process.service.PaymentService;
 import vn.vnpay.process.util.CommonUtils;
 import vn.vnpay.process.util.CustomRestTemplate;
-
 
 @Service(value = "paymentService")
 public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payment, Long> implements PaymentService {

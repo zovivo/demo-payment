@@ -1,13 +1,12 @@
-package vn.vnpay.preprocess.model.dto;
+package vn.vnpay.preprocess.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.PropertyMap;
 import org.springframework.format.annotation.DateTimeFormat;
 import vn.vnpay.preprocess.model.Payment;
+import vn.vnpay.preprocess.util.CommonUtils;
 import vn.vnpay.preprocess.validator.DateFormat;
 import vn.vnpay.preprocess.validator.NullOrBlank;
 import vn.vnpay.preprocess.validator.PhoneNumber;
@@ -44,14 +43,7 @@ public class PaymentDTO {
     private String addValue;
 
     public static Payment convertToEntity(PaymentDTO paymentDTO) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.addMappings(new PropertyMap<PaymentDTO, Payment>() {
-            @Override
-            protected void configure() {
-                skip(destination.getId());
-            }
-        });
-        Payment payment = modelMapper.map(paymentDTO, Payment.class);
+        Payment payment = CommonUtils.convertData(paymentDTO, Payment.class);
         return payment;
     }
 

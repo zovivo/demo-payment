@@ -3,7 +3,7 @@ package vn.vnpay.preprocess.util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import vn.vnpay.preprocess.model.response.ResponseData;
+import vn.vnpay.preprocess.response.ResponseData;
 
 import javax.servlet.http.HttpServletRequest;
 

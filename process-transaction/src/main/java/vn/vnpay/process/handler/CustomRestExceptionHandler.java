@@ -10,7 +10,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import vn.vnpay.process.exception.CustomException;
-import vn.vnpay.process.model.response.ResponseData;
+import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.util.ResponsePreProcessor;
 
 import javax.servlet.http.HttpServletRequest;

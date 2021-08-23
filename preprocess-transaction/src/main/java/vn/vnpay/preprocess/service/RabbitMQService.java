@@ -2,7 +2,7 @@ package vn.vnpay.preprocess.service;
 
 
 import vn.vnpay.preprocess.model.Payment;
-import vn.vnpay.preprocess.model.response.ResponseData;
+import vn.vnpay.preprocess.response.ResponseData;
 
 public interface RabbitMQService {
 

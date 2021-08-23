@@ -1,8 +1,8 @@
 package vn.vnpay.preprocess.service;
 
 import vn.vnpay.preprocess.exception.CustomException;
-import vn.vnpay.preprocess.model.dto.PaymentDTO;
-import vn.vnpay.preprocess.model.response.ResponseData;
+import vn.vnpay.preprocess.dto.PaymentDTO;
+import vn.vnpay.preprocess.response.ResponseData;
 
 public interface PaymentService {
 

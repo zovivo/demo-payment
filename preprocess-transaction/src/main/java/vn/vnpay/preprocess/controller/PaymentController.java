@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.WebRequest;
 import vn.vnpay.preprocess.exception.CustomException;
-import vn.vnpay.preprocess.model.dto.PaymentDTO;
-import vn.vnpay.preprocess.model.response.ResponseData;
+import vn.vnpay.preprocess.dto.PaymentDTO;
+import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.service.PaymentService;
 import vn.vnpay.preprocess.util.ResponsePreProcessor;
 

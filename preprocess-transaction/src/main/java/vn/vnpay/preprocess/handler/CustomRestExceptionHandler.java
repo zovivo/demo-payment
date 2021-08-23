@@ -10,7 +10,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import vn.vnpay.preprocess.exception.CustomException;
-import vn.vnpay.preprocess.model.response.ResponseData;
+import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.util.ResponsePreProcessor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,14 +29,14 @@ public class CustomRestExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ResponseData> handleAllOtherException(Exception ex, HttpServletRequest request) {
         ResponseData responseData = new ResponseData(HttpStatus.INTERNAL_SERVER_ERROR.value() + "", ex.getMessage());
-        logger.info("Exception: " + ex.getMessage(), ex);
+        logger.warn("Exception: " + ex.getMessage(), ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR, responseData, request);
     }
 
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<ResponseData> handleCustomException(CustomException ex, HttpServletRequest request) {
         ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", ex.getCustomCode().getDescription());
-        logger.info("Handler for CustomException: ", ex);
+        logger.warn("Handler for CustomException: ", ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.BAD_REQUEST, responseData, request);
     }
 
@@ -47,7 +47,7 @@ public class CustomRestExceptionHandler {
             validationMessages.add(error.getDefaultMessage());
         }
         ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", String.join(", ", validationMessages));
-        logger.info("Handler for ArgumentNotValidException: {}", ex);
+        logger.warn("Handler for ArgumentNotValidException: {}", ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.BAD_REQUEST, responseData, request);
     }
 }

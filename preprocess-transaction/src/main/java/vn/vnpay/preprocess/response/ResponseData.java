@@ -1,4 +1,4 @@
-package vn.vnpay.process.model.response;
+package vn.vnpay.preprocess.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

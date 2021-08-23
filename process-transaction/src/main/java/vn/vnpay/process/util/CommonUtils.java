@@ -1,5 +1,6 @@
 package vn.vnpay.process.util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,6 +22,8 @@ import java.util.Locale;
 public class CommonUtils {
 
     private static final Logger logger = LogManager.getLogger(CommonUtils.class);
+
+    private static final ObjectMapper objectMapper = new ObjectMapper();
     public static final String REQUEST_ID = "request_id";
 
     public static Timestamp getCurrentTime() {
@@ -75,4 +78,9 @@ public class CommonUtils {
             return null;
         }
     }
+
+    public static <T> T convertData(Object obj, Class<T> clazz) {
+        return objectMapper.convertValue(obj, clazz);
+    }
+
 }

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.vnpay.process.model.enu.ErrorCode;
+import vn.vnpay.process.enu.ErrorCode;
 
 @Getter
 @Setter

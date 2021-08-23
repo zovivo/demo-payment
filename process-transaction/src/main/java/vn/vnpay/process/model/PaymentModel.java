@@ -4,15 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.PropertyMap;
 import vn.vnpay.process.entity.Payment;
+import vn.vnpay.process.util.CommonUtils;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PaymentModel extends BaseModel{
+public class PaymentModel extends BaseModel {
 
     private String tokenKey;
     private String apiID;
@@ -34,14 +33,7 @@ public class PaymentModel extends BaseModel{
     private String addValue;
 
     public static Payment convertToEntity(PaymentModel paymentModel) {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.addMappings(new PropertyMap<PaymentModel, Payment>() {
-            @Override
-            protected void configure() {
-                skip(destination.getId());
-            }
-        });
-        Payment payment = modelMapper.map(paymentModel, Payment.class);
+        Payment payment = CommonUtils.convertData(paymentModel, Payment.class);
         return payment;
     }
 

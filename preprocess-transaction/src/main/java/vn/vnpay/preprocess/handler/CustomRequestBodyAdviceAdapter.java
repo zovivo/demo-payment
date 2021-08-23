@@ -1,14 +1,11 @@
 package vn.vnpay.preprocess.handler;
 
-import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
-import vn.vnpay.preprocess.configuration.PartnerComponent;
-import vn.vnpay.preprocess.model.dto.PaymentDTO;
 import vn.vnpay.preprocess.util.LoggingComponent;
 
 import javax.servlet.http.HttpServletRequest;

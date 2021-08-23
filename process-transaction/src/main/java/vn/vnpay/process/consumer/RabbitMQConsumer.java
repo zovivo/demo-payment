@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
-import vn.vnpay.process.model.response.ResponseData;
+import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.service.PaymentService;
 import vn.vnpay.process.util.CommonUtils;
 

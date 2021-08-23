@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import vn.vnpay.preprocess.configuration.PartnerComponent;
 import vn.vnpay.preprocess.exception.CustomException;
 import vn.vnpay.preprocess.model.Payment;
-import vn.vnpay.preprocess.model.dto.PaymentDTO;
-import vn.vnpay.preprocess.model.enu.CustomCode;
-import vn.vnpay.preprocess.model.response.ResponseData;
+import vn.vnpay.preprocess.dto.PaymentDTO;
+import vn.vnpay.preprocess.enu.CustomCode;
+import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.service.PaymentRedisService;
 import vn.vnpay.preprocess.service.PaymentService;
 import vn.vnpay.preprocess.service.RabbitMQService;
@@ -79,7 +79,6 @@ public class PaymentServiceImpl implements PaymentService {
                 throw new CustomException(CustomCode.DUPLICATE_TOKEN_KEY);
         }
         logger.info("end checkDuplicateToken");
-        return;
     }
 
     /**
@@ -109,7 +108,6 @@ public class PaymentServiceImpl implements PaymentService {
         if (Long.parseLong(paymentDTO.getRealAmount()) > paymentDTO.getDebitAmount())
             throw new CustomException(CustomCode.EXCEEDS_DEBIT);
         logger.info("end checkRealAmount");
-        return;
     }
 
     /**
@@ -126,7 +124,6 @@ public class PaymentServiceImpl implements PaymentService {
                 throw new CustomException(CustomCode.PROMOTION_CODE_EMPTY);
         }
         logger.info("end checkPromotionCode");
-        return;
     }
 
     /**
@@ -163,7 +160,6 @@ public class PaymentServiceImpl implements PaymentService {
         if (!checkSum.equals(payment.getCheckSum()))
             throw new CustomException(CustomCode.CHECKSUM_NOT_MATCH);
         logger.info("end checkMatchCheckSum");
-        return;
     }
 
     /**
@@ -179,7 +175,6 @@ public class PaymentServiceImpl implements PaymentService {
             throw new CustomException(CustomCode.BANK_CODE_INVALID);
         ThreadContext.put("bankCode", payment.getBankCode());
         logger.info("end checkBankCode");
-        return;
     }
 
 }
