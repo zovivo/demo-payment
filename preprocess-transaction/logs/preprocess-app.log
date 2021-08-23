@@ -1,0 +1,1074 @@
+2021-08-17 16:07:01.589 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 6408 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:07:01.628 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:07:01.634 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:07:03.805 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 6408 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:07:03.806 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:07:03.807 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:07:50.319 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 7772 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:07:50.348 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:07:50.353 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:07:52.263 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 7772 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:07:52.264 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:07:52.265 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:10:41.786 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 13344 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:10:41.825 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:10:41.830 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:10:43.746 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 13344 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:10:43.748 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:10:43.749 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:11:49.841 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 14052 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:11:49.858 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:11:49.863 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:11:52.384 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 14052 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:11:52.385 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:11:52.386 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:20:39.926 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 8844 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:20:39.950 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:20:39.976 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:20:41.719 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 8844 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:20:41.720 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:20:41.721 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:26:30.824 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 10064 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:26:30.884 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:26:30.892 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:26:37.501 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Started PaymentControllerTest in 7.255 seconds (JVM running for 13.978)
+2021-08-17 16:26:38.049 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 1a8b220a-193b-457e-a4b0-18fd4cc126c3
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:26:38.247 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 1a8b220a-193b-457e-a4b0-18fd4cc126c3
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:26:38.400 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:26:38.401 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:26:38.402 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:26:38.403 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:26:38.404 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-17 16:26:38.404 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-17 16:26:38.406 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-17 16:26:38.407 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-17 16:26:38.407 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-17 16:26:38.423 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-17 16:26:38.424 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-17 16:26:39.347 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-17 16:26:39.349 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-17 16:26:44.383 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"Success","data":{"id":1,"createdAt":1629192401608,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+2021-08-17 16:26:44.384 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-17 16:26:44.384 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-17 16:26:44.397 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 1a8b220a-193b-457e-a4b0-18fd4cc126c3
+[BODY RESPONSE]: 
+
+{"code":"200","message":"Success","responseId":"1a8b220a-193b-457e-a4b0-18fd4cc126c3","data":{"id":1,"createdAt":1629192401608,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-17 16:29:19.129 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 17248 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:29:19.151 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:29:19.162 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:29:21.448 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 17248 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:29:21.449 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:29:21.450 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:32:11.510 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 1788 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:32:11.546 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:32:11.552 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:32:13.158 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 1788 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:32:13.160 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:32:13.161 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:33:49.461 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 1832 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:33:49.486 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:33:49.496 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:33:55.188 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Started PaymentControllerTest in 6.183 seconds (JVM running for 10.611)
+2021-08-17 16:33:55.618 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 894c23b1-ae7e-4dcc-a23a-b6a7f1399473
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:33:55.802 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 894c23b1-ae7e-4dcc-a23a-b6a7f1399473
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:33:55.993 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:33:55.994 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:33:55.994 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:33:55.996 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:33:55.996 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-17 16:33:55.996 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-17 16:33:55.997 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-17 16:33:55.998 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-17 16:33:55.998 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-17 16:33:56.011 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-17 16:33:56.012 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-17 16:33:56.847 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-17 16:33:56.848 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-17 16:33:57.462 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"Success","data":{"id":2,"createdAt":1629192837289,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+2021-08-17 16:33:57.463 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-17 16:33:57.465 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-17 16:33:57.482 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 894c23b1-ae7e-4dcc-a23a-b6a7f1399473
+[BODY RESPONSE]: 
+
+{"code":"200","message":"Success","responseId":"894c23b1-ae7e-4dcc-a23a-b6a7f1399473","data":{"id":2,"createdAt":1629192837289,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-17 16:42:10.866 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 6208 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:42:10.892 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:42:10.894 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:42:17.525 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Started PaymentControllerTest in 7.3 seconds (JVM running for 12.328)
+2021-08-17 16:42:18.034 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: dc43449c-6bf4-4ad0-b420-bddc08e3db8b
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:42:18.333 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: dc43449c-6bf4-4ad0-b420-bddc08e3db8b
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:42:18.501 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:42:18.502 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:42:18.503 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:42:18.505 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:42:18.506 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-17 16:42:18.506 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-17 16:42:18.507 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-17 16:42:18.507 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-17 16:42:18.508 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-17 16:42:18.522 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-17 16:42:18.523 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-17 16:42:19.559 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-17 16:42:19.561 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-17 16:42:20.424 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"Success","data":{"id":3,"createdAt":1629193340218,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+2021-08-17 16:42:20.424 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-17 16:42:20.425 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-17 16:42:20.439 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: dc43449c-6bf4-4ad0-b420-bddc08e3db8b
+[BODY RESPONSE]: 
+
+{"code":"200","message":"Success","responseId":"dc43449c-6bf4-4ad0-b420-bddc08e3db8b","data":{"id":3,"createdAt":1629193340218,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-17 16:43:16.871 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 16908 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:43:16.894 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:43:16.921 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:43:24.371 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Started PaymentControllerTest in 8.296 seconds (JVM running for 15.774)
+2021-08-17 16:43:24.820 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: b3407355-5047-4352-8b6d-3df61f0d3036
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:43:25.055 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: b3407355-5047-4352-8b6d-3df61f0d3036
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:43:25.277 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:43:25.278 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:43:25.278 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:43:25.279 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:43:25.280 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-17 16:43:25.280 [INFO ] checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-17 16:43:25.280 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-17 16:43:25.280 [INFO ] checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-17 16:43:25.281 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-17 16:43:25.297 [INFO ] checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-17 16:43:25.297 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-17 16:43:26.260 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-17 16:43:26.263 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-17 16:43:26.871 [INFO ] send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"Success","data":{"id":4,"createdAt":1629193406767,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+2021-08-17 16:43:26.872 [INFO ] sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-17 16:43:26.872 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-17 16:43:26.885 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: b3407355-5047-4352-8b6d-3df61f0d3036
+[BODY RESPONSE]: 
+
+{"code":"200","message":"Success","responseId":"b3407355-5047-4352-8b6d-3df61f0d3036","data":{"id":4,"createdAt":1629193406767,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-17 16:48:42.910 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 11616 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:48:42.934 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:48:42.938 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:48:48.887 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Started PaymentControllerTest in 6.6 seconds (JVM running for 11.481)
+2021-08-17 16:48:49.371 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: b23ae82b-c89a-4af2-b7ad-13c5f65a0a26
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:48:49.544 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: b23ae82b-c89a-4af2-b7ad-13c5f65a0a26
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:48:49.723 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:48:49.723 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:48:49.724 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:48:49.726 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:48:49.726 [INFO ] checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-17 16:48:49.727 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-17 16:48:51.232 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","id":4,"createdAt":"Aug 17, 2021 4:43:26 PM"}
+2021-08-17 16:48:51.238 [INFO ] handleCustomException          --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: same day token key
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkDuplicateToken(PaymentServiceImpl.java:79) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkValidPayment(PaymentServiceImpl.java:57) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:40) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) ~[classes/:?]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.PaymentControllerTest.testPaymentAPI(PaymentControllerTest.java:53) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688) ~[junit-platform-commons-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+2021-08-17 16:48:51.279 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: b23ae82b-c89a-4af2-b7ad-13c5f65a0a26
+[BODY RESPONSE]: 
+
+{"code":"400","message":"same day token key","responseId":"b23ae82b-c89a-4af2-b7ad-13c5f65a0a26"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-17 16:54:01.065 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 3384 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:54:01.086 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:54:01.117 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:54:09.121 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Started PaymentControllerTest in 8.722 seconds (JVM running for 15.124)
+2021-08-17 16:54:09.646 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 4c887f75-55c8-4fa3-918b-c7cfab1480d5
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:54:09.855 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 4c887f75-55c8-4fa3-918b-c7cfab1480d5
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:54:09.979 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:54:09.979 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:54:09.979 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:54:09.980 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:54:09.991 [INFO ] checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-17 16:54:09.992 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-17 16:54:11.859 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","id":4,"createdAt":"Aug 17, 2021 4:43:26 PM"}
+2021-08-17 16:54:11.864 [INFO ] handleCustomException          --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: same day token key
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkDuplicateToken(PaymentServiceImpl.java:79) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkValidPayment(PaymentServiceImpl.java:57) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:40) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) ~[classes/:?]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.PaymentControllerTest.testExecutePayment(PaymentControllerTest.java:90) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688) ~[junit-platform-commons-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+2021-08-17 16:54:11.897 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 4c887f75-55c8-4fa3-918b-c7cfab1480d5
+[BODY RESPONSE]: 
+
+{"code":"400","message":"same day token key","responseId":"4c887f75-55c8-4fa3-918b-c7cfab1480d5"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-17 16:54:41.503 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Starting PaymentControllerTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 4020 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-17 16:54:41.531 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:54:41.539 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : No active profile set, falling back to default profiles: default
+2021-08-17 16:54:48.603 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentControllerTest : Started PaymentControllerTest in 7.654 seconds (JVM running for 13.527)
+2021-08-17 16:54:49.188 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 19af801d-56ae-4ceb-bedc-28f6e16bc9bb
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:54:49.358 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 19af801d-56ae-4ceb-bedc-28f6e16bc9bb
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:54:49.734 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:54:49.735 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:54:49.736 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:54:49.737 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:54:49.738 [INFO ] checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-17 16:54:49.739 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-17 16:54:52.247 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","id":4,"createdAt":"Aug 17, 2021 4:43:26 PM"}
+2021-08-17 16:54:52.254 [INFO ] handleCustomException          --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: same day token key
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkDuplicateToken(PaymentServiceImpl.java:79) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkValidPayment(PaymentServiceImpl.java:57) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:40) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) ~[classes/:?]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.PaymentControllerTest.testPaymentAPI(PaymentControllerTest.java:58) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688) ~[junit-platform-commons-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+2021-08-17 16:54:52.296 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 19af801d-56ae-4ceb-bedc-28f6e16bc9bb
+[BODY RESPONSE]: 
+
+{"code":"400","message":"same day token key","responseId":"19af801d-56ae-4ceb-bedc-28f6e16bc9bb"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-17 16:54:52.356 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: e9e64bc7-95d4-4c11-b57d-2df605f02667
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---Content-Type : application/json;charset=UTF-8
+---Content-Length : 571
+LOGGING REQUEST-----------------------------------
+
+2021-08-17 16:54:52.359 [INFO ] logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: e9e64bc7-95d4-4c11-b57d-2df605f02667
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-17 16:54:52.361 [INFO ] executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-17 16:54:52.361 [INFO ] checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-17 16:54:52.362 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-17 16:54:52.362 [INFO ] checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-17 16:54:52.363 [INFO ] checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-17 16:54:52.363 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : get Payment By tokenKey from Redis
+2021-08-17 16:54:52.373 [INFO ] getByTokenKey                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : Payment By tokenKey from Redis: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","id":4,"createdAt":"Aug 17, 2021 4:43:26 PM"}
+2021-08-17 16:54:52.375 [INFO ] handleCustomException          --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.handler.CustomRestExceptionHandler : Handler for CustomException: 
+vn.vnpay.preprocess.exception.CustomException: same day token key
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkDuplicateToken(PaymentServiceImpl.java:79) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.checkValidPayment(PaymentServiceImpl.java:57) ~[classes/:?]
+	at vn.vnpay.preprocess.service.impl.PaymentServiceImpl.executePayment(PaymentServiceImpl.java:40) ~[classes/:?]
+	at vn.vnpay.preprocess.controller.PaymentController.executePayment(PaymentController.java:34) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.filter.CustomURLFilter.doFilter(CustomURLFilter.java:33) ~[classes/:?]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183) ~[spring-test-5.3.9.jar:5.3.9]
+	at vn.vnpay.preprocess.PaymentControllerTest.testExecutePayment(PaymentControllerTest.java:90) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_261]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_261]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_261]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_261]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688) ~[junit-platform-commons-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_261]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) [junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+2021-08-17 16:54:52.378 [INFO ] logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: e9e64bc7-95d4-4c11-b57d-2df605f02667
+[BODY RESPONSE]: 
+
+{"code":"400","message":"same day token key","responseId":"e9e64bc7-95d4-4c11-b57d-2df605f02667"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-20 15:39:08.832 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 10440 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:39:08.857 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:39:08.865 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:39:16.087 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 7.796 seconds (JVM running for 12.772)
+2021-08-20 15:39:54.189 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 11624 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:39:54.221 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:39:54.228 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:40:00.256 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 6.548 seconds (JVM running for 10.649)
+2021-08-20 15:41:15.703 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 16620 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:41:15.766 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:41:15.778 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:41:23.250 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 8.043 seconds (JVM running for 12.993)
+2021-08-20 15:46:03.586 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 8464 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:46:03.621 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:46:03.624 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:46:09.777 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 6.694 seconds (JVM running for 10.882)
+2021-08-20 15:47:19.705 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 2636 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:47:19.730 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:47:19.746 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:47:36.380 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 17.401 seconds (JVM running for 25.091)
+2021-08-20 15:50:10.418 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 9244 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:50:10.460 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:50:10.473 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:50:16.852 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 7.033 seconds (JVM running for 11.548)
+2021-08-20 15:52:22.668 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 3168 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:52:22.710 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:52:22.730 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:52:28.853 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 6.639 seconds (JVM running for 11.111)
+2021-08-20 15:53:04.710 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 15284 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:53:04.738 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:53:04.744 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:53:12.061 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 7.938 seconds (JVM running for 14.107)
+2021-08-20 15:53:39.461 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 14692 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:53:39.498 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:53:39.503 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:53:46.973 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 8.088 seconds (JVM running for 13.444)
+2021-08-20 15:55:04.183 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 17188 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:55:04.205 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:55:04.209 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:55:10.437 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 6.809 seconds (JVM running for 11.382)
+2021-08-20 15:55:27.935 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 3380 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:55:27.963 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:55:27.975 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:55:35.359 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 7.949 seconds (JVM running for 12.839)
+2021-08-20 15:56:09.846 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 4072 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 15:56:09.881 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 15:56:09.896 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 15:56:20.689 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 11.432 seconds (JVM running for 16.925)
+2021-08-20 16:03:05.164 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:03:05.180 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:03:05.180 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:07:02.050 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:07:04.509 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:07:04.510 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:15:21.788 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:15:21.802 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:15:21.803 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:17:34.049 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:17:34.063 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:17:34.063 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:17:34.073 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:17:34.076 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:19:33.922 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:19:33.933 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:19:33.933 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:19:33.941 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:19:33.942 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:19:33.943 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-20 16:19:33.944 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-20 16:19:33.944 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-20 16:19:33.945 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-20 16:19:33.945 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-20 16:19:33.946 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-20 16:19:33.975 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-20 16:19:33.976 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-20 16:19:34.873 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-20 16:20:57.305 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:20:57.318 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:20:57.318 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:20:57.327 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:20:57.327 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:20:57.329 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-20 16:20:57.330 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-20 16:20:57.330 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-20 16:20:57.331 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-20 16:20:57.331 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-20 16:20:57.332 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-20 16:20:57.354 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-20 16:20:57.355 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-20 16:20:58.098 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-20 16:22:11.569 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:22:11.584 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:22:11.585 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:22:11.597 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:22:11.598 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:22:11.599 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-20 16:22:11.600 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-20 16:22:11.600 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-20 16:22:11.600 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-20 16:22:11.601 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-20 16:22:11.601 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-20 16:22:11.629 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-20 16:22:11.630 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-20 16:22:12.722 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-20 16:23:22.619 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:23:27.158 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:23:27.159 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:23:27.169 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:23:27.169 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:23:27.171 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-20 16:23:27.171 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-20 16:23:27.171 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-20 16:23:27.172 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-20 16:23:27.172 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-20 16:23:27.173 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-20 16:23:27.196 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-20 16:23:27.196 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-20 16:23:27.779 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-20 16:24:59.043 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:24:59.054 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:24:59.054 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:24:59.065 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:24:59.065 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:24:59.067 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-20 16:24:59.067 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-20 16:24:59.067 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-20 16:24:59.068 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-20 16:24:59.068 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-20 16:24:59.068 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-20 16:24:59.095 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-20 16:24:59.096 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-20 16:24:59.789 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-20 16:26:39.195 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:26:39.208 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:26:39.208 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:26:39.214 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:26:39.215 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:26:39.216 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-20 16:26:39.217 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-20 16:26:39.218 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-20 16:26:39.218 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-20 16:26:39.219 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-20 16:26:39.219 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-20 16:26:39.245 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-20 16:26:39.246 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-20 16:26:39.811 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-20 16:27:32.123 [INFO ] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Starting PaymentServiceTest using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 1888 (started by dell in C:\Users\dell\my-workspace\demo-payment\preprocess-transaction)
+2021-08-20 16:27:32.143 [DEBUG] logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-20 16:27:32.152 [INFO ] logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : No active profile set, falling back to default profiles: default
+2021-08-20 16:27:37.282 [INFO ] logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PaymentServiceTest : Started PaymentServiceTest in 5.619 seconds (JVM running for 9.579)
+2021-08-20 16:27:38.258 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-20 16:27:38.259 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-20 16:27:38.259 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-20 16:27:38.268 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-20 16:27:38.268 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-20 16:27:38.270 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-20 16:27:38.271 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-20 16:27:38.271 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-20 16:27:38.271 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-20 16:27:38.271 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-20 16:27:38.272 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-20 16:27:38.290 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-20 16:27:38.307 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-20 16:27:38.974 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:23:20.834 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-23 11:23:20.858 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-23 11:23:20.859 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-23 11:23:20.874 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-23 11:23:20.875 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-23 11:23:20.877 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-23 11:23:20.877 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-23 11:23:20.878 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-23 11:23:20.878 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-23 11:23:20.879 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-23 11:23:20.880 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-23 11:23:20.923 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-23 11:23:20.923 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-23 11:23:22.043 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:26:09.370 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-23 11:26:09.382 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-23 11:26:09.383 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-23 11:26:09.391 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-23 11:26:09.392 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-23 11:26:09.393 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-23 11:26:09.393 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-23 11:26:09.394 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-23 11:26:09.394 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-23 11:26:09.395 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-23 11:26:09.395 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-23 11:26:09.423 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-23 11:26:09.424 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-23 11:26:10.214 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:31:51.639 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-23 11:31:51.692 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-23 11:31:51.693 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-23 11:31:51.698 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-23 11:31:51.699 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-23 11:31:51.699 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-23 11:31:51.700 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-23 11:31:51.700 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-23 11:31:51.700 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-23 11:31:51.701 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-23 11:31:51.702 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-23 11:31:51.727 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-23 11:31:51.728 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-23 11:31:52.406 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:31:52.407 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-23 11:31:52.409 [INFO ] executePayment                 --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-23 11:33:12.760 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-23 11:33:12.773 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-23 11:33:12.774 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-23 11:33:12.782 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-23 11:33:12.783 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-23 11:33:12.785 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-23 11:33:12.785 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-23 11:33:12.786 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-23 11:33:12.787 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-23 11:33:12.787 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-23 11:33:12.788 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-23 11:33:12.813 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-23 11:33:12.813 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-23 11:33:13.501 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:33:13.501 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-23 11:33:13.502 [INFO ] executePayment                 --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-23 11:40:04.677 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-23 11:40:04.690 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-23 11:40:04.691 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-23 11:40:04.697 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-23 11:40:04.698 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-23 11:40:04.698 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-23 11:40:04.698 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-23 11:40:04.699 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-23 11:40:04.699 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-23 11:40:04.699 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-23 11:40:04.700 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-23 11:40:04.727 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-23 11:40:04.727 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-23 11:40:05.446 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:40:05.447 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-23 11:40:05.448 [INFO ] executePayment                 --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-23 11:40:53.247 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-23 11:40:53.262 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-23 11:40:53.262 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-23 11:40:53.269 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-23 11:40:53.270 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-23 11:41:09.127 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-23 11:41:09.127 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-23 11:41:09.128 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-23 11:41:09.128 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-23 11:41:09.129 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-23 11:41:09.130 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-23 11:41:09.167 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-23 11:41:09.169 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-23 11:41:09.785 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:41:09.786 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-23 11:41:09.786 [INFO ] executePayment                 --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-23 11:43:47.254 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-23 11:43:47.266 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-23 11:43:47.267 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-23 11:43:47.276 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-23 11:43:47.276 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-23 11:43:47.277 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-23 11:43:47.278 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-23 11:43:47.278 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-23 11:43:47.279 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-23 11:43:47.279 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-23 11:43:47.281 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-23 11:43:47.311 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-23 11:43:47.312 [INFO ] checkValidPayment              --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-23 11:43:48.062 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-23 11:43:48.064 [INFO ] sendRabbitMQ                   --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-23 11:43:48.065 [INFO ] executePayment                 --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment

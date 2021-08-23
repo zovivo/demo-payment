@@ -1,0 +1,54 @@
+2021-08-23 15:33:05.729 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-23 15:33:06.498 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-23 15:35:09.367 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-23 15:35:10.710 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-23 15:35:10.748 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-23 15:35:10.749 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-23 15:35:10.750 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-23 15:35:10.750 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-23 15:35:10.758 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : response: null
+2021-08-23 15:49:06.860 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-23 15:49:08.100 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-23 15:49:08.103 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-23 15:49:08.103 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-23 15:49:08.104 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-23 15:49:08.104 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-23 15:49:08.113 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : response: <200 OK OK,[]>
+2021-08-23 15:49:08.114 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-23 15:49:08.115 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
+2021-08-23 15:49:44.859 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-23 15:49:46.159 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-23 15:49:46.164 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-23 15:49:46.165 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-23 15:49:46.166 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-23 15:49:46.166 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-23 15:49:46.180 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : response: <200 OK OK,[]>
+2021-08-23 15:49:46.183 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-23 15:49:46.183 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
+2021-08-23 15:51:53.763 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-23 15:51:54.468 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-23 15:51:54.472 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-23 15:51:54.473 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-23 15:51:54.473 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-23 15:51:54.474 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-23 15:51:54.481 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : response: <200 OK OK,[]>
+2021-08-23 15:51:54.483 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-23 15:51:54.484 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
+2021-08-23 15:53:09.005 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-23 15:53:09.839 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-23 15:53:09.841 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-23 15:53:09.842 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-23 15:53:09.842 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-23 15:53:09.843 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-23 15:53:09.849 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : response: <200 OK OK,[]>
+2021-08-23 15:53:09.851 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-23 15:53:09.851 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
+2021-08-23 15:54:08.226 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-23 15:54:09.305 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-23 15:54:09.308 [INFO ] saveDB                         --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-23 15:54:09.308 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-23 15:54:09.309 [INFO ] saveRedis                      --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-23 15:54:09.309 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-23 15:54:09.317 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : response: <200 OK OK,[]>
+2021-08-23 15:54:09.319 [INFO ] sendToPartner                  --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-23 15:54:09.320 [INFO ] executePayment                 --- TokenKey [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
