@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import vn.vnpay.process.entity.Payment;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
-import vn.vnpay.process.enu.ErrorCode;
+import vn.vnpay.process.enu.CustomCode;
 import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.repository.PaymentRepository;
 import vn.vnpay.process.service.PaymentService;
@@ -85,7 +85,7 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
         ResponseEntity<Object> response = customRestTemplate.postForObject(inputForPartner);
         logger.info("response: {}", response);
         if (!response.getStatusCode().is2xxSuccessful())
-            throw new CustomException(ErrorCode.SEND_PARTNER_FAIL);
+            throw new CustomException(CustomCode.SEND_PARTNER_FAIL);
         ResponseData responseData = new ResponseData();
         responseData.setCode(response.getStatusCode().value() + "");
         responseData.setMessage("Success");

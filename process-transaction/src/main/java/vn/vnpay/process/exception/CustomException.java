@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.vnpay.process.enu.ErrorCode;
+import vn.vnpay.process.enu.CustomCode;
 
 @Getter
 @Setter
@@ -12,6 +12,6 @@ import vn.vnpay.process.enu.ErrorCode;
 @NoArgsConstructor
 public class CustomException extends Exception {
 
-    private ErrorCode errorCode;
+    private CustomCode customCode;
 
 }

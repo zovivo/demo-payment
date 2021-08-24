@@ -36,7 +36,7 @@ public class CustomRestExceptionHandler {
 
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<ResponseData> handleCustomException(CustomException ex, HttpServletRequest request) {
-        ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", ex.getErrorCode().getDescription());
+        ResponseData responseData = new ResponseData(HttpStatus.BAD_REQUEST.value() + "", ex.getCustomCode().getDescription());
         logger.info("Handler for CustomException:", ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.BAD_REQUEST, responseData, request);
     }
