@@ -13,6 +13,7 @@ import vn.vnpay.process.model.PaymentModel;
 import vn.vnpay.process.enu.CustomCode;
 import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.repository.PaymentRepository;
+import vn.vnpay.process.repository.redis.PaymentRepositoryRedis;
 import vn.vnpay.process.service.PaymentService;
 import vn.vnpay.process.util.CommonUtils;
 import vn.vnpay.process.util.CustomRestTemplate;
@@ -26,12 +27,10 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     private CustomRestTemplate customRestTemplate;
 
     @Autowired
-    @Qualifier(value = "paymentRepository")
     private PaymentRepository paymentRepository;
 
     @Autowired
-    @Qualifier(value = "paymentRepositoryRedis")
-    private PaymentRepository paymentRepositoryRedis;
+    private PaymentRepositoryRedis paymentRepositoryRedis;
 
     @Override
     @Transactional

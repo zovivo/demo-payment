@@ -14,18 +14,4 @@ public class PaymentRepositoryImpl extends BaseRepositoryImpl<Payment, Long> imp
         super(Payment.class);
     }
 
-    @Override
-    public Payment getByTokenKey(String tokenKey) {
-        String queryStr = "From Payment p where p.tokenKey = :tokenKey Order By p.createdAt Desc";
-        Query query = getEntityManager().createQuery(queryStr);
-        query.setParameter("tokenKey", tokenKey);
-        Payment payment = null;
-        try {
-            payment = (Payment) query.getSingleResult();
-        } catch (NoResultException e) {
-            return null;
-        }
-        return payment;
-    }
-
 }
