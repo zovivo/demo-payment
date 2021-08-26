@@ -37,13 +37,6 @@ public class BaseRepositoryImpl<E extends BaseEntity, ID extends Serializable> i
         return entityManager;
     }
 
-    protected Page<E> wrapResult(List<E> results, Pageable page, long count) {
-        if (results == null) {
-            results = Collections.emptyList();
-        }
-        return new PageImpl<>(results, page, count);
-    }
-
     //====== Build Query Coding ======
 
     public Query createQuery(QueryTemplate queryTemplate) {

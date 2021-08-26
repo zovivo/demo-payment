@@ -40,7 +40,7 @@ public class RabbitMQServiceImpl implements RabbitMQService {
                 }, new ParameterizedTypeReference<ResponseData>() {
                 }
         );
-        logger.info("response: {}", CommonUtils.parseObjectToString(response));
+        logger.info("response: {} from replyQueue: {}", CommonUtils.parseObjectToString(response), replyQueue);
         return response;
     }
 

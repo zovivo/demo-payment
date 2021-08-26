@@ -28,10 +28,21 @@ public class PaymentRedisServiceImpl implements PaymentRedisService {
     @Override
     public Payment getByTokenKey(String tokenKey) {
         logger.info("get Payment By tokenKey from Redis");
-        String paymentData = (String) hashOperations.get(getHashName(),tokenKey);
-        Payment payment = CommonUtils.parseStringToObject(paymentData,Payment.class);
-        logger.info("Payment By tokenKey from Redis: {}", CommonUtils.parseObjectToString(payment));
+        String paymentData = (String) hashOperations.get(getHashName(), tokenKey);
+        Payment payment = CommonUtils.parseStringToObject(paymentData, Payment.class);
+        logger.info("payment By tokenKey from Redis: {}", CommonUtils.parseObjectToString(payment));
         return payment;
+    }
+
+    @Override
+    public boolean isExistedTokenKey(String tokenKey) {
+        logger.info("begin check existed tokenKey in Redis");
+        boolean isExisted = hashOperations.hasKey(getHashName(), tokenKey);
+        if (true == isExisted) {
+            logger.warn("tokenKey is existed");
+        }
+        logger.info("end check existed tokenKey in Redis");
+        return isExisted;
     }
 
     @PostConstruct

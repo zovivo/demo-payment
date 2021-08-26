@@ -43,8 +43,7 @@ public class PaymentDTO {
     private String addValue;
 
     public static Payment convertToEntity(PaymentDTO paymentDTO) {
-        Payment payment = CommonUtils.convertData(paymentDTO, Payment.class);
-        return payment;
+        return CommonUtils.convertData(paymentDTO, Payment.class);
     }
 
 }

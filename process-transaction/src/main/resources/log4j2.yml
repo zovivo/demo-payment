@@ -1,18 +1,87 @@
 Configuration:
   status: debug
+  Properties:
+    Property:
+      - name: log-debug-path
+        value: "logs/debug"
+      - name: log-info-path
+        value: "logs/info"
+      - name: log-warn-path
+        value: "logs/warn"
+      - name: log-error-path
+        value: "logs/error"
+      - name: pattern
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %-30M --- TokenKey [%X{tokenKey}]  bankCode [%X{bankCode}] %logger{15} : %msg%n"
 
-  appenders:
+  Appenders:
     Console:
       name: LogToConsole
       PatternLayout:
-        Pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %-30M --- TokenKey [%X{tokenKey}] %logger{15} : %msg%n"
+        Pattern: ${pattern}
 
     RollingFile:
-      - name: LogToRollingFile
-        fileName: logs/process-app.log
+      - name: LogToRollingFileDebug
+        fileName: ${log-debug-path}/process-app.log
         filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
         PatternLayout:
-          pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %-30M --- TokenKey [%X{tokenKey}] %logger{15} : %msg%n"
+          pattern:  ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: DEBUG
+            minLevel: ERROR
+            onMatch: ACCEPT
+            onMismatch: DENY
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+      - name: LogToRollingFileInfo
+        fileName: ${log-info-path}/process-app.log
+        filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern: ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: INFO
+            minLevel: INFO
+            onMatch: ACCEPT
+            onMismatch: DENY
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+      - name: LogToRollingFileWarn
+        fileName: ${log-warn-path}/process-app.log
+        filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern: ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: WARN
+            minLevel: WARN
+            onMatch: ACCEPT
+            onMismatch: DENY
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+      - name: LogToRollingFileError
+        fileName: ${log-error-path}/process-app.log
+        filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern: ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: ERROR
+            minLevel: ERROR
+            onMatch: ACCEPT
+            onMismatch: DENY
         Policies:
           SizeBasedTriggeringPolicy:
             size: 10MB
@@ -26,11 +95,14 @@ Configuration:
         additivity: false
         AppenderRef:
           - ref: LogToConsole
-          - ref: LogToRollingFile
-
-      - name: org.springframework.web.filter.CommonsRequestLoggingFilter
-        level: info
-
+          - ref: LogToRollingFileDebug
+            level: debug
+          - ref: LogToRollingFileInfo
+            level: info
+          - ref: LogToRollingFileWarn
+            level: warn
+          - ref: LogToRollingFileError
+            level: error
     Root:
       level: error
       AppenderRef:

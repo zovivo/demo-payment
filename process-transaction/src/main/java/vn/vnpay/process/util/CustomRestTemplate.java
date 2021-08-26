@@ -23,8 +23,13 @@ public class CustomRestTemplate {
         headers.add("Accept", MediaType.APPLICATION_JSON_VALUE);
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<Object> requestBody = new HttpEntity<>(input, headers);
-        logger.info("Send data to URL: {}", PARTNER_URL);
-        ResponseEntity<Object> response = restTemplate.postForEntity(PARTNER_URL, requestBody, Object.class);
+        logger.info("send data to URL: {}", PARTNER_URL);
+        ResponseEntity<Object> response;
+        try {
+            response = restTemplate.postForEntity(PARTNER_URL, requestBody, Object.class);
+        } catch (Exception e) {
+            return null;
+        }
         return response;
     }
 

@@ -37,6 +37,18 @@ public class RabbitMQConfig {
     @Value("${spring.rabbitmq.queue}")
     private String queueName;
 
+    @Value("${spring.rabbitmq.connection-timeout}")
+    private int connectTimeout;
+
+    @Value("${spring.rabbitmq.channel-rpc-timeout}")
+    private int channelRPCTimeout;
+
+    @Value("${spring.rabbitmq.requested-channel-max}")
+    private int channelMax;
+
+    @Value("${spring.rabbitmq.template.reply-timeout}")
+    private int replyTimeout;
+
     @Value("${spring.rabbitmq.reply-queue}")
     private String replyQueueName;
 
@@ -52,8 +64,11 @@ public class RabbitMQConfig {
         rabbitConnectionFactory.setHost(hostName);
         rabbitConnectionFactory.setUsername(userName);
         rabbitConnectionFactory.setPassword(password);
-        PooledChannelConnectionFactory pcf = new PooledChannelConnectionFactory(rabbitConnectionFactory);
-        return pcf;
+        rabbitConnectionFactory.setChannelRpcTimeout(channelRPCTimeout);
+        rabbitConnectionFactory.setConnectionTimeout(connectTimeout);
+        rabbitConnectionFactory.setRequestedChannelMax(channelMax);
+        PooledChannelConnectionFactory pooledChannelConnectionFactory = new PooledChannelConnectionFactory(rabbitConnectionFactory);
+        return pooledChannelConnectionFactory;
     }
 
     @Bean(name = "rabbitTemplate")
@@ -62,7 +77,7 @@ public class RabbitMQConfig {
         template.setExchange(exchange);
         template.setRoutingKey(routingKey);
         template.setMessageConverter(messageConverter);
-        template.setReplyTimeout(10000l);
+        template.setReplyTimeout(replyTimeout);
         return template;
     }
 
@@ -91,19 +106,5 @@ public class RabbitMQConfig {
     public MessageConverter jsonMessageConverter() {
         return new Jackson2JsonMessageConverter();
     }
-
-//    @Bean
-//    public MessageListener messageListener() {
-//        return message -> logger.info("queue received: " + message);
-//    }
-//
-//    @Bean
-//    public SimpleMessageListenerContainer messageListenerContainer() throws Exception {
-//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-//        container.setConnectionFactory(pooledChannelConnectionFactory());
-//        container.setQueueNames(queueName);
-//        container.setMessageListener(messageListener());
-//        return container;
-//    }
 
 }

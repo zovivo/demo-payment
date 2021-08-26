@@ -12,8 +12,8 @@ public interface PaymentService extends BaseService<Payment, Long> {
      * hàm thực thi xử lý dữ liệu thanh toán
      * @param payment {@link PaymentModel}
      * @return responseData {@link ResponseData}
-     * @throws CustomException
+     * @throws Exception
      */
-    public ResponseData executePayment(PaymentModel payment) throws CustomException;
+    public ResponseData executePayment(PaymentModel payment) throws RuntimeException,CustomException;
 
 }

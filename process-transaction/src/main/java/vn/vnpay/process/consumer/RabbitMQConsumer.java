@@ -9,11 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import vn.vnpay.process.constant.CustomCode;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
 import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.service.PaymentService;
 import vn.vnpay.process.util.CommonUtils;
+import vn.vnpay.process.util.ResponsePreProcessor;
 
 /**
  * Project: demo-payment
@@ -32,15 +34,27 @@ public class RabbitMQConsumer {
     @Autowired
     private PaymentService paymentService;
 
+    @Autowired
+    private ResponsePreProcessor responsePreProcessor;
+
     @Value("${spring.rabbitmq.queue}")
     private String queue;
 
     @RabbitListener(queues = "${spring.rabbitmq.queue}")
-    public ResponseData receivedMessageAndReply(PaymentModel paymentModel, Message message) throws CustomException {
-        logger.info("Received from queue: " + queue + " Message: " + message);
+    public ResponseData receivedMessageAndReply(PaymentModel paymentModel, Message message) {
+        logger.info("received from queue: " + queue + " Message: " + message);
         ThreadContext.put("tokenKey", paymentModel.getTokenKey());
-        ResponseData responseData = paymentService.executePayment(paymentModel);
-        logger.info("Return response: " + CommonUtils.parseObjectToString(responseData));
+        ResponseData responseData = null;
+        try {
+            responseData = paymentService.executePayment(paymentModel);
+        } catch (CustomException e) {
+            logger.warn("custom exception: ", e);
+            responseData = responsePreProcessor.buildResponseData(e, e.getCustomCode());
+        } catch (RuntimeException e) {
+            logger.error("runtime exception: ", e);
+            responseData = responsePreProcessor.buildResponseData(e, CustomCode.UNKNOWN_ERROR);
+        }
+        logger.info("return response: " + CommonUtils.parseObjectToString(responseData));
         ThreadContext.remove("tokenKey");
         return responseData;
     }

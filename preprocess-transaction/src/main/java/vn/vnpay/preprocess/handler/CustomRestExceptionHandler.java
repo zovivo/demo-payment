@@ -29,7 +29,7 @@ public class CustomRestExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ResponseData> handleAllOtherException(Exception ex, HttpServletRequest request) {
         ResponseData responseData = new ResponseData(HttpStatus.INTERNAL_SERVER_ERROR.value() + "", ex.getMessage());
-        logger.warn("Exception: " + ex.getMessage(), ex);
+        logger.error("Exception: " + ex.getMessage(), ex);
         return responsePreProcessor.buildResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR, responseData, request);
     }
 

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.vnpay.process.enu.CustomCode;
+import vn.vnpay.process.constant.CustomCode;
 
 @Getter
 @Setter

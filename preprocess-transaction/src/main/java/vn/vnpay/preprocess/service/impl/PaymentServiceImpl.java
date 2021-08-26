@@ -9,7 +9,7 @@ import vn.vnpay.preprocess.configuration.PartnerComponent;
 import vn.vnpay.preprocess.exception.CustomException;
 import vn.vnpay.preprocess.model.Payment;
 import vn.vnpay.preprocess.dto.PaymentDTO;
-import vn.vnpay.preprocess.enu.CustomCode;
+import vn.vnpay.preprocess.constant.CustomCode;
 import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.service.PaymentRedisService;
 import vn.vnpay.preprocess.service.PaymentService;
@@ -70,13 +70,8 @@ public class PaymentServiceImpl implements PaymentService {
      */
     protected void checkDuplicateToken(PaymentDTO paymentDTO) throws CustomException {
         logger.info("begin checkDuplicateToken");
-        Payment payment = paymentRedisService.getByTokenKey(paymentDTO.getTokenKey());
-        if (payment != null) {
-            DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-            Date lastPayDate = CommonUtils.parseStringToDate(payment.getPayDate().substring(0, 8), dateFormat);
-            Date newPayDate = CommonUtils.parseStringToDate(paymentDTO.getPayDate().substring(0, 8), dateFormat);
-            if (lastPayDate.getTime() == newPayDate.getTime())
-                throw new CustomException(CustomCode.DUPLICATE_TOKEN_KEY);
+        if (paymentRedisService.isExistedTokenKey(paymentDTO.getTokenKey())) {
+            throw new CustomException(CustomCode.DUPLICATE_TOKEN_KEY);
         }
         logger.info("end checkDuplicateToken");
     }
@@ -90,8 +85,12 @@ public class PaymentServiceImpl implements PaymentService {
     protected ResponseData sendRabbitMQ(Payment payment) throws CustomException {
         logger.info("begin sendRabbitMQ");
         ResponseData responseData = rabbitMQService.send(payment);
-        if (responseData == null)
+        if (null == responseData)
             throw new CustomException(CustomCode.REQUEST_TIME_OUT);
+        else if (CustomCode.SEND_PARTNER_FAIL.getStatusCode().equals(responseData.getCode()))
+            throw new CustomException(CustomCode.SEND_PARTNER_FAIL);
+        else if (CustomCode.UNKNOWN_ERROR.getStatusCode().equals(responseData.getCode()))
+            throw new CustomException(CustomCode.UNKNOWN_ERROR);
         logger.info("end sendRabbitMQ");
         return responseData;
     }
@@ -120,7 +119,7 @@ public class PaymentServiceImpl implements PaymentService {
     protected void checkPromotionCode(PaymentDTO paymentDTO) throws CustomException {
         logger.info("begin checkPromotionCode");
         if (Long.parseLong(paymentDTO.getRealAmount()) != paymentDTO.getDebitAmount()) {
-            if (paymentDTO.getPromotionCode() == null || paymentDTO.getPromotionCode().trim().isEmpty())
+            if (null == paymentDTO.getPromotionCode() || paymentDTO.getPromotionCode().trim().isEmpty())
                 throw new CustomException(CustomCode.PROMOTION_CODE_EMPTY);
         }
         logger.info("end checkPromotionCode");
@@ -171,7 +170,7 @@ public class PaymentServiceImpl implements PaymentService {
      */
     protected void checkBankCode(PaymentDTO payment) throws CustomException {
         logger.info("begin checkBankCode");
-        if (partnerComponent.getPartnerByCode(payment.getBankCode()) == null)
+        if (null == partnerComponent.getPartnerByCode(payment.getBankCode()))
             throw new CustomException(CustomCode.BANK_CODE_INVALID);
         ThreadContext.put("bankCode", payment.getBankCode());
         logger.info("end checkBankCode");

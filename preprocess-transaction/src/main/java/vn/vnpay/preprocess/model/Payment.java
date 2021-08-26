@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Payment extends BaseModel{
+public class Payment extends BaseModel {
 
     private String tokenKey;
     private String apiID;

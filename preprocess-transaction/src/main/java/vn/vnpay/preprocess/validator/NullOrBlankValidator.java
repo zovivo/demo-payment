@@ -11,7 +11,7 @@ public class NullOrBlankValidator implements ConstraintValidator<NullOrBlank, St
 
     @Override
     public boolean isValid(final String value, final ConstraintValidatorContext context) {
-        if (value == null)
+        if (null == value)
             return false;
         return !value.trim().isEmpty();
     }

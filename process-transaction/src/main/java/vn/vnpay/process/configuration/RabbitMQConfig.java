@@ -33,6 +33,15 @@ public class RabbitMQConfig {
     @Value("${spring.rabbitmq.password}")
     private String password;
 
+    @Value("${spring.rabbitmq.connection-timeout}")
+    private int connectTimeout;
+
+    @Value("${spring.rabbitmq.channel-rpc-timeout}")
+    private int channelRPCTimeout;
+
+    @Value("${spring.rabbitmq.requested-channel-max}")
+    private int channelMax;
+
     @Value("${spring.rabbitmq.queue}")
     private String queueName;
 
@@ -48,14 +57,17 @@ public class RabbitMQConfig {
         rabbitConnectionFactory.setHost(hostName);
         rabbitConnectionFactory.setUsername(userName);
         rabbitConnectionFactory.setPassword(password);
-        PooledChannelConnectionFactory pcf = new PooledChannelConnectionFactory(rabbitConnectionFactory);
-        return pcf;
+        rabbitConnectionFactory.setChannelRpcTimeout(channelRPCTimeout);
+        rabbitConnectionFactory.setConnectionTimeout(connectTimeout);
+        rabbitConnectionFactory.setRequestedChannelMax(channelMax);
+        PooledChannelConnectionFactory pooledChannelConnectionFactory = new PooledChannelConnectionFactory(rabbitConnectionFactory);
+        return pooledChannelConnectionFactory;
     }
 
     @Bean(name = "rabbitTemplate")
     @Primary
-    RabbitTemplate rabbitTemplate(PooledChannelConnectionFactory pcf, MessageConverter messageConverter) {
-        RabbitTemplate template = new RabbitTemplate(pcf);
+    RabbitTemplate rabbitTemplate(PooledChannelConnectionFactory pooledChannelConnectionFactory, MessageConverter messageConverter) {
+        RabbitTemplate template = new RabbitTemplate(pooledChannelConnectionFactory);
         template.setExchange(exchange);
         template.setRoutingKey(routingKey);
         template.setMessageConverter(messageConverter);

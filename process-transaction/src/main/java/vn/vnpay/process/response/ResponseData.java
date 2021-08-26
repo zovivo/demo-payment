@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import vn.vnpay.process.constant.CustomCode;
 
 import java.io.Serializable;
 
@@ -24,6 +25,11 @@ public class ResponseData implements Serializable {
     public ResponseData(String code, String message) {
         this.code = code;
         this.message = message;
+    }
+
+    public ResponseData(CustomCode customCode) {
+        this.code = customCode.getStatusCode();
+        this.message = customCode.getDescription();
     }
 
 }

@@ -3,14 +3,14 @@ package vn.vnpay.process.service.impl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import vn.vnpay.process.constant.SendPartnerStatus;
 import vn.vnpay.process.entity.Payment;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
-import vn.vnpay.process.enu.CustomCode;
+import vn.vnpay.process.constant.CustomCode;
 import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.repository.PaymentRepository;
 import vn.vnpay.process.repository.redis.PaymentRepositoryRedis;
@@ -33,63 +33,73 @@ public class PaymentServiceImpl extends BaseServiceImpl<PaymentRepository, Payme
     private PaymentRepositoryRedis paymentRepositoryRedis;
 
     @Override
-    @Transactional
-    public ResponseData executePayment(PaymentModel paymentModel) throws CustomException {
+    @Transactional(noRollbackFor = {RuntimeException.class, CustomException.class})
+    public ResponseData executePayment(PaymentModel paymentModel) throws RuntimeException, CustomException {
         logger.info("begin executePayment ");
         Payment payment = PaymentModel.convertToEntity(paymentModel);
         saveDB(payment);
         saveRedis(payment);
-        ResponseData responseData = sendToPartner();
+        ResponseData responseData = sendToPartner(paymentModel);
+        payment = updatePayment(responseData, payment);
+        if (!responseData.getCode().equals(CustomCode.SUCCESS.getStatusCode()))
+            throw new CustomException(CustomCode.SEND_PARTNER_FAIL);
         responseData.setData(payment);
         logger.info("end executePayment ");
         return responseData;
     }
 
-    protected void saveDB(Payment payment) {
+    protected void saveDB(Payment payment) throws RuntimeException {
         logger.info("begin saveDB ");
-        paymentRepository.insert(payment);
+        try {
+            payment = paymentRepository.insert(payment);
+        } catch (RuntimeException e) {
+            logger.error("insert payment to DB failed exception: ", e);
+            throw new RuntimeException("insert payment to DB failed exception");
+        }
+        logger.info("save DB successfully: {}", CommonUtils.parseObjectToString(payment));
         logger.info("end saveDB ");
     }
 
-    protected void saveRedis(Payment payment) {
+    protected void saveRedis(Payment payment) throws RuntimeException {
         logger.info("begin saveRedis ");
-        paymentRepositoryRedis.insert(payment);
+        try {
+            paymentRepositoryRedis.insert(payment);
+        } catch (RuntimeException e) {
+            logger.error("save Redis failed", e);
+            throw new RuntimeException("save Redis failed");
+        }
+        logger.info("save Redis successfully");
         logger.info("end saveRedis ");
     }
 
-    protected ResponseData sendToPartner() throws CustomException {
+    protected ResponseData sendToPartner(PaymentModel payment) {
         logger.info("begin sendToPartner ");
-        String inputData = "{\n" +
-                "\t\"tokenKey\": \"1601353776839FT19310RH6P1\",\n" +
-                "\t\"apiID\": \"restPayment\",\n" +
-                "\t\"mobile\": \"0145225630\",\n" +
-                "\t\"bankCode\": \"970445\",\n" +
-                "\t\"accountNo\": \"0001100014211002\",\n" +
-                "\t\"payDate\": \"20200929112923\",\n" +
-                "\t\"addtionalData\": \"\",\n" +
-                "\t\"debitAmount\": 11200,\n" +
-                "\t\"respCode\": \"00\",\n" +
-                "\t\"respDesc\": \"SUCCESS\",\n" +
-                "\t\"traceTransfer\": \"FT19310RH6P1\",\n" +
-                "\t\"messageType\": \"1\",\n" +
-                "\t\"checkSum\": \"40e670720b754324af3d3a0ff49b52fb\",\n" +
-                "\t\"orderCode\": \"FT19310RH6P1\",\n" +
-                "\t\"userName\": \"cntest001\",\n" +
-                "\t\"realAmount\": \"11200\",\n" +
-                "\t\"promotionCode\": \"\",\n" +
-                "\t\"queueNameResponse\": \"queue.payment.qrcodeV2.restPayment\",\n" +
-                "\t\"addValue\": \"{\\\"payMethod\\\":\\\"01\\\",\\\"payMethodMMS\\\":1}\"\n" +
-                "}\n";
-        Object inputForPartner = CommonUtils.parseStringToObject(inputData, Object.class);
-        ResponseEntity<Object> response = customRestTemplate.postForObject(inputForPartner);
-        logger.info("response: {}", response);
-        if (!response.getStatusCode().is2xxSuccessful())
-            throw new CustomException(CustomCode.SEND_PARTNER_FAIL);
-        ResponseData responseData = new ResponseData();
-        responseData.setCode(response.getStatusCode().value() + "");
-        responseData.setMessage("Success");
+        ResponseEntity<Object> response = customRestTemplate.postForObject(payment);
+        logger.info("response from partner: {}", response);
+        ResponseData responseData;
+        if (null != response && response.getStatusCode().is2xxSuccessful())
+            responseData = new ResponseData(CustomCode.SUCCESS);
+        else
+            responseData = new ResponseData(CustomCode.FAIL);
         logger.info("end sendToPartner ");
         return responseData;
+    }
+
+    protected Payment updatePayment(ResponseData responseData, Payment payment) throws RuntimeException {
+        logger.info("begin updatePayment ");
+        if (responseData.getCode().equals(CustomCode.SUCCESS.getStatusCode()))
+            payment.setSendPartnerStatus(SendPartnerStatus.SUCCESS);
+        else
+            payment.setSendPartnerStatus(SendPartnerStatus.FAIL);
+        try {
+            payment = paymentRepository.update(payment);
+        } catch (RuntimeException e) {
+            logger.error("update payment to DB failed exception: ", e);
+            throw new RuntimeException("update payment to DB failed exception");
+        }
+        logger.info("save DB successfully: {}", CommonUtils.parseObjectToString(payment));
+        logger.info("end updatePayment ");
+        return payment;
     }
 
     @Override

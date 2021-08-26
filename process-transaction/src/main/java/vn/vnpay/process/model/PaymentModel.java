@@ -33,8 +33,7 @@ public class PaymentModel extends BaseModel {
     private String addValue;
 
     public static Payment convertToEntity(PaymentModel paymentModel) {
-        Payment payment = CommonUtils.convertData(paymentModel, Payment.class);
-        return payment;
+        return CommonUtils.convertData(paymentModel, Payment.class);
     }
 
 }
