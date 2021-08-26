@@ -17,39 +17,22 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.time.Duration;
+import java.util.Properties;
 
 @Configuration
-@PropertySource(value = "classpath:application.properties")
 public class RedisConfig {
 
-    @Value("${spring.redis.host}")
-    private String redisHost;
-
-    @Value("${spring.redis.port}")
-    private int redisPort;
-
-    @Value("${spring.redis.username}")
-    private String redisUserName;
-
-    @Value("${spring.redis.password}")
-    private String redisPassword;
-
-    @Value("${spring.redis.max-idle}")
-    private int maxIdle;
-    @Value("${spring.redis.min-idle}")
-    private int minIdle;
-    @Value("${spring.redis.max-wait}")
-    private int maxWaitMillis;
-    @Value("${spring.redis.max-active}")
-    private int maxTotal;
+    @Autowired
+//    @Qualifier("redisProperties")
+    private Properties redisProperties;
 
     @Bean
     public LettucePoolingClientConfiguration lettucePoolingClientConfiguration() {
         GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
-        poolConfig.setMaxIdle(maxIdle);
-        poolConfig.setMinIdle(minIdle);
-        poolConfig.setMaxWaitMillis(maxWaitMillis);
-        poolConfig.setMaxTotal(maxTotal);
+        poolConfig.setMaxIdle(Integer.valueOf(redisProperties.getProperty("spring.redis.max-idle")));
+        poolConfig.setMinIdle(Integer.valueOf(redisProperties.getProperty("spring.redis.min-idle")));
+        poolConfig.setMaxWaitMillis(Integer.valueOf(redisProperties.getProperty("spring.redis.max-wait")));
+        poolConfig.setMaxTotal(Integer.valueOf(redisProperties.getProperty("spring.redis.max-active")));
         LettucePoolingClientConfiguration lettucePoolingClientConfiguration = LettucePoolingClientConfiguration.builder()
                 .commandTimeout(Duration.ofSeconds(10))
                 .shutdownTimeout(Duration.ZERO)
@@ -62,9 +45,9 @@ public class RedisConfig {
     @Autowired
     public LettuceConnectionFactory redisConnectionFactory(LettucePoolingClientConfiguration lettucePoolingClientConfiguration) {
         RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration();
-        redisConfig.setHostName(redisHost);
-        redisConfig.setPort(redisPort);
-        redisConfig.setPassword(redisPassword);
+        redisConfig.setHostName(redisProperties.getProperty("spring.redis.host"));
+        redisConfig.setPort(Integer.valueOf(redisProperties.getProperty("spring.redis.port")));
+        redisConfig.setPassword(redisProperties.getProperty("spring.redis.password"));
         LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory(redisConfig, lettucePoolingClientConfiguration);
         lettuceConnectionFactory.setShareNativeConnection(false);
         return lettuceConnectionFactory;
@@ -73,8 +56,7 @@ public class RedisConfig {
     @Bean
     @Primary
     @Autowired
-    @Qualifier(value = "redisConnectionFactory")
-    public RedisTemplate<Object, Object> redisTemplate(LettuceConnectionFactory redisConnectionFactory) {
+    public RedisTemplate<Object, Object> redisTemplate( @Qualifier(value = "redisConnectionFactory")LettuceConnectionFactory redisConnectionFactory) {
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
         template.setKeySerializer(new StringRedisSerializer());

@@ -15,12 +15,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+import java.util.Properties;
+
 @Configuration
 @PropertySource(value = "classpath:application.properties")
 public class RabbitMQConfig {
 
     private static final Logger logger = LogManager.getLogger(RabbitMQConfig.class);
-
 
     @Value("${spring.rabbitmq.host}")
     private String hostName;
@@ -37,18 +38,6 @@ public class RabbitMQConfig {
     @Value("${spring.rabbitmq.queue}")
     private String queueName;
 
-    @Value("${spring.rabbitmq.connection-timeout}")
-    private int connectTimeout;
-
-    @Value("${spring.rabbitmq.channel-rpc-timeout}")
-    private int channelRPCTimeout;
-
-    @Value("${spring.rabbitmq.requested-channel-max}")
-    private int channelMax;
-
-    @Value("${spring.rabbitmq.template.reply-timeout}")
-    private int replyTimeout;
-
     @Value("${spring.rabbitmq.reply-queue}")
     private String replyQueueName;
 
@@ -64,11 +53,8 @@ public class RabbitMQConfig {
         rabbitConnectionFactory.setHost(hostName);
         rabbitConnectionFactory.setUsername(userName);
         rabbitConnectionFactory.setPassword(password);
-        rabbitConnectionFactory.setChannelRpcTimeout(channelRPCTimeout);
-        rabbitConnectionFactory.setConnectionTimeout(connectTimeout);
-        rabbitConnectionFactory.setRequestedChannelMax(channelMax);
-        PooledChannelConnectionFactory pooledChannelConnectionFactory = new PooledChannelConnectionFactory(rabbitConnectionFactory);
-        return pooledChannelConnectionFactory;
+        PooledChannelConnectionFactory pcf = new PooledChannelConnectionFactory(rabbitConnectionFactory);
+        return pcf;
     }
 
     @Bean(name = "rabbitTemplate")
@@ -77,7 +63,7 @@ public class RabbitMQConfig {
         template.setExchange(exchange);
         template.setRoutingKey(routingKey);
         template.setMessageConverter(messageConverter);
-        template.setReplyTimeout(replyTimeout);
+        template.setReplyTimeout(10000l);
         return template;
     }
 
@@ -106,5 +92,4 @@ public class RabbitMQConfig {
     public MessageConverter jsonMessageConverter() {
         return new Jackson2JsonMessageConverter();
     }
-
 }

@@ -73,8 +73,7 @@ public class RedisConfig {
     @Bean
     @Primary
     @Autowired
-    @Qualifier(value = "redisConnectionFactory")
-    public RedisTemplate<Object, Object> redisTemplate(LettuceConnectionFactory redisConnectionFactory) {
+    public RedisTemplate<Object, Object> redisTemplate(@Qualifier(value = "redisConnectionFactory")LettuceConnectionFactory redisConnectionFactory) {
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
         template.setKeySerializer(new StringRedisSerializer());
