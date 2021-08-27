@@ -26,7 +26,7 @@ public class RabbitMQServiceImpl implements RabbitMQService {
     private RabbitTemplate rabbitTemplate;
 
     @Autowired
-    @Qualifier("rabbitmqProperties")
+    @Qualifier(value = "rabbitmqProperties")
     private Properties rabbitmqProperties;
 
     @Override
@@ -37,14 +37,14 @@ public class RabbitMQServiceImpl implements RabbitMQService {
                 CommonUtils.parseObjectToString(payment));
         ResponseData response = rabbitTemplate.convertSendAndReceiveAsType(
                 rabbitmqProperties.getProperty("spring.rabbitmq.exchange"),
-                rabbitmqProperties.getProperty("spring.rabbitmq.routingkey"), payment,
-                message -> {
+                rabbitmqProperties.getProperty("spring.rabbitmq.routingkey"),
+                payment, message -> {
                     message.getMessageProperties().setReplyTo(rabbitmqProperties.getProperty("spring.rabbitmq.reply-queue"));
                     return message;
                 }, new ParameterizedTypeReference<ResponseData>() {
                 }
         );
-        logger.info("response: {} from replyQueue: {}", CommonUtils.parseObjectToString(response), rabbitmqProperties.getProperty("spring.rabbitmq.reply-queue"));
+        logger.info("response: {}", CommonUtils.parseObjectToString(response));
         return response;
     }
 

@@ -6,9 +6,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
+import vn.vnpay.process.configuration.realoadable.ReloadablePropertySourceFactory;
 import vn.vnpay.process.constant.CustomCode;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
@@ -16,6 +20,8 @@ import vn.vnpay.process.response.ResponseData;
 import vn.vnpay.process.service.PaymentService;
 import vn.vnpay.process.util.CommonUtils;
 import vn.vnpay.process.util.ResponsePreProcessor;
+
+import java.util.Properties;
 
 /**
  * Project: demo-payment
@@ -26,10 +32,15 @@ import vn.vnpay.process.util.ResponsePreProcessor;
  * Created with IntelliJ IDEA
  */
 @Component
-@PropertySource(value = "classpath:application.properties")
+@RefreshScope
+@PropertySource(value = "file:configs/process/rabbitmq.properties", factory = ReloadablePropertySourceFactory.class)
 public class RabbitMQConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(RabbitMQConsumer.class);
+
+    @Autowired
+    @Qualifier(value = "rabbitmqProperties")
+    private Properties rabbitmqProperties;
 
     @Autowired
     private PaymentService paymentService;

@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MutablePropertySources;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.io.File;
@@ -27,30 +26,11 @@ import java.util.Properties;
  */
 
 @Configuration
-@EnableScheduling
 public class ReloadablePropertySourceConfig {
 
-    private ConfigurableEnvironment env;
-
-    public ReloadablePropertySourceConfig(@Autowired ConfigurableEnvironment env) {
-        this.env = env;
-    }
-
-    @Bean(name = "propertiesConfiguration")
-    @ConditionalOnProperty(name = "spring.config.location", matchIfMissing = false)
-    public PropertiesConfiguration redisPropertiesConfiguration(
-            @Value("${spring.config.location}") String path,
-            @Value("${spring.properties.refreshDelay}") long refreshDelay) throws Exception {
-        PropertiesConfiguration configuration = new PropertiesConfiguration(new File(path).getCanonicalPath());
-        FileChangedReloadingStrategy fileChangedReloadingStrategy = new FileChangedReloadingStrategy();
-        fileChangedReloadingStrategy.setRefreshDelay(refreshDelay);
-        configuration.setReloadingStrategy(fileChangedReloadingStrategy);
-        return configuration;
-    }
-
-    @Bean(value = "rabbitmqPropertiesConfiguration")
-    @ConditionalOnProperty(name = "spring.config.location", matchIfMissing = false)
-    public PropertiesConfiguration rabbitMQPropertiesConfiguration(
+    @Bean("rabbitmqPropertiesConfiguration")
+    @ConditionalOnProperty(name = "spring.rabbitmq-config.location", matchIfMissing = false)
+    public PropertiesConfiguration rabbitmqPropertiesConfiguration(
             @Value("${spring.rabbitmq-config.location}") String path,
             @Value("${spring.properties.refreshDelay}") long refreshDelay) throws Exception {
         PropertiesConfiguration configuration = new PropertiesConfiguration(new File(path).getCanonicalPath());
@@ -60,17 +40,28 @@ public class ReloadablePropertySourceConfig {
         return configuration;
     }
 
-    @Bean
-    @ConditionalOnBean(PropertiesConfiguration.class)
-    @Primary
-    public Properties properties(PropertiesConfiguration propertiesConfiguration) throws Exception {
+    @Bean("rabbitmqProperties")
+    @ConditionalOnBean(name = "rabbitmqPropertiesConfiguration")
+    public Properties rabbitmqProperties(@Autowired @Qualifier(value = "rabbitmqPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
         ReloadableProperties properties = new ReloadableProperties(propertiesConfiguration);
         return properties;
     }
 
-    @Bean(name = "rabbitmqProperties")
-    @ConditionalOnBean(name = "rabbitmqPropertiesConfiguration")
-    public Properties rabbitmqProperties(@Autowired @Qualifier(value = "rabbitmqPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
+    @Bean("redisPropertiesConfiguration")
+    @ConditionalOnProperty(name = "spring.redis-config.location", matchIfMissing = false)
+    public PropertiesConfiguration redisPropertiesConfiguration(
+            @Value("${spring.redis-config.location}") String path,
+            @Value("${spring.properties.refreshDelay}") long refreshDelay) throws Exception {
+        PropertiesConfiguration configuration = new PropertiesConfiguration(new File(path).getCanonicalPath());
+        FileChangedReloadingStrategy fileChangedReloadingStrategy = new FileChangedReloadingStrategy();
+        fileChangedReloadingStrategy.setRefreshDelay(refreshDelay);
+        configuration.setReloadingStrategy(fileChangedReloadingStrategy);
+        return configuration;
+    }
+
+    @Bean("redisProperties")
+    @ConditionalOnBean(name = "redisPropertiesConfiguration")
+    public Properties redisProperties(@Autowired @Qualifier(value = "redisPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
         ReloadableProperties properties = new ReloadableProperties(propertiesConfiguration);
         return properties;
     }

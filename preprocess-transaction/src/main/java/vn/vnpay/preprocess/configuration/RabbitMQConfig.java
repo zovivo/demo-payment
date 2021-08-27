@@ -10,82 +10,72 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 import java.util.Properties;
 
 @Configuration
-@PropertySource(value = "classpath:application.properties")
+@RefreshScope
+@EnableAutoConfiguration(
+        exclude = {RabbitAutoConfiguration.class,
+        })
 public class RabbitMQConfig {
 
     private static final Logger logger = LogManager.getLogger(RabbitMQConfig.class);
 
-    @Value("${spring.rabbitmq.host}")
-    private String hostName;
-
-    @Value("${spring.rabbitmq.port}")
-    private String port;
-
-    @Value("${spring.rabbitmq.username}")
-    private String userName;
-
-    @Value("${spring.rabbitmq.password}")
-    private String password;
-
-    @Value("${spring.rabbitmq.queue}")
-    private String queueName;
-
-    @Value("${spring.rabbitmq.reply-queue}")
-    private String replyQueueName;
-
-    @Value("${spring.rabbitmq.exchange}")
-    private String exchange;
-
-    @Value("${spring.rabbitmq.routingkey}")
-    private String routingKey;
+    @Autowired
+    @Qualifier(value = "rabbitmqProperties")
+    private Properties rabbitmqProperties;
 
     @Bean(name = "pooledChannelConnectionFactory")
     PooledChannelConnectionFactory pooledChannelConnectionFactory() throws Exception {
         ConnectionFactory rabbitConnectionFactory = new ConnectionFactory();
-        rabbitConnectionFactory.setHost(hostName);
-        rabbitConnectionFactory.setUsername(userName);
-        rabbitConnectionFactory.setPassword(password);
-        PooledChannelConnectionFactory pcf = new PooledChannelConnectionFactory(rabbitConnectionFactory);
-        return pcf;
+        rabbitConnectionFactory.setHost(rabbitmqProperties.getProperty("spring.rabbitmq.host"));
+        rabbitConnectionFactory.setUsername(rabbitmqProperties.getProperty("spring.rabbitmq.username"));
+        rabbitConnectionFactory.setPassword(rabbitmqProperties.getProperty("spring.rabbitmq.password"));
+        rabbitConnectionFactory.setChannelRpcTimeout(Integer.valueOf(rabbitmqProperties.getProperty("spring.rabbitmq.channel-rpc-timeout")));
+        rabbitConnectionFactory.setConnectionTimeout(Integer.valueOf(rabbitmqProperties.getProperty("spring.rabbitmq.connection-timeout")));
+        rabbitConnectionFactory.setRequestedChannelMax(Integer.valueOf(rabbitmqProperties.getProperty("spring.rabbitmq.requested-channel-max")));
+        PooledChannelConnectionFactory pooledChannelConnectionFactory = new PooledChannelConnectionFactory(rabbitConnectionFactory);
+        return pooledChannelConnectionFactory;
     }
 
     @Bean(name = "rabbitTemplate")
     RabbitTemplate rabbitTemplate(PooledChannelConnectionFactory pooledChannelConnectionFactory, MessageConverter messageConverter) {
         RabbitTemplate template = new RabbitTemplate(pooledChannelConnectionFactory);
-        template.setExchange(exchange);
-        template.setRoutingKey(routingKey);
+        template.setExchange(rabbitmqProperties.getProperty("spring.rabbitmq.exchange"));
+        template.setRoutingKey(rabbitmqProperties.getProperty("spring.rabbitmq.routingkey"));
         template.setMessageConverter(messageConverter);
-        template.setReplyTimeout(10000l);
+        template.setReplyTimeout(Long.valueOf(rabbitmqProperties.getProperty("spring.rabbitmq.template.reply-timeout")));
         return template;
     }
 
     @Bean(name = "rabbitQueue")
     Queue queue() {
-        return new Queue(queueName, false);
+        return new Queue(rabbitmqProperties.getProperty("spring.rabbitmq.queue"), false);
     }
 
     @Bean(name = "replyQueue")
     Queue replyQueue() {
-        return new Queue(replyQueueName, true);
+        return new Queue(rabbitmqProperties.getProperty("spring.rabbitmq.reply-queue"), true);
     }
 
     @Bean(name = "rabbitExchange")
     DirectExchange exchange() {
-        return new DirectExchange(exchange);
+        return new DirectExchange(rabbitmqProperties.getProperty("spring.rabbitmq.exchange"));
     }
 
     @Bean
     @Autowired
     Binding binding(@Qualifier(value = "rabbitQueue") Queue queue, DirectExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(routingKey);
+        return BindingBuilder.bind(queue).to(exchange).with(rabbitmqProperties.getProperty("spring.rabbitmq.routingkey"));
     }
 
     @Bean

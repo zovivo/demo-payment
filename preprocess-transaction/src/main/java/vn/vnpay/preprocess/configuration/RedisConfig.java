@@ -4,6 +4,10 @@ import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration;
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -20,10 +24,14 @@ import java.time.Duration;
 import java.util.Properties;
 
 @Configuration
+@RefreshScope
+@EnableAutoConfiguration(
+        exclude = {RedisAutoConfiguration.class,
+        })
 public class RedisConfig {
 
     @Autowired
-//    @Qualifier("redisProperties")
+    @Qualifier(value = "redisProperties")
     private Properties redisProperties;
 
     @Bean
@@ -41,7 +49,7 @@ public class RedisConfig {
         return lettucePoolingClientConfiguration;
     }
 
-    @Bean(name = "redisConnectionFactory")
+    @Bean
     @Autowired
     public LettuceConnectionFactory redisConnectionFactory(LettucePoolingClientConfiguration lettucePoolingClientConfiguration) {
         RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration();
@@ -55,8 +63,7 @@ public class RedisConfig {
 
     @Bean
     @Primary
-    @Autowired
-    public RedisTemplate<Object, Object> redisTemplate( @Qualifier(value = "redisConnectionFactory")LettuceConnectionFactory redisConnectionFactory) {
+    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
         template.setKeySerializer(new StringRedisSerializer());
