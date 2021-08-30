@@ -1,11 +1,25 @@
 package vn.vnpay.preprocess.configuration;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import vn.vnpay.preprocess.util.CommonUtils;
 import vn.vnpay.preprocess.util.Partner;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 
 /**
@@ -18,15 +32,16 @@ import java.util.List;
  */
 
 @Component
-@ConfigurationProperties(prefix = "qrcode")
-@PropertySource(value = "classpath:partner.yml", factory = YamlPropertySourceFactory.class)
 public class PartnerComponent {
 
-    private final List<Partner> partners;
+    private static final Logger logger = LogManager.getLogger(PartnerComponent.class);
 
-    public PartnerComponent(List<Partner> partners) {
-        this.partners = partners;
-    }
+    @Value("${spring.partner-config.location}")
+    private String path;
+
+    private List<Partner> partners;
+
+    private final ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 
     public List<Partner> getPartners() {
         return partners;
@@ -42,6 +57,14 @@ public class PartnerComponent {
         return this.partners.stream()
                 .filter(partner -> partner.getBankCode().equals(bankCode))
                 .findAny().orElse(null);
+    }
+
+    @Scheduled(fixedRate = 10000)
+    private void reloadPartnerProperties() throws IOException {
+        Map<String, List<Partner>> partnerMap = mapper.readValue(new URL(path), new TypeReference<Map<String, List<Partner>>>() {
+        });
+        this.partners = partnerMap.get("partners");
+        logger.info("partners: {}", CommonUtils.parseObjectToString(partners));
     }
 
 }

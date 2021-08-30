@@ -1,0 +1,56 @@
+2021-08-30 13:46:11.961 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-30 13:46:11.986 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-30 13:46:11.991 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: null
+2021-08-30 13:46:11.992 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-30 13:46:11.992 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-30 13:46:11.993 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save Redis successfully
+2021-08-30 13:46:11.994 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-30 13:46:11.995 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-30 13:46:11.999 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : response from partner: <200 OK OK,[]>
+2021-08-30 13:46:12.005 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-30 13:46:12.005 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin updatePayment 
+2021-08-30 13:46:12.008 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-30 13:46:12.009 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end updatePayment 
+2021-08-30 13:46:12.009 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
+2021-08-30 13:49:13.696 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-30 13:49:13.705 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-30 13:49:13.709 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: null
+2021-08-30 13:49:13.710 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-30 13:49:13.710 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-30 13:49:13.710 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save Redis successfully
+2021-08-30 13:49:13.711 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-30 13:49:13.711 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-30 13:49:13.715 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : response from partner: <200 OK OK,[]>
+2021-08-30 13:49:13.718 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-30 13:49:13.718 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin updatePayment 
+2021-08-30 13:49:13.719 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-30 13:49:13.720 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end updatePayment 
+2021-08-30 13:49:13.720 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
+2021-08-30 13:49:39.967 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-30 13:49:39.980 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-30 13:49:39.986 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: null
+2021-08-30 13:49:39.987 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-30 13:49:39.988 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-30 13:49:39.988 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save Redis successfully
+2021-08-30 13:49:39.990 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-30 13:49:39.990 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-30 13:49:39.994 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : response from partner: <200 OK OK,[]>
+2021-08-30 13:49:39.997 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-30 13:49:39.998 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin updatePayment 
+2021-08-30 13:49:39.999 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-30 13:49:40.000 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end updatePayment 
+2021-08-30 13:49:40.001 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 
+2021-08-30 13:50:17.023 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin executePayment 
+2021-08-30 13:50:17.034 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveDB 
+2021-08-30 13:50:17.038 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: null
+2021-08-30 13:50:17.038 [INFO ] saveDB                         --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveDB 
+2021-08-30 13:50:17.039 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin saveRedis 
+2021-08-30 13:50:17.039 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save Redis successfully
+2021-08-30 13:50:17.040 [INFO ] saveRedis                      --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end saveRedis 
+2021-08-30 13:50:17.040 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin sendToPartner 
+2021-08-30 13:50:17.044 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : response from partner: <200 OK OK,[]>
+2021-08-30 13:50:17.047 [INFO ] sendToPartner                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end sendToPartner 
+2021-08-30 13:50:17.048 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : begin updatePayment 
+2021-08-30 13:50:17.050 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : save DB successfully: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-30 13:50:17.050 [INFO ] updatePayment                  --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end updatePayment 
+2021-08-30 13:50:17.051 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.process.service.impl.PaymentServiceImpl : end executePayment 

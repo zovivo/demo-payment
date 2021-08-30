@@ -1,0 +1,12 @@
+partners:
+  - bank-code: VNPAY
+    private-key: 908405
+  - bank-code: BIDV
+    private-key: 970466
+  - bank-code: VIETCOMBANK
+    private-key: 970436
+  - bank-code: TCB
+    private-key: 970435
+
+
+

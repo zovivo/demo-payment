@@ -1,0 +1,11 @@
+2021-08-30 13:45:14.127 [INFO ] executePayment                 --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-30 13:45:14.154 [INFO ] checkValidPayment              --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-30 13:45:14.155 [INFO ] checkBankCode                  --- TokenKey []  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-30 13:45:14.169 [INFO ] checkBankCode                  --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-30 13:45:14.171 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-30 13:45:14.172 [INFO ] checkDuplicateToken            --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-30 13:45:14.172 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-30 13:45:14.173 [INFO ] checkRealAmount                --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-30 13:45:14.174 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-30 13:45:14.174 [INFO ] checkPromotionCode             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-30 13:45:14.175 [INFO ] checkMatchCheckSum             --- TokenKey []  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum

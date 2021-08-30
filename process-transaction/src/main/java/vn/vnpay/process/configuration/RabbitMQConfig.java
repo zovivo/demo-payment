@@ -22,6 +22,7 @@ import org.springframework.context.annotation.PropertySource;
 import java.util.Properties;
 
 @Configuration
+@RefreshScope
 public class RabbitMQConfig {
 
     private static final Logger logger = LogManager.getLogger(RabbitMQConfig.class);
@@ -31,6 +32,7 @@ public class RabbitMQConfig {
     private Properties rabbitmqProperties;
 
     @Bean(name = "pooledChannelConnectionFactory")
+    @Primary
     PooledChannelConnectionFactory pooledChannelConnectionFactory() throws Exception {
         ConnectionFactory rabbitConnectionFactory = new ConnectionFactory();
         rabbitConnectionFactory.setHost(rabbitmqProperties.getProperty("spring.rabbitmq.host"));
@@ -45,7 +47,7 @@ public class RabbitMQConfig {
 
     @Bean(name = "rabbitTemplate")
     @Primary
-    RabbitTemplate rabbitTemplate(PooledChannelConnectionFactory pooledChannelConnectionFactory, MessageConverter messageConverter) {
+    RabbitTemplate rabbitTemplate(@Autowired @Qualifier("pooledChannelConnectionFactory") PooledChannelConnectionFactory pooledChannelConnectionFactory, MessageConverter messageConverter) {
         RabbitTemplate template = new RabbitTemplate(pooledChannelConnectionFactory);
         template.setExchange(rabbitmqProperties.getProperty("spring.rabbitmq.exchange"));
         template.setRoutingKey(rabbitmqProperties.getProperty("spring.rabbitmq.routingkey"));

@@ -1,5 +1,7 @@
 package vn.vnpay.preprocess.util;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.hash.Hashing;
 import com.google.gson.Gson;
@@ -55,4 +57,5 @@ public class CommonUtils {
     public static <T> T convertData(Object obj, Class<T> clazz) {
         return objectMapper.convertValue(obj, clazz);
     }
+
 }
