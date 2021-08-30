@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -51,6 +52,8 @@ public class HibernateConfig {
     private String hibernateFormatSQL;
 
     @Bean(name = "hikariDataSource")
+    @Primary
+    @RefreshScope
     @ConfigurationProperties("spring.datasource.hikari")
     public HikariDataSource dataSource() {
         HikariDataSource hikariDataSource = DataSourceBuilder.create().type(HikariDataSource.class).build();

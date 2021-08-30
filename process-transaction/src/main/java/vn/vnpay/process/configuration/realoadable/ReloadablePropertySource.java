@@ -3,6 +3,7 @@ package vn.vnpay.process.configuration.realoadable;
 import org.apache.commons.configuration.ConfigurationConverter;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.configuration.reloading.FileChangedReloadingStrategy;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.PropertySource;
 import org.springframework.util.StringUtils;
 import vn.vnpay.process.exception.PropertiesException;
@@ -16,6 +17,9 @@ import vn.vnpay.process.exception.PropertiesException;
  */
 public class ReloadablePropertySource extends PropertySource {
 
+    @Value("${spring.properties.refreshDelay}")
+    private long refreshDelay;
+
     PropertiesConfiguration propertiesConfiguration;
 
     public ReloadablePropertySource(String name, PropertiesConfiguration propertiesConfiguration) {
@@ -28,7 +32,7 @@ public class ReloadablePropertySource extends PropertySource {
         try {
             this.propertiesConfiguration = new PropertiesConfiguration(path);
             FileChangedReloadingStrategy strategy = new FileChangedReloadingStrategy();
-            strategy.setRefreshDelay(5000);
+            strategy.setRefreshDelay(refreshDelay);
             this.propertiesConfiguration.setReloadingStrategy(strategy);
         } catch (Exception e) {
             throw new PropertiesException(e);

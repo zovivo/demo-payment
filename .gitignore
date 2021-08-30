@@ -2,7 +2,7 @@
 *.class
 
 # Log file
-#*.log
+*.log
 #git rm -r --cached
 
 # BlueJ files
@@ -32,7 +32,7 @@ out/
 *.iws
 
 ## Test
-**/src/test/**
+#**/src/test/**
 
 ## Maven
 */target/

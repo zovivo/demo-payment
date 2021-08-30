@@ -7,11 +7,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.core.env.MutablePropertySources;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.io.File;
@@ -26,6 +24,7 @@ import java.util.Properties;
  */
 
 @Configuration
+@EnableScheduling
 public class ReloadablePropertySourceConfig {
 
     @Bean("rabbitmqPropertiesConfiguration")
@@ -42,6 +41,7 @@ public class ReloadablePropertySourceConfig {
 
     @Bean("rabbitmqProperties")
     @ConditionalOnBean(name = "rabbitmqPropertiesConfiguration")
+    @RefreshScope
     public Properties rabbitmqProperties(@Autowired @Qualifier(value = "rabbitmqPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
         ReloadableProperties properties = new ReloadableProperties(propertiesConfiguration);
         return properties;
@@ -61,6 +61,7 @@ public class ReloadablePropertySourceConfig {
 
     @Bean("redisProperties")
     @ConditionalOnBean(name = "redisPropertiesConfiguration")
+    @RefreshScope
     public Properties redisProperties(@Autowired @Qualifier(value = "redisPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
         ReloadableProperties properties = new ReloadableProperties(propertiesConfiguration);
         return properties;
