@@ -19,7 +19,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -27,21 +26,19 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import vn.vnpay.process.configuration.realoadable.ReloadablePropertySourceFactory;
 
-import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
 @EnableAutoConfiguration(
         exclude = {DataSourceAutoConfiguration.class,
-        DataSourceTransactionManagerAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class
-})
+                DataSourceTransactionManagerAutoConfiguration.class,
+                HibernateJpaAutoConfiguration.class
+        })
 @PropertySource(value = "file:configs/process/datasource.properties", factory = ReloadablePropertySourceFactory.class)
 public class HibernateConfig {
 
-    private static Logger logger = LogManager.getLogger(HibernateConfig.class);
     private static final String PACKAGES_TO_SCAN = "vn.vnpay.process.entity";
-
+    private static Logger logger = LogManager.getLogger(HibernateConfig.class);
     @Value("${hibernate.dialect}")
     private String hibernateDialect;
     @Value("${hibernate.ddl-auto}")
@@ -70,7 +67,7 @@ public class HibernateConfig {
         entityManagerFactoryBean.setPackagesToScan(PACKAGES_TO_SCAN);
         Properties properties = getHibernateProperties();
         entityManagerFactoryBean.setJpaProperties(properties);
-        logger.info("entityManagerFactory: " + entityManagerFactoryBean);
+        logger.info("entityManagerFactory: {}", entityManagerFactoryBean);
         return entityManagerFactoryBean;
     }
 

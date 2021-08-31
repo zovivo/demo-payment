@@ -1,0 +1,383 @@
+2021-08-31 14:25:09.616 logStarting                    --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Starting PreprocessTransactionApplication using Java 1.8.0_261 on DESKTOP-CPQCDS8 with PID 12392 (C:\Users\dell\my-workspace\demo-payment\preprocess-transaction\target\classes started by dell in C:\Users\dell\my-workspace\demo-payment)
+2021-08-31 14:25:09.639 logStartupProfileInfo          --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : No active profile set, falling back to default profiles: default
+2021-08-31 14:25:19.954 logStarted                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.PreprocessTransactionApplication : Started PreprocessTransactionApplication in 13.555 seconds (JVM running for 22.488)
+2021-08-31 14:25:20.113 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:25:29.949 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:25:39.949 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:25:49.945 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:25:58.889 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: e6535217-c72a-4923-8e8a-a7847784bd35
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.4
+---accept : */*
+---postman-token : a6cb6937-6786-44b9-8f8f-6fb54ba5f25a
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-31 14:25:58.987 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: e6535217-c72a-4923-8e8a-a7847784bd35
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-31 14:25:59.141 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-31 14:25:59.141 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-31 14:25:59.141 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-31 14:25:59.143 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-31 14:25:59.143 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-31 14:25:59.143 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : begin check existed tokenKey in Redis
+2021-08-31 14:25:59.943 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:26:00.593 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : end check existed tokenKey in Redis
+2021-08-31 14:26:00.594 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-31 14:26:00.594 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-31 14:26:00.594 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-31 14:26:00.594 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-31 14:26:00.594 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-31 14:26:00.595 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-31 14:26:00.607 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-31 14:26:00.607 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-31 14:26:00.616 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-31 14:26:00.620 send                           --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-31 14:26:04.161 send                           --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"success","data":{"id":1,"createdAt":1630394764095,"updatedAt":1630394764095,"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","sendPartnerStatus":"SUCCESS"}}
+2021-08-31 14:26:04.163 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-31 14:26:04.164 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-31 14:26:04.174 logResponse                    --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: e6535217-c72a-4923-8e8a-a7847784bd35
+[BODY RESPONSE]: 
+
+{"code":"200","message":"success","responseId":"e6535217-c72a-4923-8e8a-a7847784bd35","data":{"id":1,"createdAt":1630394764095,"updatedAt":1630394764095,"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","sendPartnerStatus":"SUCCESS"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-31 14:26:07.225 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 0eca04ce-15d4-4d8f-8119-8247609ef73b
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.4
+---accept : */*
+---postman-token : f124f955-56ff-4d3d-b65f-b4a528e9a539
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-31 14:26:07.227 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 0eca04ce-15d4-4d8f-8119-8247609ef73b
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200910112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"2e28f56c87d0bb1c61d56fef0510e3e8c946d4743004647d562a590414ea096f","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-31 14:26:07.228 executePayment                 --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-31 14:26:07.228 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-31 14:26:07.229 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-31 14:26:07.231 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-31 14:26:07.233 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-31 14:26:07.233 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : begin check existed tokenKey in Redis
+2021-08-31 14:26:07.241 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : end check existed tokenKey in Redis
+2021-08-31 14:26:07.263 logResponse                    --- TokenKey [1601353776839FT19310RH6P1]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 0eca04ce-15d4-4d8f-8119-8247609ef73b
+[BODY RESPONSE]: 
+
+{"code":"400","message":"same day token key","responseId":"0eca04ce-15d4-4d8f-8119-8247609ef73b"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-31 14:26:09.949 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:26:19.939 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:26:29.943 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:26:39.950 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:26:49.937 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:26:59.946 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:27:09.950 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:27:19.937 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:27:29.943 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:27:39.950 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:27:49.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:27:59.948 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:28:09.948 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:28:19.948 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:28:29.950 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:28:39.938 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:28:49.944 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:28:59.946 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:29:09.949 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:29:19.946 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:29:29.948 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:29:39.972 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:29:49.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:29:59.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:30:09.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:30:19.948 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:30:29.935 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:30:39.946 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:30:49.937 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:30:59.942 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:31:09.950 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:31:19.943 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:31:20.484 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: a9eb4d53-1687-4943-8384-fcca81ac11e4
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.4
+---accept : */*
+---postman-token : 8fbdb9b1-cd9c-44c1-9f43-f9798d270cb4
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-31 14:31:20.485 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: a9eb4d53-1687-4943-8384-fcca81ac11e4
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-31 14:31:20.486 executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-31 14:31:20.487 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-31 14:31:20.487 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-31 14:31:20.487 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-31 14:31:20.487 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-31 14:31:20.488 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : begin check existed tokenKey in Redis
+2021-08-31 14:31:20.495 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : end check existed tokenKey in Redis
+2021-08-31 14:31:20.496 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-31 14:31:20.496 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-31 14:31:20.497 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-31 14:31:20.499 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-31 14:31:20.499 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-31 14:31:20.499 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-31 14:31:20.500 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-31 14:31:20.502 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-31 14:31:20.503 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-31 14:31:20.506 send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-31 14:31:24.415 send                           --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"success","data":{"id":1,"createdAt":1630395084296,"updatedAt":1630395084296,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","sendPartnerStatus":"SUCCESS"}}
+2021-08-31 14:31:24.416 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-31 14:31:24.416 executePayment                 --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-31 14:31:24.417 logResponse                    --- TokenKey [1601353776839FT19310RH6P2]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: a9eb4d53-1687-4943-8384-fcca81ac11e4
+[BODY RESPONSE]: 
+
+{"code":"200","message":"success","responseId":"a9eb4d53-1687-4943-8384-fcca81ac11e4","data":{"id":1,"createdAt":1630395084296,"updatedAt":1630395084296,"tokenKey":"1601353776839FT19310RH6P2","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200911112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"18b42dc90b1a9a3121ba71474c7002280b0a596941a6df06d18ad53ca147c93d","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","sendPartnerStatus":"SUCCESS"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-31 14:31:29.942 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:31:39.938 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:31:49.936 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:31:59.949 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:32:09.944 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:32:19.943 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:32:29.952 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:32:39.944 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:32:49.938 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:32:59.937 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:33:09.944 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:33:19.943 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:33:29.941 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:33:39.941 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:33:49.943 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:33:59.941 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:34:09.940 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:34:19.949 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:34:29.940 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:34:39.938 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:34:49.941 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:34:54.651 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: da72dfa2-a9f5-40d7-91eb-c1332cf7dbba
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.4
+---accept : */*
+---postman-token : 42b2e3cb-7efe-4d2c-92f9-715abb2cfcc2
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-31 14:34:54.653 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: da72dfa2-a9f5-40d7-91eb-c1332cf7dbba
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-31 14:34:54.654 executePayment                 --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-31 14:34:54.654 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-31 14:34:54.654 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-31 14:34:54.654 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-31 14:34:54.655 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-31 14:34:54.655 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : begin check existed tokenKey in Redis
+2021-08-31 14:34:54.662 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : end check existed tokenKey in Redis
+2021-08-31 14:34:54.663 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-31 14:34:54.663 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-31 14:34:54.664 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-31 14:34:54.664 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-31 14:34:54.665 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-31 14:34:54.666 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-31 14:34:54.666 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-31 14:34:54.666 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-31 14:34:54.667 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-31 14:34:54.667 send                           --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-31 14:34:59.942 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:35:04.693 send                           --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: null
+2021-08-31 14:35:04.696 logResponse                    --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: da72dfa2-a9f5-40d7-91eb-c1332cf7dbba
+[BODY RESPONSE]: 
+
+{"code":"400","message":"request timeout to execute in queue","responseId":"da72dfa2-a9f5-40d7-91eb-c1332cf7dbba"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-31 14:35:09.653 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: 1cde39bf-d219-4a92-b492-05640bc95738
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.4
+---accept : */*
+---postman-token : 83c44863-0a86-4367-b7ff-0bcd356ebf2c
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-31 14:35:09.656 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: 1cde39bf-d219-4a92-b492-05640bc95738
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-31 14:35:09.659 executePayment                 --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-31 14:35:09.660 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-31 14:35:09.660 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-31 14:35:09.662 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-31 14:35:09.663 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-31 14:35:09.663 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : begin check existed tokenKey in Redis
+2021-08-31 14:35:09.669 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : end check existed tokenKey in Redis
+2021-08-31 14:35:09.670 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-31 14:35:09.671 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-31 14:35:09.672 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-31 14:35:09.674 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-31 14:35:09.675 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-31 14:35:09.676 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-31 14:35:09.676 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-31 14:35:09.677 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-31 14:35:09.678 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-31 14:35:09.680 send                           --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-31 14:35:09.938 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:35:19.702 send                           --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: null
+2021-08-31 14:35:19.704 logResponse                    --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: 1cde39bf-d219-4a92-b492-05640bc95738
+[BODY RESPONSE]: 
+
+{"code":"400","message":"request timeout to execute in queue","responseId":"1cde39bf-d219-4a92-b492-05640bc95738"}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-31 14:35:19.946 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:35:29.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:35:39.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:35:49.942 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:35:59.958 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:36:09.945 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:36:19.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:36:29.949 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:36:39.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:36:42.952 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.filter.CustomURLFilter : 
+LOGGING REQUEST-----------------------------------
+[REQUEST-ID]: f1d54470-ff1c-4bfb-85a3-0a7b62f3a9b5
+[PATH]: /payment/
+[QUERIES]: null
+[HEADERS]: 
+---content-type : application/json
+---user-agent : PostmanRuntime/7.28.4
+---accept : */*
+---postman-token : 30e84b52-b92c-40a1-8c31-2c3387efd52a
+---host : localhost:8082
+---accept-encoding : gzip, deflate, br
+---connection : keep-alive
+---content-length : 593
+LOGGING REQUEST-----------------------------------
+
+2021-08-31 14:36:42.955 logRequest                     --- TokenKey []  bankCode [] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING REQUEST BODY-----------------------------------
+[REQUEST-ID]: f1d54470-ff1c-4bfb-85a3-0a7b62f3a9b5
+[BODY REQUEST]: 
+
+{"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+
+LOGGING REQUEST BODY-----------------------------------
+
+2021-08-31 14:36:42.956 executePayment                 --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin executePayment
+2021-08-31 14:36:42.956 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkValidPayment
+2021-08-31 14:36:42.957 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P3]  bankCode [] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkBankCode
+2021-08-31 14:36:42.957 checkBankCode                  --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkBankCode
+2021-08-31 14:36:42.957 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkDuplicateToken
+2021-08-31 14:36:42.957 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : begin check existed tokenKey in Redis
+2021-08-31 14:36:42.961 isExistedTokenKey              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentRedisServiceImpl : end check existed tokenKey in Redis
+2021-08-31 14:36:42.961 checkDuplicateToken            --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkDuplicateToken
+2021-08-31 14:36:42.962 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkRealAmount
+2021-08-31 14:36:42.962 checkRealAmount                --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkRealAmount
+2021-08-31 14:36:42.969 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkPromotionCode
+2021-08-31 14:36:42.969 checkPromotionCode             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkPromotionCode
+2021-08-31 14:36:42.970 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin checkMatchCheckSum
+2021-08-31 14:36:42.972 checkMatchCheckSum             --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkMatchCheckSum
+2021-08-31 14:36:42.972 checkValidPayment              --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end checkValidPayment
+2021-08-31 14:36:42.973 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : begin sendRabbitMQ
+2021-08-31 14:36:42.974 send                           --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : send to exchange: qrcode.exchange routingKey: qrcode.routingkey payment: {"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2021-08-31 14:36:43.091 send                           --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.RabbitMQServiceImpl : response: {"code":"200","message":"success","data":{"id":3,"createdAt":1630395403075,"updatedAt":1630395403075,"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","sendPartnerStatus":"SUCCESS"}}
+2021-08-31 14:36:43.092 sendRabbitMQ                   --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end sendRabbitMQ
+2021-08-31 14:36:43.092 executePayment                 --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.service.impl.PaymentServiceImpl : end executePayment
+2021-08-31 14:36:43.093 logResponse                    --- TokenKey [1601353776839FT19310RH6P3]  bankCode [VNPAY] vn.vnpay.preprocess.util.LoggingComponent : 
+LOGGING RESPONSE-----------------------------------
+[REQUEST-ID]: f1d54470-ff1c-4bfb-85a3-0a7b62f3a9b5
+[BODY RESPONSE]: 
+
+{"code":"200","message":"success","responseId":"f1d54470-ff1c-4bfb-85a3-0a7b62f3a9b5","data":{"id":3,"createdAt":1630395403075,"updatedAt":1630395403075,"tokenKey":"1601353776839FT19310RH6P3","apiID":"restPayment","mobile":"0345225630","bankCode":"VNPAY","accountNo":"0001100014211002","payDate":"20200912112923","additionalData":"","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"b05ef777c84803ed2b40e46118fea842aa749d26a3a09f4e96d108977ff50411","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11100","promotionCode":"   123 ","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}","sendPartnerStatus":"SUCCESS"}}
+
+LOGGING RESPONSE-----------------------------------
+
+2021-08-31 14:36:49.938 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:36:59.941 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:37:09.947 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]
+2021-08-31 14:37:19.946 reloadPartnerProperties        --- TokenKey []  bankCode [] vn.vnpay.preprocess.configuration.PartnerComponent : partners: [{"bankCode":"VNPAY","privateKey":"908405"},{"bankCode":"BIDV","privateKey":"970466"},{"bankCode":"VIETCOMBANK","privateKey":"970436"},{"bankCode":"TCB","privateKey":"970435"}]

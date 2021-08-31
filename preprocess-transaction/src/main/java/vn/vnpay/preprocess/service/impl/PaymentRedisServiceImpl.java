@@ -11,10 +11,6 @@ import vn.vnpay.preprocess.service.PaymentRedisService;
 import vn.vnpay.preprocess.util.CommonUtils;
 
 import javax.annotation.PostConstruct;
-import java.util.Comparator;
-import java.util.List;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.stream.Collectors;
 
 @Service(value = "paymentRedisService")
 public class PaymentRedisServiceImpl implements PaymentRedisService {

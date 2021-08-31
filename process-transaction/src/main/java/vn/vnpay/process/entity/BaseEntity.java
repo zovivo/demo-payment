@@ -25,7 +25,8 @@ public class BaseEntity implements Serializable {
     protected Timestamp createdAt;
     @Column(name = "updated_at")
     protected Timestamp updatedAt;
-    @ColumnDefault(value="false")
+
+    @ColumnDefault(value = "false")
 
     @PrePersist
     protected void onCreate() {

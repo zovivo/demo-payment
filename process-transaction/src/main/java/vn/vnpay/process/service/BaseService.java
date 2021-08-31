@@ -1,7 +1,6 @@
 package vn.vnpay.process.service;
 
 
-
 import vn.vnpay.process.entity.BaseEntity;
 
 import java.io.Serializable;

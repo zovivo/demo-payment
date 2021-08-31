@@ -1,13 +1,14 @@
 package vn.vnpay.preprocess.configuration.realoadable;
 
+import org.apache.commons.configuration.PropertiesConfiguration;
+import vn.vnpay.preprocess.exception.PropertiesException;
+
+import javax.naming.OperationNotSupportedException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.Properties;
-import javax.naming.OperationNotSupportedException;
-import org.apache.commons.configuration.PropertiesConfiguration;
-import vn.vnpay.preprocess.exception.PropertiesException;
 
 /**
  * Project: demo-payment

@@ -2,16 +2,10 @@ Configuration:
   status: debug
   Properties:
     Property:
-      - name: log-debug-path
-        value: "logs/debug"
-      - name: log-info-path
-        value: "logs/info"
-      - name: log-warn-path
-        value: "logs/warn"
-      - name: log-error-path
-        value: "logs/error"
+      - name: log-path
+        value: "logs/process"
       - name: pattern
-        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %-30M --- TokenKey [%X{tokenKey}]  bankCode [%X{bankCode}] %logger{15} : %msg%n"
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-30M --- TokenKey [%X{tokenKey}]  bankCode [%X{bankCode}] %logger{15} : %msg%n"
 
   Appenders:
     Console:
@@ -21,14 +15,14 @@ Configuration:
 
     RollingFile:
       - name: LogToRollingFileDebug
-        fileName: ${log-debug-path}/process-app.log
-        filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        fileName: ${log-path}/process-debug.log
+        filePattern: "$${log-path}/process-debug-%d{MM-dd-yyyy}-%i.log.gz"
         PatternLayout:
           pattern:  ${pattern}
         Filters:
           LevelRangeFilter:
             maxLevel: DEBUG
-            minLevel: ERROR
+            minLevel: DEBUG
             onMatch: ACCEPT
             onMismatch: DENY
         Policies:
@@ -38,8 +32,8 @@ Configuration:
           max: 10
 
       - name: LogToRollingFileInfo
-        fileName: ${log-info-path}/process-app.log
-        filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        fileName: ${log-path}/process-info.log
+        filePattern: "$${log-path}/process-info-%d{MM-dd-yyyy}-%i.log.gz"
         PatternLayout:
           pattern: ${pattern}
         Filters:
@@ -55,8 +49,8 @@ Configuration:
           max: 10
 
       - name: LogToRollingFileWarn
-        fileName: ${log-warn-path}/process-app.log
-        filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        fileName: ${log-path}/process-warn.log
+        filePattern: "$${log-path}/process-warn-%d{MM-dd-yyyy}-%i.log.gz"
         PatternLayout:
           pattern: ${pattern}
         Filters:
@@ -72,8 +66,8 @@ Configuration:
           max: 10
 
       - name: LogToRollingFileError
-        fileName: ${log-error-path}/process-app.log
-        filePattern: "logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        fileName: ${log-path}/process-error.log
+        filePattern: "$${log-path}/process-error-%d{MM-dd-yyyy}-%i.log.gz"
         PatternLayout:
           pattern: ${pattern}
         Filters:

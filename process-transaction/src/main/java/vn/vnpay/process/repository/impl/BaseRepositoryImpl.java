@@ -1,9 +1,5 @@
 package vn.vnpay.process.repository.impl;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
-import org.springframework.transaction.annotation.Transactional;
 import vn.vnpay.process.entity.BaseEntity;
 import vn.vnpay.process.repository.BaseRepository;
 import vn.vnpay.process.util.QueryTemplate;
@@ -14,15 +10,14 @@ import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaDelete;
 import javax.persistence.criteria.CriteriaUpdate;
 import java.io.Serializable;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
 public class BaseRepositoryImpl<E extends BaseEntity, ID extends Serializable> implements BaseRepository<E, ID> {
 
+    private final Class entityClass;
     @PersistenceContext
     private EntityManager entityManager;
-    private final Class entityClass;
 
     public BaseRepositoryImpl(Class entityClass) {
         this.entityClass = entityClass;

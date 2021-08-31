@@ -1,7 +1,5 @@
 package vn.vnpay.preprocess.util;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.hash.Hashing;
 import com.google.gson.Gson;
@@ -17,12 +15,10 @@ import java.util.Date;
 @Component
 public class CommonUtils {
 
+    public static final String REQUEST_ID = "request_id";
     private static final Logger logger = LogManager.getLogger(CommonUtils.class);
-
     private static final ObjectMapper objectMapper = new ObjectMapper();
     private static final Gson gson = new Gson();
-
-    public static final String REQUEST_ID = "request_id";
 
     public static String parseObjectToString(Object object) {
         return gson.toJson(object);

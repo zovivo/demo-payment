@@ -1,6 +1,5 @@
 package vn.vnpay.process.configuration.realoadable;
 
-import org.apache.commons.configuration.ConfigurationConverter;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.configuration.reloading.FileChangedReloadingStrategy;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,10 +16,9 @@ import vn.vnpay.process.exception.PropertiesException;
  */
 public class ReloadablePropertySource extends PropertySource {
 
+    PropertiesConfiguration propertiesConfiguration;
     @Value("${spring.properties.refreshDelay}")
     private long refreshDelay;
-
-    PropertiesConfiguration propertiesConfiguration;
 
     public ReloadablePropertySource(String name, PropertiesConfiguration propertiesConfiguration) {
         super(name);

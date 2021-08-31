@@ -11,7 +11,7 @@ public interface BaseRepository<E extends BaseEntity, ID extends Serializable> {
 
     public E insert(E e);
 
-    public E find(ID id) ;
+    public E find(ID id);
 
     public List<E> findAll();
 

@@ -52,9 +52,9 @@ public class RabbitMQConsumer {
 
     @RabbitListener(queues = "${spring.rabbitmq.queue}")
     public ResponseData receivedMessageAndReply(PaymentModel paymentModel, Message message) {
-        logger.info("received from queue: " + queue + " Message: " + message);
         ThreadContext.put("tokenKey", paymentModel.getTokenKey());
-        ResponseData responseData = null;
+        logger.info("received from queue: {} Message: {}", queue, message);
+        ResponseData responseData;
         try {
             responseData = paymentService.executePayment(paymentModel);
         } catch (CustomException e) {
@@ -64,7 +64,7 @@ public class RabbitMQConsumer {
             logger.error("runtime exception: ", e);
             responseData = responsePreProcessor.buildResponseData(e, CustomCode.UNKNOWN_ERROR);
         }
-        logger.info("return response: " + CommonUtils.parseObjectToString(responseData));
+        logger.info("return response: {}", CommonUtils.parseObjectToString(responseData));
         ThreadContext.remove("tokenKey");
         return responseData;
     }

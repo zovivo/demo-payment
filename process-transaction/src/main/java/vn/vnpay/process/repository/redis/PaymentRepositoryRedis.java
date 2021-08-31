@@ -32,8 +32,8 @@ public class PaymentRepositoryRedis {
 
     public Payment insert(Payment payment) {
         hashOperations.put(getHashName(), payment.getTokenKey(), CommonUtils.parseObjectToString(payment));
-        redisTemplate.expireAt(getHashName(),CommonUtils.getEndDateTime());
-        logger.info("save payment of hash {} to redis : {} expireTime: {}", getHashName(), CommonUtils.parseObjectToString(payment),CommonUtils.getEndDateTime());
+        redisTemplate.expireAt(getHashName(), CommonUtils.getEndDateTime());
+        logger.info("save payment of hash {} to redis : {} expireTime: {}", getHashName(), CommonUtils.parseObjectToString(payment), CommonUtils.getEndDateTime());
         return payment;
     }
 

@@ -6,19 +6,15 @@ import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import vn.vnpay.preprocess.configuration.PartnerComponent;
+import vn.vnpay.preprocess.constant.CustomCode;
+import vn.vnpay.preprocess.dto.PaymentDTO;
 import vn.vnpay.preprocess.exception.CustomException;
 import vn.vnpay.preprocess.model.Payment;
-import vn.vnpay.preprocess.dto.PaymentDTO;
-import vn.vnpay.preprocess.constant.CustomCode;
 import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.service.PaymentRedisService;
 import vn.vnpay.preprocess.service.PaymentService;
 import vn.vnpay.preprocess.service.RabbitMQService;
 import vn.vnpay.preprocess.util.CommonUtils;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @Service(value = "paymentService")
 public class PaymentServiceImpl implements PaymentService {

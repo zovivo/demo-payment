@@ -15,9 +15,9 @@ public class CustomException extends Exception {
     private CustomCode customCode;
     private String message;
 
-    public CustomException(CustomCode customCode){
-       this.customCode = customCode;
-       this.message = customCode.getDescription();
+    public CustomException(CustomCode customCode) {
+        this.customCode = customCode;
+        this.message = customCode.getDescription();
     }
 
 }
