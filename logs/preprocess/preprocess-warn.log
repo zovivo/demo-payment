@@ -186,3 +186,13 @@ vn.vnpay.preprocess.exception.CustomException: request timeout to execute in que
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_261]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.50.jar:9.0.50]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_261]
+2021-08-31 16:37:32.366 createBucket                   --- TokenKey [588a6aaa-1607-4188-a32e-3b07337cd8d7]  bankCode [] vn.vnpay.preprocess.service.impl.MinioService : bucket my-bucket already exists.
+2021-08-31 17:13:50.463 checkBucket                    --- TokenKey [b1782808-de09-437b-a54f-9f9e1b19036c]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : bucket logs not exist.
+2021-08-31 17:13:50.705 checkBucket                    --- TokenKey [b1782808-de09-437b-a54f-9f9e1b19036c]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : create bucket logs successfully
+2021-08-31 17:16:40.832 checkBucket                    --- TokenKey [c58d1d3d-bd1f-4c62-a5f6-6eb18c1b89b3]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : bucket logs already exists.
+2021-08-31 17:22:41.470 checkBucket                    --- TokenKey [5d568642-7c3b-4f9b-a0fc-b289c6d444c4]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : bucket logs already exists.
+2021-08-31 17:25:44.147 checkBucket                    --- TokenKey [33b1613c-01e5-4521-956f-c99494d9dc6c]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : bucket logs already exists.
+2021-08-31 17:26:27.422 checkBucket                    --- TokenKey [8bb0b94e-030f-4253-9330-55522ed10b71]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : bucket logs already exists.
+2021-08-31 17:26:27.558 uploadFile                     --- TokenKey [8bb0b94e-030f-4253-9330-55522ed10b71]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : create object file my-log-info successfully
+2021-08-31 17:31:11.244 checkBucket                    --- TokenKey [d4ded363-0f5c-450f-9097-22bf489f0db5]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : bucket logs already exists.
+2021-08-31 17:31:11.390 uploadFile                     --- TokenKey [d4ded363-0f5c-450f-9097-22bf489f0db5]  bankCode [] vn.vnpay.preprocess.service.impl.FileUploadService : create object file my-log-info successfully

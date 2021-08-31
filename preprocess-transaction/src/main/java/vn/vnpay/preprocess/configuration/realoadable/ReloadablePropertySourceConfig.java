@@ -67,4 +67,23 @@ public class ReloadablePropertySourceConfig {
         return properties;
     }
 
+    @Bean("minioPropertiesConfiguration")
+    @ConditionalOnProperty(name = "spring.minio-config.location", matchIfMissing = false)
+    public PropertiesConfiguration minioPropertiesConfiguration(
+            @Value("${spring.minio-config.location}") String path,
+            @Value("${spring.properties.refreshDelay}") long refreshDelay) throws Exception {
+        PropertiesConfiguration configuration = new PropertiesConfiguration(new File(path).getCanonicalPath());
+        FileChangedReloadingStrategy fileChangedReloadingStrategy = new FileChangedReloadingStrategy();
+        fileChangedReloadingStrategy.setRefreshDelay(refreshDelay);
+        configuration.setReloadingStrategy(fileChangedReloadingStrategy);
+        return configuration;
+    }
+
+    @Bean("minioProperties")
+    @ConditionalOnBean(name = "minioPropertiesConfiguration")
+    @RefreshScope
+    public Properties minioProperties(@Autowired @Qualifier(value = "minioPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
+        ReloadableProperties properties = new ReloadableProperties(propertiesConfiguration);
+        return properties;
+    }
 }

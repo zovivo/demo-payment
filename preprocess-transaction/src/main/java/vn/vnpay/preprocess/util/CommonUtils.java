@@ -6,7 +6,11 @@ import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -29,7 +33,7 @@ public class CommonUtils {
         try {
             date = dateFormat.parse(dateStr);
         } catch (ParseException e) {
-            logger.warn("ParseException: ", e);
+            logger.error("ParseException: ", e);
             return null;
         }
         return date;
@@ -52,6 +56,31 @@ public class CommonUtils {
 
     public static <T> T convertData(Object obj, Class<T> clazz) {
         return objectMapper.convertValue(obj, clazz);
+    }
+
+    public static String saveTempFile(MultipartFile file, String tempPath) {
+        String fileName = file.getOriginalFilename();
+        String tempFilePath = tempPath + fileName;
+        File tempFileDir = new File(tempPath);
+        if (!tempFileDir.exists()) {
+            logger.info("create directory {}", tempPath);
+            tempFileDir.mkdirs();
+        }
+        try {
+            FileCopyUtils.copy(file.getBytes(), new File(tempFilePath));
+        } catch (IOException e) {
+            logger.error("IOException: ", e);
+        }
+        return tempFilePath;
+    }
+
+    public static void deleteTempFile(String tempPath) {
+        File tempFile = new File(tempPath);
+        if (tempFile.delete()) {
+            logger.info("deleted {} ", tempPath);
+        } else {
+            logger.warn("failed to delete {}.", tempPath);
+        }
     }
 
 }

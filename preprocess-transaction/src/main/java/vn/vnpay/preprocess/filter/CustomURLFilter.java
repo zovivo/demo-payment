@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
 import org.springframework.stereotype.Component;
+import vn.vnpay.preprocess.util.CommonUtils;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +27,7 @@ public class CustomURLFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         String requestId = UUID.randomUUID().toString();
         servletRequest.setAttribute(REQUEST_ID, requestId);
-        ThreadContext.put("requestId", requestId);
+        ThreadContext.put(CommonUtils.REQUEST_ID, requestId);
         logRequest((HttpServletRequest) servletRequest, requestId);
         filterChain.doFilter(servletRequest, servletResponse);
     }
