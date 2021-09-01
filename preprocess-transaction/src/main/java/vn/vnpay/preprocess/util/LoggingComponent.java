@@ -3,6 +3,7 @@ package vn.vnpay.preprocess.util;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
+import vn.vnpay.preprocess.constant.AppConstant;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,7 +40,8 @@ public class LoggingComponent {
         data.append("\nLOGGING RESPONSE-----------------------------------\n")
                 .append("[REQUEST-ID]: ").append(requestId).append("\n")
                 .append("[BODY RESPONSE]: ").append("\n\n")
-                .append(CommonUtils.parseObjectToString(body))
+                .append(CommonUtils.parseObjectToString(body).length() <= AppConstant.MAX_LENGTH_BODY_LOG
+                        ? CommonUtils.parseObjectToString(body) : ("size: " + CommonUtils.parseObjectToString(body).length()))
                 .append("\n\n")
                 .append("LOGGING RESPONSE-----------------------------------\n");
 

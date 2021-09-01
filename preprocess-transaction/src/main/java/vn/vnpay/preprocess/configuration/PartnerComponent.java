@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import vn.vnpay.preprocess.constant.AppConstant;
 import vn.vnpay.preprocess.util.CommonUtils;
 import vn.vnpay.preprocess.util.Partner;
 
@@ -55,7 +56,7 @@ public class PartnerComponent {
     private void reloadPartnerProperties() throws IOException {
         Map<String, List<Partner>> partnerMap = mapper.readValue(new URL(path), new TypeReference<Map<String, List<Partner>>>() {
         });
-        this.partners = partnerMap.get("partners");
+        this.partners = partnerMap.get(AppConstant.PARTNERS_LIST);
         logger.info("partners: {}", CommonUtils.parseObjectToString(partners));
     }
 

@@ -1,25 +1,17 @@
 package vn.vnpay.preprocess.controller;
 
-import io.minio.errors.*;
 import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import vn.vnpay.preprocess.constant.AppConstant;
 import vn.vnpay.preprocess.dto.FileUploadDTO;
-import vn.vnpay.preprocess.exception.CustomException;
 import vn.vnpay.preprocess.response.ResponseData;
-import vn.vnpay.preprocess.service.impl.FileUploadService;
-import vn.vnpay.preprocess.util.CommonUtils;
-import vn.vnpay.preprocess.util.ResponsePreProcessor;
+import vn.vnpay.preprocess.service.FileService;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * Project: demo-payment
@@ -31,18 +23,24 @@ import java.security.NoSuchAlgorithmException;
 
 @RestController
 @RequestMapping(value = "/file/")
-public class FileController {
+public class FileController extends BaseController {
 
     @Autowired
-    private FileUploadService fileUploadService;
-    @Autowired
-    private ResponsePreProcessor responsePreProcessor;
+    private FileService fileService;
 
     @PostMapping(value = {"upload/"})
-    public ResponseEntity<ResponseData> uploadFile(@ModelAttribute FileUploadDTO fileUpload, HttpServletRequest request) throws CustomException, ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
-        ThreadContext.put("tokenKey", ThreadContext.get(CommonUtils.REQUEST_ID));
-        ResponseData responseData = fileUploadService.uploadFile(fileUpload);
-        return responsePreProcessor.buildResponseEntity(HttpStatus.OK, responseData, request);
+    public ResponseEntity<ResponseData> uploadFile(@ModelAttribute FileUploadDTO fileUpload, HttpServletRequest request) throws Exception {
+        putKeyToThread(ThreadContext.get(AppConstant.REQUEST_ID));
+        ResponseData responseData = fileService.uploadFile(fileUpload);
+        return buildResponseEntity(HttpStatus.OK, responseData, request);
+    }
+
+    @RequestMapping(value = "download/", method = {RequestMethod.POST, RequestMethod.GET})
+    public ResponseEntity<ByteArrayResource> downloadFile(@RequestParam(value = "file-name") String fileName) throws Exception {
+        putKeyToThread(ThreadContext.get(AppConstant.REQUEST_ID));
+        return downloadFile(fileName, fileService.getFileData(fileName));
     }
 
 }
+
+

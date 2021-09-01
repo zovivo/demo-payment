@@ -9,12 +9,14 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import vn.vnpay.process.constant.RedisConstant;
 
 import java.time.Duration;
 import java.util.Properties;
@@ -27,16 +29,16 @@ import java.util.Properties;
 public class RedisConfig {
 
     @Autowired
-    @Qualifier(value = "redisProperties")
+    @Qualifier(value = RedisConstant.REDIS_PROPERTIES_BEAN)
     private Properties redisProperties;
 
     @Bean
     public LettucePoolingClientConfiguration lettucePoolingClientConfiguration() {
         GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
-        poolConfig.setMaxIdle(Integer.valueOf(redisProperties.getProperty("spring.redis.max-idle")));
-        poolConfig.setMinIdle(Integer.valueOf(redisProperties.getProperty("spring.redis.min-idle")));
-        poolConfig.setMaxWaitMillis(Integer.valueOf(redisProperties.getProperty("spring.redis.max-wait")));
-        poolConfig.setMaxTotal(Integer.valueOf(redisProperties.getProperty("spring.redis.max-active")));
+        poolConfig.setMaxIdle(Integer.valueOf(redisProperties.getProperty(RedisConstant.MAX_IDLE)));
+        poolConfig.setMinIdle(Integer.valueOf(redisProperties.getProperty(RedisConstant.MIN_IDLE)));
+        poolConfig.setMaxWaitMillis(Integer.valueOf(redisProperties.getProperty(RedisConstant.MAX_WAIT)));
+        poolConfig.setMaxTotal(Integer.valueOf(redisProperties.getProperty(RedisConstant.MAX_ACTIVE)));
         LettucePoolingClientConfiguration lettucePoolingClientConfiguration = LettucePoolingClientConfiguration.builder()
                 .commandTimeout(Duration.ofSeconds(10))
                 .shutdownTimeout(Duration.ZERO)
@@ -49,18 +51,17 @@ public class RedisConfig {
     @Autowired
     public LettuceConnectionFactory redisConnectionFactory(LettucePoolingClientConfiguration lettucePoolingClientConfiguration) {
         RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration();
-        redisConfig.setHostName(redisProperties.getProperty("spring.redis.host"));
-        redisConfig.setPort(Integer.valueOf(redisProperties.getProperty("spring.redis.port")));
-        redisConfig.setPassword(redisProperties.getProperty("spring.redis.password"));
+        redisConfig.setHostName(redisProperties.getProperty(RedisConstant.HOST));
+        redisConfig.setPort(Integer.valueOf(redisProperties.getProperty(RedisConstant.PORT)));
+        redisConfig.setPassword(redisProperties.getProperty(RedisConstant.PASSWORD));
         LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory(redisConfig, lettucePoolingClientConfiguration);
         lettuceConnectionFactory.setShareNativeConnection(false);
         return lettuceConnectionFactory;
     }
 
-    @Bean
+    @Bean(RedisConstant.REDIS_TEMPLATE_BEAN)
     @Primary
-    @Autowired
-    public RedisTemplate<Object, Object> redisTemplate(@Qualifier(value = "redisConnectionFactory") LettuceConnectionFactory redisConnectionFactory) {
+    public RedisTemplate<Object, Object> redisTemplate(@Autowired RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
         template.setKeySerializer(new StringRedisSerializer());

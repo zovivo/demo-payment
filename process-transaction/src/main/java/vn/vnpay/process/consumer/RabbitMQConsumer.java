@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.PropertySource;
@@ -20,8 +19,6 @@ import vn.vnpay.process.service.PaymentService;
 import vn.vnpay.process.util.CommonUtils;
 import vn.vnpay.process.util.ResponsePreProcessor;
 
-import java.util.Properties;
-
 /**
  * Project: demo-payment
  * Package: vn.vnpay.process.configuration
@@ -32,14 +29,10 @@ import java.util.Properties;
  */
 @Component
 @RefreshScope
-@PropertySource(value = "file:configs/process/rabbitmq.properties", factory = ReloadablePropertySourceFactory.class)
+@PropertySource(value = "${spring.rabbitmq-config.url}", factory = ReloadablePropertySourceFactory.class)
 public class RabbitMQConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(RabbitMQConsumer.class);
-
-    @Autowired
-    @Qualifier(value = "rabbitmqProperties")
-    private Properties rabbitmqProperties;
 
     @Autowired
     private PaymentService paymentService;

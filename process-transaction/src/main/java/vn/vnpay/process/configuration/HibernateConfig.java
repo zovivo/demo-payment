@@ -25,6 +25,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import vn.vnpay.process.configuration.realoadable.ReloadablePropertySourceFactory;
+import vn.vnpay.process.constant.DataSourceConstant;
 
 import java.util.Properties;
 
@@ -34,7 +35,7 @@ import java.util.Properties;
                 DataSourceTransactionManagerAutoConfiguration.class,
                 HibernateJpaAutoConfiguration.class
         })
-@PropertySource(value = "file:configs/process/datasource.properties", factory = ReloadablePropertySourceFactory.class)
+@PropertySource(value = "${spring.datasource-config.location}", factory = ReloadablePropertySourceFactory.class)
 public class HibernateConfig {
 
     private static final String PACKAGES_TO_SCAN = "vn.vnpay.process.entity";
@@ -51,7 +52,7 @@ public class HibernateConfig {
     @Bean(name = "hikariDataSource")
     @Primary
     @RefreshScope
-    @ConfigurationProperties("spring.datasource.hikari")
+    @ConfigurationProperties(DataSourceConstant.HIKARI_PREFIX_CONFIG)
     public HikariDataSource dataSource() {
         HikariDataSource hikariDataSource = DataSourceBuilder.create().type(HikariDataSource.class).build();
         return hikariDataSource;
@@ -64,7 +65,7 @@ public class HibernateConfig {
         entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);
         entityManagerFactoryBean.setDataSource(dataSource);
         entityManagerFactoryBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
-        entityManagerFactoryBean.setPackagesToScan(PACKAGES_TO_SCAN);
+        entityManagerFactoryBean.setPackagesToScan(DataSourceConstant.PACKAGES_TO_SCAN);
         Properties properties = getHibernateProperties();
         entityManagerFactoryBean.setJpaProperties(properties);
         logger.info("entityManagerFactory: {}", entityManagerFactoryBean);

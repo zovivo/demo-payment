@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import vn.vnpay.process.constant.RabbitConstant;
+import vn.vnpay.process.constant.RedisConstant;
 
 import java.io.File;
 import java.util.Properties;
@@ -36,7 +38,7 @@ public class ReloadablePropertySourceConfig {
         return configuration;
     }
 
-    @Bean("rabbitmqProperties")
+    @Bean(RabbitConstant.RABBITMQ_PROPERTIES_BEAN)
     @ConditionalOnBean(name = "rabbitmqPropertiesConfiguration")
     public Properties rabbitmqProperties(@Autowired @Qualifier(value = "rabbitmqPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
         ReloadableProperties properties = new ReloadableProperties(propertiesConfiguration);
@@ -55,7 +57,7 @@ public class ReloadablePropertySourceConfig {
         return configuration;
     }
 
-    @Bean("redisProperties")
+    @Bean(RedisConstant.REDIS_PROPERTIES_BEAN)
     @ConditionalOnBean(name = "redisPropertiesConfiguration")
     public Properties redisProperties(@Autowired @Qualifier(value = "redisPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
         ReloadableProperties properties = new ReloadableProperties(propertiesConfiguration);

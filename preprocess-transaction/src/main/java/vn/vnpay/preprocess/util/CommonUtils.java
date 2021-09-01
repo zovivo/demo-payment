@@ -19,7 +19,6 @@ import java.util.Date;
 @Component
 public class CommonUtils {
 
-    public static final String REQUEST_ID = "request_id";
     private static final Logger logger = LogManager.getLogger(CommonUtils.class);
     private static final ObjectMapper objectMapper = new ObjectMapper();
     private static final Gson gson = new Gson();

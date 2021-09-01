@@ -11,6 +11,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import vn.vnpay.preprocess.constant.MinioConstant;
+import vn.vnpay.preprocess.constant.RabbitConstant;
 
 import java.io.File;
 import java.util.Properties;
@@ -39,7 +41,7 @@ public class ReloadablePropertySourceConfig {
         return configuration;
     }
 
-    @Bean("rabbitmqProperties")
+    @Bean(RabbitConstant.RABBITMQ_PROPERTIES_BEAN)
     @ConditionalOnBean(name = "rabbitmqPropertiesConfiguration")
     @RefreshScope
     public Properties rabbitmqProperties(@Autowired @Qualifier(value = "rabbitmqPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {
@@ -79,7 +81,7 @@ public class ReloadablePropertySourceConfig {
         return configuration;
     }
 
-    @Bean("minioProperties")
+    @Bean(MinioConstant.MINIO_PROPERTIES_BEAN)
     @ConditionalOnBean(name = "minioPropertiesConfiguration")
     @RefreshScope
     public Properties minioProperties(@Autowired @Qualifier(value = "minioPropertiesConfiguration") PropertiesConfiguration propertiesConfiguration) throws Exception {

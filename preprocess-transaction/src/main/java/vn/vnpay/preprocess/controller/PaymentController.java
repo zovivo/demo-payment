@@ -1,6 +1,5 @@
 package vn.vnpay.preprocess.controller;
 
-import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,25 +12,22 @@ import vn.vnpay.preprocess.dto.PaymentDTO;
 import vn.vnpay.preprocess.exception.CustomException;
 import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.service.PaymentService;
-import vn.vnpay.preprocess.util.ResponsePreProcessor;
 
 import javax.servlet.http.HttpServletRequest;
 
 
 @RestController
 @RequestMapping(value = "/payment/")
-public class PaymentController {
+public class PaymentController extends BaseController {
 
     @Autowired
     private PaymentService paymentService;
-    @Autowired
-    private ResponsePreProcessor responsePreProcessor;
 
     @PostMapping(value = {""})
     public ResponseEntity<ResponseData> executePayment(@RequestBody @Validated PaymentDTO paymentDTO, HttpServletRequest request) throws CustomException {
-        ThreadContext.put("tokenKey", paymentDTO.getTokenKey());
+        putKeyToThread(paymentDTO.getTokenKey());
         ResponseData responseData = paymentService.executePayment(paymentDTO);
-        return responsePreProcessor.buildResponseEntity(HttpStatus.OK, responseData, request);
+        return buildResponseEntity(HttpStatus.OK, responseData, request);
     }
 
 }
