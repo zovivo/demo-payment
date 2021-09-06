@@ -7,11 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.vnpay.preprocess.constant.AppConstant;
+import vn.vnpay.preprocess.dto.FileMinIODTO;
 import vn.vnpay.preprocess.dto.FileUploadDTO;
 import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.service.FileService;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 /**
  * Project: demo-payment
@@ -36,9 +38,9 @@ public class FileController extends BaseController {
     }
 
     @RequestMapping(value = "download/", method = {RequestMethod.POST, RequestMethod.GET})
-    public ResponseEntity<ByteArrayResource> downloadFile(@RequestParam(value = "file-name") String fileName) throws Exception {
+    public ResponseEntity<ByteArrayResource> downloadFile(@RequestBody @Valid FileMinIODTO fileMinIODTO) throws Exception {
         putKeyToThread(ThreadContext.get(AppConstant.REQUEST_ID));
-        return downloadFile(fileName, fileService.getFileData(fileName));
+        return downloadFile(fileMinIODTO.getObjectName(), fileService.getFileData(fileMinIODTO));
     }
 
 }

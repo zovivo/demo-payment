@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import vn.vnpay.preprocess.constant.AppConstant;
 import vn.vnpay.preprocess.constant.CustomCode;
 import vn.vnpay.preprocess.constant.MinioConstant;
+import vn.vnpay.preprocess.dto.FileMinIODTO;
 import vn.vnpay.preprocess.dto.FileUploadDTO;
 import vn.vnpay.preprocess.response.ResponseData;
 import vn.vnpay.preprocess.service.FileService;
@@ -43,29 +44,31 @@ public class FileServiceImpl implements FileService {
     public ResponseData uploadFile(FileUploadDTO fileUpload) throws Exception {
         logger.info("begin uploadFile: {}", fileUpload.getName());
         String tempFilePath = saveTempFile(fileUpload);
-        ResponseData responseData = uploadToMinio(minioProperties.getProperty(MinioConstant.DEFAULT_BUCKET_NAME), fileUpload.getName(), tempFilePath);
+        ResponseData responseData = uploadToMinio(fileUpload.getBucketName(), fileUpload.getName(), tempFilePath);
         deleteTempFile(tempFilePath);
         logger.info("end uploadFile: {}", fileUpload.getName());
         return responseData;
     }
 
     @Override
-    public byte[] getFileData(String fileName) throws Exception {
-        logger.info("begin getFileInputStream: {}", fileName);
+    public byte[] getFileData(FileMinIODTO fileMinIODTO) throws Exception {
+        String bucketName = fileMinIODTO.getBucketName() == null ? minioProperties.getProperty(MinioConstant.DEFAULT_BUCKET_NAME) : fileMinIODTO.getBucketName();
+        logger.info("begin getFileInputStream: {} from bucket {}", fileMinIODTO.getObjectName(), bucketName);
         byte[] data;
         try (InputStream stream = minioClient.getObject(
                 GetObjectArgs.builder()
-                        .bucket(minioProperties.getProperty(MinioConstant.DEFAULT_BUCKET_NAME))
-                        .object(fileName)
+                        .bucket(bucketName)
+                        .object(fileMinIODTO.getObjectName())
                         .build())) {
             data = IOUtils.toByteArray(stream);
         }
-        logger.info("end getFileInputStream: {}", fileName);
+        logger.info("end getFileInputStream: {} from bucket {}", fileMinIODTO.getObjectName(), bucketName);
         return data;
     }
 
     @Override
     public void checkBucket(String bucketName) throws Exception {
+        bucketName = bucketName == null ? minioProperties.getProperty(MinioConstant.DEFAULT_BUCKET_NAME) : bucketName;
         logger.info("begin checkBucket {}", bucketName);
         boolean isExist = minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build());
         if (isExist) {
@@ -82,7 +85,7 @@ public class FileServiceImpl implements FileService {
     public ResponseData uploadToMinio(String bucketName, String objectName, String filePath) throws Exception {
         logger.info("begin uploadToMinio");
         checkBucket(bucketName);
-        minioClient.uploadObject(
+        ObjectWriteResponse response = minioClient.uploadObject(
                 UploadObjectArgs.builder()
                         .bucket(bucketName)
                         .object(objectName)
@@ -90,7 +93,10 @@ public class FileServiceImpl implements FileService {
                         .build());
         logger.info("create object file {} successfully", objectName);
         logger.info("end uploadToMinio");
-        return new ResponseData(CustomCode.SUCCESS);
+        ResponseData responseData = new ResponseData(CustomCode.SUCCESS);
+        FileMinIODTO fileMinIO = new FileMinIODTO(response.bucket(), response.object());
+        responseData.setData(fileMinIO);
+        return responseData;
     }
 
     /**

@@ -1,5 +1,6 @@
 package vn.vnpay.preprocess.service;
 
+import vn.vnpay.preprocess.dto.FileMinIODTO;
 import vn.vnpay.preprocess.dto.FileUploadDTO;
 import vn.vnpay.preprocess.response.ResponseData;
 
@@ -23,6 +24,7 @@ public interface FileService {
 
     /**
      * hàm check bucket trên MinIO Server,
+     * nếu bucketName=null, chuyển về default bucket
      * nếu chưa có bucket, tạo bucket mới với tên bucketName truyền vào
      *
      * @param bucketName {@link String}
@@ -45,10 +47,10 @@ public interface FileService {
     /**
      * hàm get file data trực tiếp từ MinIO Server,
      *
-     * @param fileName {@link String} - tên file lưu trên MinIO server
+     * @param fileMinIODTO {@link FileMinIODTO} - tên file và bucket lưu trên MinIO server
      * @return byte []
      * @throws Exception
      */
-    public byte[] getFileData(String fileName) throws Exception;
+    public byte[] getFileData(FileMinIODTO fileMinIODTO) throws Exception;
 
 }
