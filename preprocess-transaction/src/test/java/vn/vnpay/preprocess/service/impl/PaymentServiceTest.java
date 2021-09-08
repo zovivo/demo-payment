@@ -132,7 +132,7 @@ public class PaymentServiceTest {
     }
 
     @Test
-    public void whenExecutePayment_ThrowTimeoutException() {
+    public void whenExecutePayment_SendQueueTimeout_ShouldThrowTimeoutException() {
         Mockito.when(partnerComponent.getPartnerByCode("VNPAY")).thenReturn(new Partner("VNPAY", "908405"));
         Mockito.when(paymentRedisService.isExistedTokenKey(Mockito.any(String.class))).thenReturn(false);
         String inputPaymentData = "{\n" +
