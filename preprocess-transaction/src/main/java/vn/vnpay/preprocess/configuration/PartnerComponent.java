@@ -40,6 +40,10 @@ public class PartnerComponent {
         return partners;
     }
 
+    private void setPartners(List<Partner> partners) {
+        this.partners = partners;
+    }
+
     /**
      * lấy thông tin Partner theo bankCode
      *

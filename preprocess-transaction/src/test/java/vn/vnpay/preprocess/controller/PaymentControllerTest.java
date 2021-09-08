@@ -1,4 +1,4 @@
-package vn.vnpay.preprocess;
+package vn.vnpay.preprocess.controller;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
