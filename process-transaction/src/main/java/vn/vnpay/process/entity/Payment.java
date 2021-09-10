@@ -7,6 +7,7 @@ import lombok.Setter;
 import vn.vnpay.process.constant.SendPartnerStatus;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Setter
 @Getter
@@ -54,5 +55,7 @@ public class Payment extends BaseEntity {
     @Column(name = "send_partner_status")
     @Enumerated(EnumType.STRING)
     private SendPartnerStatus sendPartnerStatus;
+    @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "payment")
+    private List<Order> orders;
 
 }

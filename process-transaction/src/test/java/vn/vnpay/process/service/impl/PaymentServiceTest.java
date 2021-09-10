@@ -9,6 +9,7 @@ import org.mockito.Mockito;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.transaction.annotation.Transactional;
 import vn.vnpay.process.entity.Payment;
 import vn.vnpay.process.exception.CustomException;
 import vn.vnpay.process.model.PaymentModel;
@@ -131,6 +132,5 @@ public class PaymentServiceTest {
         Payment paymentResult = (Payment) responseData.getData();
         Assertions.assertNotNull(paymentResult);
     }
-
 
 }

@@ -1,0 +1,103 @@
+Configuration:
+  status: debug
+  Properties:
+    Property:
+      - name: log-path
+        value: "logs/process"
+      - name: pattern
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-30M --- TokenKey [%X{tokenKey}]  bankCode [%X{bankCode}] %logger{15} : %msg%n"
+
+  Appenders:
+    Console:
+      name: LogToConsole
+      PatternLayout:
+        Pattern: ${pattern}
+
+    RollingFile:
+      - name: LogToRollingFileDebug
+        fileName: ${log-path}/process-debug.log
+        filePattern: "$${log-path}/process-debug-%d{MM-dd-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern:  ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: DEBUG
+            minLevel: DEBUG
+            onMatch: ACCEPT
+            onMismatch: DENY
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+      - name: LogToRollingFileInfo
+        fileName: ${log-path}/process-info.log
+        filePattern: "$${log-path}/process-info-%d{MM-dd-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern: ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: INFO
+            minLevel: INFO
+            onMatch: ACCEPT
+            onMismatch: DENY
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+      - name: LogToRollingFileWarn
+        fileName: ${log-path}/process-warn.log
+        filePattern: "$${log-path}/process-warn-%d{MM-dd-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern: ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: WARN
+            minLevel: WARN
+            onMatch: ACCEPT
+            onMismatch: DENY
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+      - name: LogToRollingFileError
+        fileName: ${log-path}/process-error.log
+        filePattern: "$${log-path}/process-error-%d{MM-dd-yyyy}-%i.log.gz"
+        PatternLayout:
+          pattern: ${pattern}
+        Filters:
+          LevelRangeFilter:
+            maxLevel: ERROR
+            minLevel: ERROR
+            onMatch: ACCEPT
+            onMismatch: DENY
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+  Loggers:
+    Logger:
+      - name: vn.vnpay
+        level: debug
+        additivity: false
+        AppenderRef:
+          - ref: LogToConsole
+          - ref: LogToRollingFileDebug
+            level: debug
+          - ref: LogToRollingFileInfo
+            level: info
+          - ref: LogToRollingFileWarn
+            level: warn
+          - ref: LogToRollingFileError
+            level: error
+    Root:
+      level: error
+      AppenderRef:
+        ref: LogToConsole
